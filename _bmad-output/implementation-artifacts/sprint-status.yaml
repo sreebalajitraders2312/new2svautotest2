@@ -46,10 +46,10 @@ development_status:
   epic-1: in-progress
   1-1-nextjs-project-initialization-and-configuration: done
   1-2-css-design-system-extraction: done
-  1-3-json-catalogue-and-typescript-data-types: ready-for-dev
-  1-4-utility-libraries: ready-for-dev
-  1-5-root-layout-with-header-footer-and-floatingwhatsapp: ready-for-dev
-  1-6-vercel-deployment-and-ci: ready-for-dev
+  1-3-json-catalogue-and-typescript-data-types: review
+  1-4-utility-libraries: review
+  1-5-root-layout-with-header-footer-and-floatingwhatsapp: review
+  1-6-vercel-deployment-and-ci: review
   epic-1-retrospective: optional
 
   # Epic 2: Homepage with Mode Switch

@@ -1,0 +1,1905 @@
+{
+  "modes": {
+    "automobile": {
+      "brandSub": "Auto Parts Bangalore",
+      "nav": {
+        "explore": "Search by Vehicle",
+        "search": "Search Parts",
+        "quote": "Get Quote",
+        "mobileSearch": "Search"
+      },
+      "home": {
+        "title": "Automobile spare parts, <span>ready to source.</span>",
+        "copy": "Trusted Bangalore supplier for car, commercial, tractor, construction, forklift, and two-wheeler parts. Search by OEM number, product code, vehicle, category, or brand.",
+        "points": [
+          "5000+ Parts In Stock",
+          "Same Day Dispatch",
+          "GST Invoice Available"
+        ],
+        "categoryTitle": "Search by <span>Category</span>",
+        "featuredTitle": "Featured Parts",
+        "brandsKicker": "Manufacturers",
+        "brandsTitle": "Top Brands",
+        "advantageKicker": "Why Us",
+        "advantageTitle": "Our Advantage",
+        "contactTitle": "Need a part?",
+        "contactCopy": "Send your enquiry by WhatsApp, call, or email. We will help identify the right spare and respond fast.",
+        "advantages": [
+          {
+            "title": "OEM Matching",
+            "copy": "Share the part number or old sample and we will match the right replacement."
+          },
+          {
+            "title": "Wholesale Supply",
+            "copy": "Support for workshops, retailers, fleets, and repeat B2B buyers."
+          },
+          {
+            "title": "Same Day Response",
+            "copy": "Quick quote support on moving parts and urgent availability checks."
+          },
+          {
+            "title": "Bangalore Pickup",
+            "copy": "Ready support for local dispatch, counter pickup, and courier coordination."
+          }
+        ],
+        "contactList": [
+          {
+            "label": "WhatsApp",
+            "value": "+91 98765 43210"
+          },
+          {
+            "label": "Call",
+            "value": "+91 80 2345 6789"
+          },
+          {
+            "label": "Email",
+            "value": "info@sventerprises.in"
+          }
+        ],
+        "featured": [
+          {
+            "category": "Brake Parts",
+            "product": "Brake Disc Rotor",
+            "code": "BRK"
+          },
+          {
+            "category": "Electrical",
+            "product": "O2 Sensor",
+            "code": "O2"
+          },
+          {
+            "category": "Suspension",
+            "product": "Shock Absorber",
+            "code": "SHK"
+          }
+        ]
+      },
+      "categoriesOverview": {
+        "title": "Browse All Categories",
+        "copy": "Explore the main automobile spare parts categories we supply in Bangalore for workshops, retailers, fleet operators and wholesale buyers."
+      },
+      "brandsPage": {
+        "title": "Browse by Brand",
+        "copy": "Parts from leading OEM and aftermarket manufacturers for passenger, utility, and commercial vehicles."
+      },
+      "contactPage": {
+        "title": "Contact SV Enterprises",
+        "copy": "Reach us for OEM matching, brand availability, pricing, and urgent automobile spare part enquiries.",
+        "subtitle": "Automobile Spare Parts Dealer",
+        "address": "Auto Parts Market, Shivajinagar, Bangalore - 560001",
+        "hoursKicker": "Hours",
+        "hoursTitle": "Working Hours",
+        "hoursCopy": "Monday - Saturday: 9:00 AM - 6:00 PM<br>Sunday: Closed",
+        "mapTitle": "Auto Parts Market, Bangalore",
+        "mapCopy": "Open location in Google Maps"
+      },
+      "searchPage": {
+        "breadcrumb": "Home > Search",
+        "title": "Search<br>Parts",
+        "copy": "OEM number, product code, brand, vehicle model, or category.",
+        "placeholder": "Search OEM, product code, brand...",
+        "suggestionLabel": "Popular searches",
+        "resultsTitle": "Suggested parts",
+        "seeAll": "See all 12 ->",
+        "filters": [
+          "All",
+          "Brakes",
+          "Lighting",
+          "Filters"
+        ],
+        "suggestions": [
+          "Brake pads",
+          "Oil filter",
+          "04465-0K240",
+          "Hella lamps",
+          "Toyota Hilux"
+        ],
+        "results": [
+          {
+            "category": "Brake Parts",
+            "product": "Brake Pad Set",
+            "code": "BP",
+            "meta": "04465-0K240",
+            "price": "₹2,400",
+            "status": "In stock"
+          },
+          {
+            "category": "Electrical",
+            "product": "Head Lamp Relay",
+            "code": "HL",
+            "meta": "HL-H7-55W",
+            "price": "₹1,850",
+            "status": "In stock"
+          },
+          {
+            "category": "Filters",
+            "product": "Oil Filter Cartridge",
+            "code": "OF",
+            "meta": "EOF-1180",
+            "price": "₹420",
+            "status": "In stock"
+          },
+          {
+            "category": "Transmission",
+            "product": "Clutch Plate",
+            "code": "DB",
+            "meta": "6PK-1125",
+            "price": "₹980",
+            "status": "In stock"
+          }
+        ]
+      },
+      "filterPanel": {
+        "title": "Filter <span>Parts</span>",
+        "copy": "Narrow results by category, brand, vehicle, and tool type.",
+        "fields": [
+          {
+            "label": "Category",
+            "placeholder": "Select Category",
+            "options": [
+              "Brake Parts",
+              "Engine Parts",
+              "Suspension",
+              "Electrical",
+              "Filters",
+              "Transmission"
+            ]
+          },
+          {
+            "label": "Brand",
+            "placeholder": "Select Brand",
+            "options": [
+              "Bosch",
+              "Denso",
+              "Brembo",
+              "KYB",
+              "Valeo",
+              "Toyota"
+            ]
+          },
+          {
+            "label": "Vehicle Type",
+            "placeholder": "Select Vehicle Type",
+            "options": [
+              "Car",
+              "SUV",
+              "Commercial Vehicle",
+              "Construction Vehicle",
+              "Two Wheeler"
+            ]
+          },
+          {
+            "label": "Vehicle Manufacturer",
+            "placeholder": "Select Vehicle Manufacturer",
+            "options": [
+              "Toyota",
+              "Mahindra",
+              "Tata",
+              "Maruti Suzuki",
+              "Hyundai",
+              "Ashok Leyland"
+            ]
+          },
+          {
+            "label": "Vehicle Model",
+            "placeholder": "Select Vehicle Model",
+            "options": [
+              "Fortuner",
+              "Innova",
+              "Hi-Lux",
+              "Bolero",
+              "Nexon",
+              "Swift"
+            ]
+          },
+          {
+            "label": "Tool Type",
+            "placeholder": "Select Tool Type",
+            "options": [
+              "Diagnostic Tool",
+              "Hand Tool",
+              "Service Tool",
+              "Workshop Equipment",
+              "Measuring Tool"
+            ]
+          }
+        ]
+      },
+      "explore": {
+        "title": "Search by Vehicle",
+        "copy": "Select a vehicle segment to find compatible spare parts faster."
+      },
+      "detail": {
+        "compatTitle": "Compatible With",
+        "specTitle": "Technical Specs",
+        "descriptionTitle": "Product Description",
+        "primaryLabel": "WhatsApp Enquiry",
+        "secondaryLabel": "Call Now",
+        "noteLabel": "Bulk Orders<br>Welcome",
+        "metaPoints": [
+          "Wholesale Prices",
+          "Fast Enquiry",
+          "Bangalore Dealer"
+        ],
+        "trust": [
+          {
+            "title": "5000+ Parts",
+            "subtitle": "In Stock",
+            "icon": "shield"
+          },
+          {
+            "title": "Same Day Dispatch",
+            "subtitle": "Bangalore",
+            "icon": "truck"
+          },
+          {
+            "title": "GST Invoice",
+            "subtitle": "Available",
+            "icon": "doc"
+          }
+        ]
+      },
+      "footer": {
+        "copy": "Bangalore's trusted automobile spare parts dealer for cars, commercial vehicles, tractors, construction equipment, forklifts, and two-wheelers."
+      }
+    },
+    "industrial": {
+      "brandSub": "Industrial Products Bangalore",
+      "nav": {
+        "explore": "Search by Application",
+        "search": "Search Products",
+        "quote": "Get Pricing",
+        "mobileSearch": "Search"
+      },
+      "home": {
+        "title": "Wholesale industrial products, <span>ready for supply.</span>",
+        "copy": "Trusted Bangalore dealer for motors, bearings, hydraulics, pneumatics, sealing products, gearboxes and workshop consumables for factories, maintenance teams, and OEM buyers.",
+        "points": [
+          "Bulk Orders Welcome",
+          "Factory Supply Support",
+          "Bangalore Wholesale Dispatch"
+        ],
+        "categoryTitle": "Industrial <span>Categories</span>",
+        "featuredTitle": "Top Industrial Products",
+        "brandsKicker": "Industrial Brands",
+        "brandsTitle": "Preferred Makes",
+        "advantageKicker": "Why Buyers Choose Us",
+        "advantageTitle": "Industrial Supply Support",
+        "contactTitle": "Need an industrial item?",
+        "contactCopy": "Share the application, specification, or old sample. We will help with brand options, compatibility, and quick wholesale pricing.",
+        "advantages": [
+          {
+            "title": "Application Support",
+            "copy": "Selection help for bearing sizes, motor ratings, seal dimensions, and hose assemblies."
+          },
+          {
+            "title": "Bulk and Repeat Supply",
+            "copy": "Support for factories, maintenance contracts, machine builders, and distributors."
+          },
+          {
+            "title": "Specification Matching",
+            "copy": "We work from part numbers, dimensions, drawings, and sample references."
+          },
+          {
+            "title": "Ready Dispatch Options",
+            "copy": "Fast movement on standard industrial consumables and maintenance items."
+          }
+        ],
+        "contactList": [
+          {
+            "label": "WhatsApp",
+            "value": "+91 98765 43210"
+          },
+          {
+            "label": "Call",
+            "value": "+91 80 2345 6789"
+          },
+          {
+            "label": "Email",
+            "value": "industrial@sventerprises.in"
+          }
+        ],
+        "featured": [
+          {
+            "category": "Bearings",
+            "product": "Deep Groove Bearing",
+            "code": "BRG"
+          },
+          {
+            "category": "Motors",
+            "product": "3 Phase Electric Motor",
+            "code": "MTR"
+          },
+          {
+            "category": "Hydraulic Parts",
+            "product": "Hydraulic Hose Assembly",
+            "code": "HYD"
+          }
+        ]
+      },
+      "categoriesOverview": {
+        "title": "Browse Industrial Categories",
+        "copy": "Explore industrial products for factories, workshops, machine maintenance, utilities, and OEM supply in Bangalore."
+      },
+      "brandsPage": {
+        "title": "Browse Industrial Brands",
+        "copy": "Leading brands for bearings, motors, hydraulic products, pneumatic systems, and industrial maintenance supplies."
+      },
+      "contactPage": {
+        "title": "Contact SV Enterprises Industrial Desk",
+        "copy": "Reach us for specification matching, bulk pricing, availability, and urgent industrial product enquiries.",
+        "subtitle": "Industrial Products Wholesale Dealer",
+        "address": "Industrial Supply Market, Shivajinagar, Bangalore - 560001",
+        "hoursKicker": "Support Hours",
+        "hoursTitle": "Industrial Counter Timing",
+        "hoursCopy": "Monday - Saturday: 9:00 AM - 6:30 PM<br>Sunday: On call for repeat buyers",
+        "mapTitle": "Industrial Supply Counter, Bangalore",
+        "mapCopy": "Open location in Google Maps"
+      },
+      "searchPage": {
+        "breadcrumb": "Home > Search",
+        "title": "Search<br>Industrial Products",
+        "copy": "Search by size, specification, model, application, brand, or industrial category.",
+        "placeholder": "Search bearing size, motor model, hose spec...",
+        "suggestionLabel": "Popular searches",
+        "resultsTitle": "Suggested industrial products",
+        "seeAll": "See all 18 ->",
+        "filters": [
+          "All",
+          "Bearings",
+          "Hydraulics",
+          "Motors",
+          "Pneumatics"
+        ],
+        "suggestions": [
+          "6205 ZZ",
+          "3 phase motor",
+          "Hydraulic hose",
+          "Pneumatic cylinder",
+          "Mechanical seal"
+        ],
+        "results": [
+          {
+            "category": "Bearings",
+            "product": "Deep Groove Bearing",
+            "code": "BRG",
+            "meta": "6205 ZZ",
+            "price": "₹185",
+            "status": "Ready stock"
+          },
+          {
+            "category": "Motors",
+            "product": "3 Phase Electric Motor",
+            "code": "MTR",
+            "meta": "2 HP Foot Mount",
+            "price": "₹8,900",
+            "status": "Dealer supply"
+          },
+          {
+            "category": "Hydraulic Parts",
+            "product": "Hydraulic Hose Assembly",
+            "code": "HYD",
+            "meta": "1/2 inch 2SN",
+            "price": "₹1,250",
+            "status": "Made to order"
+          },
+          {
+            "category": "Pneumatic Parts",
+            "product": "Pneumatic Cylinder",
+            "code": "CYL",
+            "meta": "SC 63 x 100",
+            "price": "₹1,780",
+            "status": "In stock"
+          }
+        ]
+      },
+      "filterPanel": {
+        "title": "Filter <span>Products</span>",
+        "copy": "Narrow industrial results by category, brand, application, and specification family.",
+        "fields": [
+          {
+            "label": "Category",
+            "placeholder": "Select Category",
+            "options": [
+              "Bearings",
+              "Hydraulic Parts",
+              "Motors",
+              "Gearboxes",
+              "Pneumatic Parts",
+              "Seals and Couplings"
+            ]
+          },
+          {
+            "label": "Brand",
+            "placeholder": "Select Brand",
+            "options": [
+              "SKF",
+              "Parker",
+              "ABB",
+              "Janatics",
+              "Fenner",
+              "Siemens"
+            ]
+          },
+          {
+            "label": "Application",
+            "placeholder": "Select Application",
+            "options": [
+              "Conveyor",
+              "Compressor",
+              "Pump",
+              "Machine Tool",
+              "Hydraulic Power Pack"
+            ]
+          },
+          {
+            "label": "Product Family",
+            "placeholder": "Select Product Family",
+            "options": [
+              "Rolling",
+              "Power Transmission",
+              "Fluid Power",
+              "Sealing",
+              "Electrical Drive"
+            ]
+          },
+          {
+            "label": "Size / Spec",
+            "placeholder": "Select Size / Spec",
+            "options": [
+              "6205",
+              "1/2 inch",
+              "2 HP",
+              "SC 63",
+              "NM Coupling"
+            ]
+          },
+          {
+            "label": "Supply Type",
+            "placeholder": "Select Supply Type",
+            "options": [
+              "Stock Item",
+              "Made to Order",
+              "Bulk Supply",
+              "Dealer Price",
+              "Service Replacement"
+            ]
+          }
+        ]
+      },
+      "explore": {
+        "title": "Search by Application",
+        "copy": "Choose the industrial use case to explore common maintenance and replacement items faster."
+      },
+      "detail": {
+        "compatTitle": "Suitable For",
+        "specTitle": "Technical Specs",
+        "descriptionTitle": "Product Description",
+        "primaryLabel": "WhatsApp for Pricing",
+        "secondaryLabel": "Call Supply Desk",
+        "noteLabel": "Bulk Supply<br>Available",
+        "metaPoints": [
+          "Dealer Pricing",
+          "Spec Matching",
+          "Bangalore Supply"
+        ],
+        "trust": [
+          {
+            "title": "Standard Sizes",
+            "subtitle": "Ready stock",
+            "icon": "shield"
+          },
+          {
+            "title": "Fast Dispatch",
+            "subtitle": "Across Bangalore",
+            "icon": "truck"
+          },
+          {
+            "title": "Bulk Billing",
+            "subtitle": "GST invoice",
+            "icon": "doc"
+          }
+        ]
+      },
+      "footer": {
+        "copy": "Bangalore industrial products wholesale supplier for bearings, motors, hydraulics, pneumatics, gearboxes, sealing products, and factory maintenance needs."
+      }
+    }
+  },
+  "categories": {
+    "automobile": [
+      {
+        "id": "automobile-engine-parts",
+        "title": "Engine Parts",
+        "slug": "engine-parts",
+        "description": "Filters, belts, gaskets, service parts and overhaul components.",
+        "count": "420+ Parts",
+        "imageUrl": "assets/brake-disc-card.svg",
+        "catalogueCopy": "Workshop-ready engine service parts for daily running cars, utility vehicles and fleet maintenance."
+      },
+      {
+        "id": "automobile-brake-parts",
+        "title": "Brake Parts",
+        "slug": "brake-parts",
+        "description": "Pads, discs, drums, calipers, boosters and brake hardware.",
+        "count": "280+ Parts",
+        "imageUrl": "assets/brake-disc-card.svg",
+        "catalogueCopy": "High quality brake components for cars, SUVs, MUVs and commercial vehicles."
+      },
+      {
+        "id": "automobile-suspension",
+        "title": "Suspension",
+        "slug": "suspension",
+        "description": "Shocks, springs, bushes, links and steering support items.",
+        "count": "310+ Parts",
+        "imageUrl": "assets/brake-disc-card.svg",
+        "catalogueCopy": "Ride control and suspension components for stable handling, heavy usage and fleet upkeep."
+      },
+      {
+        "id": "automobile-electrical",
+        "title": "Electrical",
+        "slug": "electrical",
+        "description": "Sensors, relays, alternators, switches and lamps.",
+        "count": "560+ Parts",
+        "imageUrl": "assets/brake-disc-card.svg",
+        "catalogueCopy": "Fast moving electrical parts for diagnostics, charging systems, sensors and lighting support."
+      },
+      {
+        "id": "automobile-filters",
+        "title": "Filters",
+        "slug": "filters",
+        "description": "Air, oil, cabin, fuel and hydraulic service filters.",
+        "count": "190+ Parts",
+        "imageUrl": "assets/brake-disc-card.svg",
+        "catalogueCopy": "Routine service filters for cleaner airflow, better engine protection and dependable maintenance cycles."
+      },
+      {
+        "id": "automobile-transmission",
+        "title": "Transmission",
+        "slug": "transmission",
+        "description": "Clutch, CV joints, release bearings and drivetrain items.",
+        "count": "240+ Parts",
+        "imageUrl": "assets/brake-disc-card.svg",
+        "catalogueCopy": "Fast moving clutch and drivetrain components for utility vehicles, pickups and commercial use."
+      },
+      {
+        "id": "automobile-cooling",
+        "title": "Cooling",
+        "slug": "cooling",
+        "description": "Radiators, fans, hoses, tanks and thermostats.",
+        "count": "175+ Parts",
+        "imageUrl": "assets/brake-disc-card.svg",
+        "catalogueCopy": "Radiator and cooling line parts for heavy running vehicles, workshop repairs and seasonal maintenance."
+      },
+      {
+        "id": "automobile-body-parts",
+        "title": "Body Parts",
+        "slug": "body-parts",
+        "description": "Mirrors, lamps, panels, handles and exterior trims.",
+        "count": "360+ Parts",
+        "imageUrl": "assets/brake-disc-card.svg",
+        "catalogueCopy": "Exterior trims, lamps and replacement body hardware for repair, accident work and fleet upkeep."
+      }
+    ],
+    "industrial": [
+      {
+        "id": "industrial-bearings",
+        "title": "Bearings",
+        "slug": "bearings",
+        "description": "Deep groove, taper, roller, pedestal and bearing kits.",
+        "count": "260+ Products",
+        "imageUrl": "assets/brake-disc-card.svg",
+        "catalogueCopy": "Moving industrial bearing sizes for maintenance teams, machine builders, and repeat supply buyers."
+      },
+      {
+        "id": "industrial-hydraulic-hoses",
+        "title": "Hydraulic Parts",
+        "slug": "hydraulic-hoses",
+        "description": "Hoses, fittings, pumps, seals and hydraulic service items.",
+        "count": "190+ Products",
+        "imageUrl": "assets/brake-disc-card.svg",
+        "catalogueCopy": "Hydraulic service items for power packs, construction support, presses and machine maintenance.",
+        "slugOverride": "hydraulic-hoses"
+      },
+      {
+        "id": "industrial-motors",
+        "title": "Motors",
+        "slug": "motors",
+        "description": "AC motors, brake motors, geared motors and control drives.",
+        "count": "140+ Products",
+        "imageUrl": "assets/brake-disc-card.svg",
+        "catalogueCopy": "Industrial electric motors and geared drive products for factory and utility applications."
+      },
+      {
+        "id": "industrial-gearboxes",
+        "title": "Gearboxes",
+        "slug": "gearboxes",
+        "description": "Helical, worm, bevel and reduction gearbox assemblies.",
+        "count": "110+ Products",
+        "imageUrl": "assets/brake-disc-card.svg",
+        "catalogueCopy": "Reduction gearbox supply for conveyors, mixers, machine transmissions and repair requirements."
+      },
+      {
+        "id": "industrial-pneumatic-parts",
+        "title": "Pneumatic Parts",
+        "slug": "pneumatic-parts",
+        "description": "FRL units, cylinders, valves, hoses and connectors.",
+        "count": "175+ Products",
+        "imageUrl": "assets/brake-disc-card.svg",
+        "catalogueCopy": "Pneumatic controls and accessories for automation, packaging, and compressed air systems."
+      },
+      {
+        "id": "industrial-seals-and-couplings",
+        "title": "Seals and Couplings",
+        "slug": "seals-and-couplings",
+        "description": "Oil seals, mechanical seals, jaw and chain couplings.",
+        "count": "220+ Products",
+        "imageUrl": "assets/brake-disc-card.svg",
+        "catalogueCopy": "Sealing and transmission support items for pumps, motors, shafts and rotating machinery."
+      }
+    ]
+  },
+  "products": {
+    "automobile": {
+      "engine-parts": [
+        {
+          "id": "automobile-engine-parts-oil-filter-cartridge",
+          "name": "Oil Filter Cartridge",
+          "slug": "oil-filter-cartridge",
+          "oemNumber": "90915YZZD2",
+          "shortDescription": "High efficiency oil filter for scheduled engine service.",
+          "brand": "ELOFIC",
+          "category": "Engine Parts",
+          "categorySlug": "engine-parts",
+          "stockStatus": "in-stock",
+          "popularityRank": 1,
+          "imageUrl": "assets/brake-disc-card.svg",
+          "imageFallbackInitials": "OF",
+          "availableSizes": [
+            "90915YZZD2"
+          ]
+        },
+        {
+          "id": "automobile-engine-parts-air-filter-element",
+          "name": "Air Filter Element",
+          "slug": "air-filter-element",
+          "oemNumber": "17801YZZA1",
+          "shortDescription": "Clean airflow filter for better combustion and mileage.",
+          "brand": "TOYOTA",
+          "category": "Engine Parts",
+          "categorySlug": "engine-parts",
+          "stockStatus": "in-stock",
+          "popularityRank": 2,
+          "imageUrl": "assets/brake-disc-card.svg",
+          "imageFallbackInitials": "AF",
+          "availableSizes": [
+            "17801YZZA1"
+          ]
+        },
+        {
+          "id": "automobile-engine-parts-timing-belt-kit",
+          "name": "Timing Belt Kit",
+          "slug": "timing-belt-kit",
+          "oemNumber": "13568-09041",
+          "shortDescription": "Reliable timing kit for smooth engine synchronization.",
+          "brand": "GATES",
+          "category": "Engine Parts",
+          "categorySlug": "engine-parts",
+          "stockStatus": "in-stock",
+          "popularityRank": 3,
+          "imageUrl": "assets/brake-disc-card.svg",
+          "imageFallbackInitials": "TB"
+        },
+        {
+          "id": "automobile-engine-parts-cylinder-head-gasket",
+          "name": "Cylinder Head Gasket",
+          "slug": "cylinder-head-gasket",
+          "oemNumber": "11115-0L010",
+          "shortDescription": "OE-grade gasket sealing kit for engine overhaul jobs.",
+          "brand": "NPR",
+          "category": "Engine Parts",
+          "categorySlug": "engine-parts",
+          "stockStatus": "in-stock",
+          "popularityRank": 4,
+          "imageUrl": "assets/brake-disc-card.svg",
+          "imageFallbackInitials": "HG"
+        }
+      ],
+      "brake-parts": [
+        {
+          "id": "automobile-brake-parts-brake-disc-rotor",
+          "name": "Brake Disc Rotor",
+          "slug": "brake-disc-rotor",
+          "oemNumber": "51712M68K00",
+          "shortDescription": "Premium quality ventilated brake disc for front axle.",
+          "brand": "BOSCH",
+          "category": "Brake Parts",
+          "categorySlug": "brake-parts",
+          "stockStatus": "in-stock",
+          "popularityRank": 1,
+          "imageUrl": "assets/brake-disc-card.svg",
+          "imageFallbackInitials": "BD",
+          "fullDescription": "High performance ventilated brake disc rotor for front axle. Precision machined for smooth braking, reduced heat build-up and longer life. Manufactured to OEM standards for perfect fit and safety.",
+          "compatibleVehicles": [
+            "Maruti Suzuki Swift (2011-17)",
+            "Maruti Suzuki Dzire (2011-17)",
+            "Maruti Suzuki Ertiga (2012-18)",
+            "Maruti Suzuki WagonR (2010-19)"
+          ],
+          "technicalSpecs": {
+            "Type": "Ventilated Disc",
+            "Diameter": "275 mm",
+            "Bolt Hole": "4",
+            "Position": "Front Axle",
+            "Thickness": "24 mm",
+            "Material": "Cast Iron"
+          }
+        },
+        {
+          "id": "automobile-brake-parts-brake-pad-set",
+          "name": "Brake Pad Set",
+          "slug": "brake-pad-set",
+          "oemNumber": "58101B0A20",
+          "shortDescription": "Ceramic brake pad set with low dust and noise.",
+          "brand": "MOBIS",
+          "category": "Brake Parts",
+          "categorySlug": "brake-parts",
+          "stockStatus": "in-stock",
+          "popularityRank": 2,
+          "imageUrl": "assets/brake-disc-card.svg",
+          "imageFallbackInitials": "BP"
+        },
+        {
+          "id": "automobile-brake-parts-brake-caliper-assy",
+          "name": "Brake Caliper Assy",
+          "slug": "brake-caliper-assy",
+          "oemNumber": "58180M68K00",
+          "shortDescription": "Complete front brake caliper assembly for workshop fitment.",
+          "brand": "MANDO",
+          "category": "Brake Parts",
+          "categorySlug": "brake-parts",
+          "stockStatus": "in-stock",
+          "popularityRank": 3,
+          "imageUrl": "assets/brake-disc-card.svg",
+          "imageFallbackInitials": "BC"
+        },
+        {
+          "id": "automobile-brake-parts-brake-drum",
+          "name": "Brake Drum",
+          "slug": "brake-drum",
+          "oemNumber": "43512M68K00",
+          "shortDescription": "High durability brake drum for rear axle applications.",
+          "brand": "TVS",
+          "category": "Brake Parts",
+          "categorySlug": "brake-parts",
+          "stockStatus": "in-stock",
+          "popularityRank": 4,
+          "imageUrl": "assets/brake-disc-card.svg",
+          "imageFallbackInitials": "BD"
+        }
+      ],
+      "suspension": [
+        {
+          "id": "automobile-suspension-shock-absorber",
+          "name": "Shock Absorber",
+          "slug": "shock-absorber",
+          "oemNumber": "48510-09N20",
+          "shortDescription": "Gas charged front shock absorber for stable ride quality.",
+          "brand": "KYB",
+          "category": "Suspension",
+          "categorySlug": "suspension",
+          "stockStatus": "in-stock",
+          "popularityRank": 1,
+          "imageUrl": "assets/brake-disc-card.svg",
+          "imageFallbackInitials": "SA"
+        },
+        {
+          "id": "automobile-suspension-lower-arm-bush",
+          "name": "Lower Arm Bush",
+          "slug": "lower-arm-bush",
+          "oemNumber": "48654-0K020",
+          "shortDescription": "Durable suspension bush for reduced vibration and noise.",
+          "brand": "555",
+          "category": "Suspension",
+          "categorySlug": "suspension",
+          "stockStatus": "in-stock",
+          "popularityRank": 2,
+          "imageUrl": "assets/brake-disc-card.svg",
+          "imageFallbackInitials": "LB"
+        },
+        {
+          "id": "automobile-suspension-stabilizer-link",
+          "name": "Stabilizer Link",
+          "slug": "stabilizer-link",
+          "oemNumber": "48820-0K010",
+          "shortDescription": "Strong link rod for balanced cornering and body control.",
+          "brand": "CTR",
+          "category": "Suspension",
+          "categorySlug": "suspension",
+          "stockStatus": "in-stock",
+          "popularityRank": 3,
+          "imageUrl": "assets/brake-disc-card.svg",
+          "imageFallbackInitials": "SL"
+        },
+        {
+          "id": "automobile-suspension-coil-spring",
+          "name": "Coil Spring",
+          "slug": "coil-spring",
+          "oemNumber": "48131-0K340",
+          "shortDescription": "Heavy-duty spring for restored ride height and support.",
+          "brand": "LESJOFORS",
+          "category": "Suspension",
+          "categorySlug": "suspension",
+          "stockStatus": "in-stock",
+          "popularityRank": 4,
+          "imageUrl": "assets/brake-disc-card.svg",
+          "imageFallbackInitials": "CS"
+        }
+      ],
+      "electrical": [
+        {
+          "id": "automobile-electrical-o2-sensor",
+          "name": "O2 Sensor",
+          "slug": "o2-sensor",
+          "oemNumber": "89467-30030",
+          "shortDescription": "OE-spec oxygen sensor for emission control and mileage.",
+          "brand": "DENSO",
+          "category": "Electrical",
+          "categorySlug": "electrical",
+          "stockStatus": "in-stock",
+          "popularityRank": 1,
+          "imageUrl": "assets/brake-disc-card.svg",
+          "imageFallbackInitials": "O2"
+        },
+        {
+          "id": "automobile-electrical-alternator-assy",
+          "name": "Alternator Assy",
+          "slug": "alternator-assy",
+          "oemNumber": "27060-0L170",
+          "shortDescription": "Charging unit for consistent battery and electrical load.",
+          "brand": "BOSCH",
+          "category": "Electrical",
+          "categorySlug": "electrical",
+          "stockStatus": "in-stock",
+          "popularityRank": 2,
+          "imageUrl": "assets/brake-disc-card.svg",
+          "imageFallbackInitials": "AL"
+        },
+        {
+          "id": "automobile-electrical-head-lamp-relay",
+          "name": "Head Lamp Relay",
+          "slug": "head-lamp-relay",
+          "oemNumber": "90987-02028",
+          "shortDescription": "Reliable relay for lighting circuit protection and control.",
+          "brand": "HELLA",
+          "category": "Electrical",
+          "categorySlug": "electrical",
+          "stockStatus": "in-stock",
+          "popularityRank": 3,
+          "imageUrl": "assets/brake-disc-card.svg",
+          "imageFallbackInitials": "RL"
+        },
+        {
+          "id": "automobile-electrical-battery-terminal-set",
+          "name": "Battery Terminal Set",
+          "slug": "battery-terminal-set",
+          "oemNumber": "BT-2210",
+          "shortDescription": "Heavy gauge terminal set for workshop battery replacements.",
+          "brand": "LUCAS",
+          "category": "Electrical",
+          "categorySlug": "electrical",
+          "stockStatus": "in-stock",
+          "popularityRank": 4,
+          "imageUrl": "assets/brake-disc-card.svg",
+          "imageFallbackInitials": "BT"
+        }
+      ],
+      "filters": [
+        {
+          "id": "automobile-filters-fuel-filter-assembly",
+          "name": "Fuel Filter Assembly",
+          "slug": "fuel-filter-assembly",
+          "oemNumber": "23390-0L041",
+          "shortDescription": "Fuel filtration unit for clean injection performance.",
+          "brand": "DELPHI",
+          "category": "Filters",
+          "categorySlug": "filters",
+          "stockStatus": "in-stock",
+          "popularityRank": 1,
+          "imageUrl": "assets/brake-disc-card.svg",
+          "imageFallbackInitials": "FF"
+        },
+        {
+          "id": "automobile-filters-cabin-filter",
+          "name": "Cabin Filter",
+          "slug": "cabin-filter",
+          "oemNumber": "87139-0D070",
+          "shortDescription": "Dust and pollen cabin filter for passenger comfort.",
+          "brand": "MAHLE",
+          "category": "Filters",
+          "categorySlug": "filters",
+          "stockStatus": "in-stock",
+          "popularityRank": 2,
+          "imageUrl": "assets/brake-disc-card.svg",
+          "imageFallbackInitials": "CF"
+        },
+        {
+          "id": "automobile-filters-hydraulic-filter",
+          "name": "Hydraulic Filter",
+          "slug": "hydraulic-filter",
+          "oemNumber": "HF-5402",
+          "shortDescription": "Hydraulic system filter for workshop and equipment service.",
+          "brand": "DONALDSON",
+          "category": "Filters",
+          "categorySlug": "filters",
+          "stockStatus": "in-stock",
+          "popularityRank": 3,
+          "imageUrl": "assets/brake-disc-card.svg",
+          "imageFallbackInitials": "HF"
+        },
+        {
+          "id": "automobile-filters-air-cleaner-set",
+          "name": "Air Cleaner Set",
+          "slug": "air-cleaner-set",
+          "oemNumber": "17801-30040",
+          "shortDescription": "Service replacement air cleaner for diesel utility vehicles.",
+          "brand": "MANN",
+          "category": "Filters",
+          "categorySlug": "filters",
+          "stockStatus": "in-stock",
+          "popularityRank": 4,
+          "imageUrl": "assets/brake-disc-card.svg",
+          "imageFallbackInitials": "AC"
+        }
+      ],
+      "transmission": [
+        {
+          "id": "automobile-transmission-clutch-cover",
+          "name": "Clutch Cover",
+          "slug": "clutch-cover",
+          "oemNumber": "31210-0K281",
+          "shortDescription": "Heavy-duty clutch cover for reliable torque transfer.",
+          "brand": "AISIN",
+          "category": "Transmission",
+          "categorySlug": "transmission",
+          "stockStatus": "in-stock",
+          "popularityRank": 1,
+          "imageUrl": "assets/brake-disc-card.svg",
+          "imageFallbackInitials": "CC"
+        },
+        {
+          "id": "automobile-transmission-clutch-plate",
+          "name": "Clutch Plate",
+          "slug": "clutch-plate",
+          "oemNumber": "31250-0K280",
+          "shortDescription": "Friction disc engineered for smoother gear shifts.",
+          "brand": "EXEDY",
+          "category": "Transmission",
+          "categorySlug": "transmission",
+          "stockStatus": "in-stock",
+          "popularityRank": 2,
+          "imageUrl": "assets/brake-disc-card.svg",
+          "imageFallbackInitials": "CP"
+        },
+        {
+          "id": "automobile-transmission-release-bearing",
+          "name": "Release Bearing",
+          "slug": "release-bearing",
+          "oemNumber": "31230-71010",
+          "shortDescription": "Low-noise bearing for dependable clutch release action.",
+          "brand": "NSK",
+          "category": "Transmission",
+          "categorySlug": "transmission",
+          "stockStatus": "in-stock",
+          "popularityRank": 3,
+          "imageUrl": "assets/brake-disc-card.svg",
+          "imageFallbackInitials": "RB"
+        },
+        {
+          "id": "automobile-transmission-cv-joint-kit",
+          "name": "CV Joint Kit",
+          "slug": "cv-joint-kit",
+          "oemNumber": "43420-0K020",
+          "shortDescription": "Drive shaft CV kit for long service life and fitment ease.",
+          "brand": "GSP",
+          "category": "Transmission",
+          "categorySlug": "transmission",
+          "stockStatus": "in-stock",
+          "popularityRank": 4,
+          "imageUrl": "assets/brake-disc-card.svg",
+          "imageFallbackInitials": "CV"
+        }
+      ],
+      "cooling": [
+        {
+          "id": "automobile-cooling-radiator-assembly",
+          "name": "Radiator Assembly",
+          "slug": "radiator-assembly",
+          "oemNumber": "16400-0L240",
+          "shortDescription": "Complete radiator unit for dependable engine cooling.",
+          "brand": "DENSO",
+          "category": "Cooling",
+          "categorySlug": "cooling",
+          "stockStatus": "in-stock",
+          "popularityRank": 1,
+          "imageUrl": "assets/brake-disc-card.svg",
+          "imageFallbackInitials": "RA"
+        },
+        {
+          "id": "automobile-cooling-coolant-hose-set",
+          "name": "Coolant Hose Set",
+          "slug": "coolant-hose-set",
+          "oemNumber": "16571-0L070",
+          "shortDescription": "Moulded hose kit for leak-free coolant circulation.",
+          "brand": "GATES",
+          "category": "Cooling",
+          "categorySlug": "cooling",
+          "stockStatus": "in-stock",
+          "popularityRank": 2,
+          "imageUrl": "assets/brake-disc-card.svg",
+          "imageFallbackInitials": "CH"
+        },
+        {
+          "id": "automobile-cooling-thermostat-valve",
+          "name": "Thermostat Valve",
+          "slug": "thermostat-valve",
+          "oemNumber": "90916-03100",
+          "shortDescription": "Accurate temperature regulation for engine protection.",
+          "brand": "TOYOTA",
+          "category": "Cooling",
+          "categorySlug": "cooling",
+          "stockStatus": "in-stock",
+          "popularityRank": 3,
+          "imageUrl": "assets/brake-disc-card.svg",
+          "imageFallbackInitials": "TV"
+        },
+        {
+          "id": "automobile-cooling-cooling-fan-motor",
+          "name": "Cooling Fan Motor",
+          "slug": "cooling-fan-motor",
+          "oemNumber": "16363-0L050",
+          "shortDescription": "Fan motor assembly for stable airflow and heat control.",
+          "brand": "BOSCH",
+          "category": "Cooling",
+          "categorySlug": "cooling",
+          "stockStatus": "in-stock",
+          "popularityRank": 4,
+          "imageUrl": "assets/brake-disc-card.svg",
+          "imageFallbackInitials": "FM"
+        }
+      ],
+      "body-parts": [
+        {
+          "id": "automobile-body-parts-head-lamp-assembly",
+          "name": "Head Lamp Assembly",
+          "slug": "head-lamp-assembly",
+          "oemNumber": "81150-0K340",
+          "shortDescription": "Clear lens head lamp assembly for right side fitment.",
+          "brand": "HELLA",
+          "category": "Body Parts",
+          "categorySlug": "body-parts",
+          "stockStatus": "in-stock",
+          "popularityRank": 1,
+          "imageUrl": "assets/brake-disc-card.svg",
+          "imageFallbackInitials": "HL"
+        },
+        {
+          "id": "automobile-body-parts-door-mirror",
+          "name": "Door Mirror",
+          "slug": "door-mirror",
+          "oemNumber": "87910-0K241",
+          "shortDescription": "Replacement side mirror for daily use utility vehicles.",
+          "brand": "TYC",
+          "category": "Body Parts",
+          "categorySlug": "body-parts",
+          "stockStatus": "in-stock",
+          "popularityRank": 2,
+          "imageUrl": "assets/brake-disc-card.svg",
+          "imageFallbackInitials": "DM"
+        },
+        {
+          "id": "automobile-body-parts-tail-lamp-unit",
+          "name": "Tail Lamp Unit",
+          "slug": "tail-lamp-unit",
+          "oemNumber": "81550-0K120",
+          "shortDescription": "Rear tail lamp with OE-style fit and light output.",
+          "brand": "DEPO",
+          "category": "Body Parts",
+          "categorySlug": "body-parts",
+          "stockStatus": "in-stock",
+          "popularityRank": 3,
+          "imageUrl": "assets/brake-disc-card.svg",
+          "imageFallbackInitials": "TL"
+        },
+        {
+          "id": "automobile-body-parts-outer-door-handle",
+          "name": "Outer Door Handle",
+          "slug": "outer-door-handle",
+          "oemNumber": "69210-0K010",
+          "shortDescription": "Durable exterior door handle for service replacement.",
+          "brand": "TOYOTA",
+          "category": "Body Parts",
+          "categorySlug": "body-parts",
+          "stockStatus": "in-stock",
+          "popularityRank": 4,
+          "imageUrl": "assets/brake-disc-card.svg",
+          "imageFallbackInitials": "DH"
+        }
+      ]
+    },
+    "industrial": {
+      "bearings": [
+        {
+          "id": "industrial-bearings-skf-6205",
+          "name": "Deep Groove Bearing",
+          "slug": "skf-6205",
+          "oemNumber": "6205 ZZ",
+          "shortDescription": "Standard deep groove bearing for motors, pumps and rotating assemblies.",
+          "brand": "SKF",
+          "category": "Bearings",
+          "categorySlug": "bearings",
+          "stockStatus": "ready-stock",
+          "popularityRank": 1,
+          "imageUrl": "assets/brake-disc-card.svg",
+          "imageFallbackInitials": "BR",
+          "slugOverride": "skf-6205",
+          "fullDescription": "Reliable deep groove bearing for regular industrial rotation duty. Suitable for motors, pumps, conveyors and other common maintenance requirements.",
+          "compatibleApplications": [
+            "Electric motors",
+            "Industrial pumps",
+            "Conveyor rollers",
+            "General machinery"
+          ],
+          "technicalSpecs": {
+            "Type": "Deep Groove Ball Bearing",
+            "Size": "25 x 52 x 15 mm",
+            "Shield": "Double metal shield",
+            "Series": "6205",
+            "Lubrication": "Pre-greased",
+            "Application": "General rotating equipment"
+          },
+          "availableSizes": [
+            "6205 ZZ"
+          ]
+        },
+        {
+          "id": "industrial-bearings-pillow-block-unit",
+          "name": "Pillow Block Unit",
+          "slug": "pillow-block-unit",
+          "oemNumber": "UCP205",
+          "shortDescription": "Mounted bearing housing unit for shafts and conveyor support frames.",
+          "brand": "NTN",
+          "category": "Bearings",
+          "categorySlug": "bearings",
+          "stockStatus": "ready-stock",
+          "popularityRank": 2,
+          "imageUrl": "assets/brake-disc-card.svg",
+          "imageFallbackInitials": "PB",
+          "availableSizes": [
+            "UCP205"
+          ]
+        },
+        {
+          "id": "industrial-bearings-taper-roller-bearing",
+          "name": "Taper Roller Bearing",
+          "slug": "taper-roller-bearing",
+          "oemNumber": "30205",
+          "shortDescription": "Load-supporting taper roller bearing for heavier radial and axial duty.",
+          "brand": "FAG",
+          "category": "Bearings",
+          "categorySlug": "bearings",
+          "stockStatus": "ready-stock",
+          "popularityRank": 3,
+          "imageUrl": "assets/brake-disc-card.svg",
+          "imageFallbackInitials": "TR"
+        },
+        {
+          "id": "industrial-bearings-needle-bearing",
+          "name": "Needle Bearing",
+          "slug": "needle-bearing",
+          "oemNumber": "HK2020",
+          "shortDescription": "Compact needle bearing for limited space industrial assemblies.",
+          "brand": "IKO",
+          "category": "Bearings",
+          "categorySlug": "bearings",
+          "stockStatus": "ready-stock",
+          "popularityRank": 4,
+          "imageUrl": "assets/brake-disc-card.svg",
+          "imageFallbackInitials": "NB"
+        }
+      ],
+      "hydraulic-hoses": [
+        {
+          "id": "industrial-hydraulic-hoses-hydraulic-hose-assembly",
+          "name": "Hydraulic Hose Assembly",
+          "slug": "hydraulic-hose-assembly",
+          "oemNumber": "1/2 inch 2SN",
+          "shortDescription": "High pressure hose assembly with crimped end fittings.",
+          "brand": "PARKER",
+          "category": "Hydraulic Parts",
+          "categorySlug": "hydraulic-hoses",
+          "stockStatus": "ready-stock",
+          "popularityRank": 1,
+          "imageUrl": "assets/brake-disc-card.svg",
+          "imageFallbackInitials": "HH",
+          "availableSizes": [
+            "1/2 inch 2SN"
+          ]
+        },
+        {
+          "id": "industrial-hydraulic-hoses-hydraulic-seal-kit",
+          "name": "Hydraulic Seal Kit",
+          "slug": "hydraulic-seal-kit",
+          "oemNumber": "CYL-63-SEAL",
+          "shortDescription": "Seal kit for standard hydraulic cylinder repair and leakage control.",
+          "brand": "HALLITE",
+          "category": "Hydraulic Parts",
+          "categorySlug": "hydraulic-hoses",
+          "stockStatus": "ready-stock",
+          "popularityRank": 2,
+          "imageUrl": "assets/brake-disc-card.svg",
+          "imageFallbackInitials": "SK"
+        },
+        {
+          "id": "industrial-hydraulic-hoses-gear-pump",
+          "name": "Gear Pump",
+          "slug": "gear-pump",
+          "oemNumber": "GP-16CC",
+          "shortDescription": "Hydraulic gear pump for compact power pack and machine service use.",
+          "brand": "YUKEN",
+          "category": "Hydraulic Parts",
+          "categorySlug": "hydraulic-hoses",
+          "stockStatus": "ready-stock",
+          "popularityRank": 3,
+          "imageUrl": "assets/brake-disc-card.svg",
+          "imageFallbackInitials": "GP"
+        },
+        {
+          "id": "industrial-hydraulic-hoses-directional-valve",
+          "name": "Directional Valve",
+          "slug": "directional-valve",
+          "oemNumber": "4WE6",
+          "shortDescription": "Directional control valve for hydraulic line flow switching.",
+          "brand": "BOSCH REXROTH",
+          "category": "Hydraulic Parts",
+          "categorySlug": "hydraulic-hoses",
+          "stockStatus": "ready-stock",
+          "popularityRank": 4,
+          "imageUrl": "assets/brake-disc-card.svg",
+          "imageFallbackInitials": "DV"
+        }
+      ],
+      "motors": [
+        {
+          "id": "industrial-motors-3-phase-electric-motor",
+          "name": "3 Phase Electric Motor",
+          "slug": "3-phase-electric-motor",
+          "oemNumber": "2 HP Foot Mount",
+          "shortDescription": "Reliable three phase induction motor for general industrial machinery.",
+          "brand": "ABB",
+          "category": "Motors",
+          "categorySlug": "motors",
+          "stockStatus": "ready-stock",
+          "popularityRank": 1,
+          "imageUrl": "assets/brake-disc-card.svg",
+          "imageFallbackInitials": "EM",
+          "availableSizes": [
+            "2 HP Foot Mount"
+          ]
+        },
+        {
+          "id": "industrial-motors-brake-motor",
+          "name": "Brake Motor",
+          "slug": "brake-motor",
+          "oemNumber": "1 HP B14",
+          "shortDescription": "AC brake motor for controlled stopping in machinery and conveyor use.",
+          "brand": "CG",
+          "category": "Motors",
+          "categorySlug": "motors",
+          "stockStatus": "ready-stock",
+          "popularityRank": 2,
+          "imageUrl": "assets/brake-disc-card.svg",
+          "imageFallbackInitials": "BM",
+          "availableSizes": [
+            "1 HP B14"
+          ]
+        },
+        {
+          "id": "industrial-motors-geared-motor",
+          "name": "Geared Motor",
+          "slug": "geared-motor",
+          "oemNumber": "40 RPM",
+          "shortDescription": "Compact geared motor for torque-driven low-speed applications.",
+          "brand": "BONFIGLIOLI",
+          "category": "Motors",
+          "categorySlug": "motors",
+          "stockStatus": "ready-stock",
+          "popularityRank": 3,
+          "imageUrl": "assets/brake-disc-card.svg",
+          "imageFallbackInitials": "GM",
+          "availableSizes": [
+            "40 RPM"
+          ]
+        },
+        {
+          "id": "industrial-motors-motor-cooling-fan",
+          "name": "Motor Cooling Fan",
+          "slug": "motor-cooling-fan",
+          "oemNumber": "Frame 100",
+          "shortDescription": "Cooling fan replacement for standard TEFC industrial motors.",
+          "brand": "SIEMENS",
+          "category": "Motors",
+          "categorySlug": "motors",
+          "stockStatus": "ready-stock",
+          "popularityRank": 4,
+          "imageUrl": "assets/brake-disc-card.svg",
+          "imageFallbackInitials": "MF",
+          "availableSizes": [
+            "Frame 100"
+          ]
+        }
+      ],
+      "gearboxes": [
+        {
+          "id": "industrial-gearboxes-worm-gearbox",
+          "name": "Worm Gearbox",
+          "slug": "worm-gearbox",
+          "oemNumber": "NMRV 063",
+          "shortDescription": "Compact worm reduction gearbox for low speed torque transfer.",
+          "brand": "FENNER",
+          "category": "Gearboxes",
+          "categorySlug": "gearboxes",
+          "stockStatus": "ready-stock",
+          "popularityRank": 1,
+          "imageUrl": "assets/brake-disc-card.svg",
+          "imageFallbackInitials": "WG",
+          "availableSizes": [
+            "NMRV 063"
+          ]
+        },
+        {
+          "id": "industrial-gearboxes-helical-gearbox",
+          "name": "Helical Gearbox",
+          "slug": "helical-gearbox",
+          "oemNumber": "H Series 80",
+          "shortDescription": "Industrial helical gearbox for efficient drive transmission.",
+          "brand": "BONFIGLIOLI",
+          "category": "Gearboxes",
+          "categorySlug": "gearboxes",
+          "stockStatus": "ready-stock",
+          "popularityRank": 2,
+          "imageUrl": "assets/brake-disc-card.svg",
+          "imageFallbackInitials": "HG",
+          "availableSizes": [
+            "H Series 80"
+          ]
+        },
+        {
+          "id": "industrial-gearboxes-gear-coupling-hub",
+          "name": "Gear Coupling Hub",
+          "slug": "gear-coupling-hub",
+          "oemNumber": "GC-90",
+          "shortDescription": "Drive coupling hub for gearbox and shaft alignment assemblies.",
+          "brand": "LOVEJOY",
+          "category": "Gearboxes",
+          "categorySlug": "gearboxes",
+          "stockStatus": "ready-stock",
+          "popularityRank": 3,
+          "imageUrl": "assets/brake-disc-card.svg",
+          "imageFallbackInitials": "CH"
+        },
+        {
+          "id": "industrial-gearboxes-reducer-oil-seal",
+          "name": "Reducer Oil Seal",
+          "slug": "reducer-oil-seal",
+          "oemNumber": "80 x 100",
+          "shortDescription": "Gearbox seal for maintenance replacement and leakage prevention.",
+          "brand": "NAK",
+          "category": "Gearboxes",
+          "categorySlug": "gearboxes",
+          "stockStatus": "ready-stock",
+          "popularityRank": 4,
+          "imageUrl": "assets/brake-disc-card.svg",
+          "imageFallbackInitials": "OS",
+          "availableSizes": [
+            "80 x 100"
+          ]
+        }
+      ],
+      "pneumatic-parts": [
+        {
+          "id": "industrial-pneumatic-parts-pneumatic-cylinder",
+          "name": "Pneumatic Cylinder",
+          "slug": "pneumatic-cylinder",
+          "oemNumber": "SC 63 x 100",
+          "shortDescription": "Standard pneumatic cylinder for linear motion in automation setups.",
+          "brand": "JANATICS",
+          "category": "Pneumatic Parts",
+          "categorySlug": "pneumatic-parts",
+          "stockStatus": "ready-stock",
+          "popularityRank": 1,
+          "imageUrl": "assets/brake-disc-card.svg",
+          "imageFallbackInitials": "PC",
+          "availableSizes": [
+            "SC 63 x 100"
+          ]
+        },
+        {
+          "id": "industrial-pneumatic-parts-frl-unit",
+          "name": "FRL Unit",
+          "slug": "frl-unit",
+          "oemNumber": "1/2 inch",
+          "shortDescription": "Filter regulator lubricator unit for compressed air treatment.",
+          "brand": "AIRTAC",
+          "category": "Pneumatic Parts",
+          "categorySlug": "pneumatic-parts",
+          "stockStatus": "ready-stock",
+          "popularityRank": 2,
+          "imageUrl": "assets/brake-disc-card.svg",
+          "imageFallbackInitials": "FR",
+          "availableSizes": [
+            "1/2 inch"
+          ]
+        },
+        {
+          "id": "industrial-pneumatic-parts-solenoid-valve",
+          "name": "Solenoid Valve",
+          "slug": "solenoid-valve",
+          "oemNumber": "5/2 24VDC",
+          "shortDescription": "Directional pneumatic valve for machine actuation control.",
+          "brand": "SMC",
+          "category": "Pneumatic Parts",
+          "categorySlug": "pneumatic-parts",
+          "stockStatus": "ready-stock",
+          "popularityRank": 3,
+          "imageUrl": "assets/brake-disc-card.svg",
+          "imageFallbackInitials": "SV",
+          "availableSizes": [
+            "5/2 24VDC"
+          ]
+        },
+        {
+          "id": "industrial-pneumatic-parts-pu-tube-roll",
+          "name": "PU Tube Roll",
+          "slug": "pu-tube-roll",
+          "oemNumber": "8 x 5 mm",
+          "shortDescription": "Flexible pneumatic tubing for workshop and automation routing.",
+          "brand": "JANATICS",
+          "category": "Pneumatic Parts",
+          "categorySlug": "pneumatic-parts",
+          "stockStatus": "ready-stock",
+          "popularityRank": 4,
+          "imageUrl": "assets/brake-disc-card.svg",
+          "imageFallbackInitials": "PU",
+          "availableSizes": [
+            "8 x 5 mm"
+          ]
+        }
+      ],
+      "seals-and-couplings": [
+        {
+          "id": "industrial-seals-and-couplings-mechanical-seal",
+          "name": "Mechanical Seal",
+          "slug": "mechanical-seal",
+          "oemNumber": "MG1 28 mm",
+          "shortDescription": "General-duty mechanical seal for pump maintenance replacement.",
+          "brand": "BURGMANN",
+          "category": "Seals and Couplings",
+          "categorySlug": "seals-and-couplings",
+          "stockStatus": "ready-stock",
+          "popularityRank": 1,
+          "imageUrl": "assets/brake-disc-card.svg",
+          "imageFallbackInitials": "MS",
+          "availableSizes": [
+            "MG1 28 mm"
+          ]
+        },
+        {
+          "id": "industrial-seals-and-couplings-jaw-coupling-set",
+          "name": "Jaw Coupling Set",
+          "slug": "jaw-coupling-set",
+          "oemNumber": "L095",
+          "shortDescription": "Flexible jaw coupling for motor to pump or gearbox connection.",
+          "brand": "FENNER",
+          "category": "Seals and Couplings",
+          "categorySlug": "seals-and-couplings",
+          "stockStatus": "ready-stock",
+          "popularityRank": 2,
+          "imageUrl": "assets/brake-disc-card.svg",
+          "imageFallbackInitials": "JC"
+        },
+        {
+          "id": "industrial-seals-and-couplings-oil-seal",
+          "name": "Oil Seal",
+          "slug": "oil-seal",
+          "oemNumber": "40 x 62 x 10",
+          "shortDescription": "Nitrile oil seal for shaft sealing in reducers and pump drives.",
+          "brand": "NAK",
+          "category": "Seals and Couplings",
+          "categorySlug": "seals-and-couplings",
+          "stockStatus": "ready-stock",
+          "popularityRank": 3,
+          "imageUrl": "assets/brake-disc-card.svg",
+          "imageFallbackInitials": "OS",
+          "availableSizes": [
+            "40 x 62 x 10"
+          ]
+        },
+        {
+          "id": "industrial-seals-and-couplings-chain-coupling",
+          "name": "Chain Coupling",
+          "slug": "chain-coupling",
+          "oemNumber": "KC 5012",
+          "shortDescription": "Heavy-duty chain coupling for industrial drive transmission.",
+          "brand": "ROLON",
+          "category": "Seals and Couplings",
+          "categorySlug": "seals-and-couplings",
+          "stockStatus": "ready-stock",
+          "popularityRank": 4,
+          "imageUrl": "assets/brake-disc-card.svg",
+          "imageFallbackInitials": "CC"
+        }
+      ]
+    }
+  },
+  "brands": {
+    "automobile": [
+      {
+        "id": "automobile-annabond",
+        "name": "Annabond",
+        "mode": "automobile"
+      },
+      {
+        "id": "automobile-ceekay",
+        "name": "Ceekay",
+        "mode": "automobile"
+      },
+      {
+        "id": "automobile-delphi",
+        "name": "Delphi",
+        "mode": "automobile"
+      },
+      {
+        "id": "automobile-elofic",
+        "name": "Elofic",
+        "mode": "automobile"
+      },
+      {
+        "id": "automobile-gabriel",
+        "name": "Gabriel",
+        "mode": "automobile"
+      },
+      {
+        "id": "automobile-gates",
+        "name": "Gates",
+        "mode": "automobile"
+      },
+      {
+        "id": "automobile-hella",
+        "name": "Hella",
+        "mode": "automobile"
+      },
+      {
+        "id": "automobile-hi-q",
+        "name": "Hi-Q+",
+        "mode": "automobile"
+      },
+      {
+        "id": "automobile-ngk",
+        "name": "NGK",
+        "mode": "automobile"
+      },
+      {
+        "id": "automobile-osram",
+        "name": "OSRAM",
+        "mode": "automobile"
+      },
+      {
+        "id": "automobile-varroc",
+        "name": "Varroc",
+        "mode": "automobile"
+      },
+      {
+        "id": "automobile-wurth",
+        "name": "Wurth",
+        "mode": "automobile"
+      }
+    ],
+    "industrial": [
+      {
+        "id": "industrial-skf",
+        "name": "SKF",
+        "mode": "industrial"
+      },
+      {
+        "id": "industrial-nsk",
+        "name": "NSK",
+        "mode": "industrial"
+      },
+      {
+        "id": "industrial-fag",
+        "name": "FAG",
+        "mode": "industrial"
+      },
+      {
+        "id": "industrial-fenner",
+        "name": "Fenner",
+        "mode": "industrial"
+      },
+      {
+        "id": "industrial-bonfiglioli",
+        "name": "Bonfiglioli",
+        "mode": "industrial"
+      },
+      {
+        "id": "industrial-bosch-rexroth",
+        "name": "Bosch Rexroth",
+        "mode": "industrial"
+      },
+      {
+        "id": "industrial-janatics",
+        "name": "Janatics",
+        "mode": "industrial"
+      },
+      {
+        "id": "industrial-parker",
+        "name": "Parker",
+        "mode": "industrial"
+      },
+      {
+        "id": "industrial-abb",
+        "name": "ABB",
+        "mode": "industrial"
+      },
+      {
+        "id": "industrial-siemens",
+        "name": "Siemens",
+        "mode": "industrial"
+      },
+      {
+        "id": "industrial-hiwin",
+        "name": "Hiwin",
+        "mode": "industrial"
+      },
+      {
+        "id": "industrial-wurth",
+        "name": "Wurth",
+        "mode": "industrial"
+      }
+    ]
+  },
+  "vehicles": [
+    {
+      "id": "tractors",
+      "title": "Tractors",
+      "slug": "tractors",
+      "description": "Agriculture tractor parts for field duty, hydraulics, clutch, lighting, and routine service.",
+      "imageUrl": "assets/tractor-hero-provided.png",
+      "parts": [
+        "Clutch Plate and Pressure Plate",
+        "Hydraulic Pump",
+        "Fuel Filter Assembly",
+        "Work Lamp LED",
+        "Radiator Hose",
+        "Brake Shoe Set",
+        "Steering Ball Joint",
+        "Engine Mount"
+      ]
+    },
+    {
+      "id": "bus-trailers",
+      "title": "Bus and Trailers",
+      "slug": "bus-trailers",
+      "description": "Heavy-duty fleet parts for brake, suspension, body electrical, lamps, and trailer hardware.",
+      "imageUrl": "assets/car-suv-cutout.png",
+      "parts": [
+        "Air Brake Valve",
+        "Brake Lining Kit",
+        "Tail Lamp Assembly",
+        "Leaf Spring Bush",
+        "Wheel Bearing Kit",
+        "Trailer Coupling",
+        "Side Marker Lamp",
+        "Shock Absorber"
+      ]
+    },
+    {
+      "id": "construction",
+      "title": "Construction Vehicles",
+      "slug": "construction",
+      "description": "High-demand parts for loaders, backhoes, excavators, site vehicles, and construction equipment.",
+      "imageUrl": "assets/hero-machine-parts-cutout.png",
+      "parts": [
+        "Work Lamp H3",
+        "Work Lamp LED",
+        "Head Lamps",
+        "Tail Lamps",
+        "Hydraulic Filter",
+        "Bucket Tooth",
+        "Starter Motor",
+        "Radiator Assembly"
+      ]
+    },
+    {
+      "id": "three-wheeler",
+      "title": "Three Wheeler",
+      "slug": "three-wheeler",
+      "description": "Auto rickshaw spares for engine, body, cables, lighting, brake, and service requirements.",
+      "imageUrl": "assets/car-sedan-cutout.png",
+      "parts": [
+        "Clutch Cable",
+        "Brake Drum",
+        "Head Lamp Unit",
+        "Accelerator Cable",
+        "Air Filter",
+        "Spark Plug",
+        "Silencer Assembly",
+        "Wheel Bearing"
+      ]
+    },
+    {
+      "id": "two-wheeler",
+      "title": "Two Wheeler",
+      "slug": "two-wheeler",
+      "description": "Bike and scooter parts for daily service, braking, lighting, cables, filters, and electricals.",
+      "imageUrl": "assets/car-sedan-cutout.png",
+      "parts": [
+        "Disc Pad Set",
+        "Drive Belt",
+        "Brake Cable",
+        "Indicator Lamp",
+        "Oil Filter",
+        "Chain Sprocket Kit",
+        "Battery Relay",
+        "Mirror Set"
+      ]
+    },
+    {
+      "id": "forklift",
+      "title": "Forklift",
+      "slug": "forklift",
+      "description": "Industrial forklift parts for mast, hydraulic, drivetrain, brake, electrical, and service systems.",
+      "imageUrl": "assets/hero-machine-parts-cutout.png",
+      "parts": [
+        "Forklift Fork Pin",
+        "Mast Roller Bearing",
+        "Hydraulic Hose",
+        "Control Valve",
+        "Solid Tyre",
+        "Brake Master Cylinder",
+        "Reverse Alarm",
+        "Load Wheel Bearing"
+      ]
+    }
+  ],
+  "applications": [
+    {
+      "id": "conveyors",
+      "title": "Conveyor Systems",
+      "slug": "conveyors",
+      "description": "Bearings, couplings, geared motors, chains, and conveyor maintenance items.",
+      "imageUrl": "assets/hero-machine-parts-cutout.png",
+      "parts": [
+        "Bearing Housing",
+        "Chain Coupling",
+        "Geared Motor",
+        "Rubber Lagging",
+        "Take-up Bearing",
+        "Roller Chain",
+        "V Belt",
+        "Drive Sprocket"
+      ],
+      "badge": "CV"
+    },
+    {
+      "id": "compressors",
+      "title": "Compressors",
+      "slug": "compressors",
+      "description": "Filters, valves, seals, hoses and service items for air compressor maintenance.",
+      "imageUrl": "assets/hero-machine-parts-cutout.png",
+      "parts": [
+        "Air Intake Filter",
+        "NRV Valve",
+        "Pressure Switch",
+        "Compressor Oil Seal",
+        "Discharge Hose",
+        "Drain Valve",
+        "Motor Pulley",
+        "Belt Set"
+      ],
+      "badge": "CP"
+    },
+    {
+      "id": "hydraulics",
+      "title": "Hydraulic Power Packs",
+      "slug": "hydraulics",
+      "description": "Hydraulic hoses, seals, pumps, valves and line accessories.",
+      "imageUrl": "assets/hero-machine-parts-cutout.png",
+      "parts": [
+        "Hydraulic Hose",
+        "Seal Kit",
+        "Directional Valve",
+        "Gear Pump",
+        "Pressure Gauge",
+        "Return Line Filter",
+        "Hose Fittings",
+        "Tank Breather"
+      ],
+      "badge": "HY"
+    },
+    {
+      "id": "packaging",
+      "title": "Packaging Machines",
+      "slug": "packaging",
+      "description": "Sensors, pneumatic cylinders, heaters, couplings and wear parts.",
+      "imageUrl": "assets/hero-machine-parts-cutout.png",
+      "parts": [
+        "Photo Sensor",
+        "Pneumatic Cylinder",
+        "Solenoid Valve",
+        "Jaw Coupling",
+        "Heater Cartridge",
+        "Bearing Insert",
+        "Timing Belt",
+        "Guide Roller"
+      ],
+      "badge": "PK"
+    },
+    {
+      "id": "pumps",
+      "title": "Industrial Pumps",
+      "slug": "pumps",
+      "description": "Mechanical seals, bearings, shafts, couplings and electric drive items.",
+      "imageUrl": "assets/hero-machine-parts-cutout.png",
+      "parts": [
+        "Mechanical Seal",
+        "Impeller Nut",
+        "Deep Groove Bearing",
+        "Motor Terminal Box",
+        "Jaw Spider",
+        "Pump Shaft Sleeve",
+        "Gland Packing",
+        "Flexible Coupling"
+      ],
+      "badge": "PM"
+    },
+    {
+      "id": "panels",
+      "title": "Industrial Panels",
+      "slug": "panels",
+      "description": "Motors, relays, breakers, lamps and electrical maintenance supplies.",
+      "imageUrl": "assets/hero-machine-parts-cutout.png",
+      "parts": [
+        "Contactor",
+        "Overload Relay",
+        "Panel Fan Filter",
+        "Indicator Lamp",
+        "Terminal Blocks",
+        "Motor Protection Breaker",
+        "Push Button",
+        "Cable Gland"
+      ],
+      "badge": "EP"
+    }
+  ]
+}

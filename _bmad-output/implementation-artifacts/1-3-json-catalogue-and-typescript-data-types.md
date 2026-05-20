@@ -1,6 +1,6 @@
 # Story 1.3: JSON Catalogue & TypeScript Data Types
 
-Status: ready-for-dev
+Status: review
 
 ## Story
 
@@ -26,28 +26,28 @@ so that every component has strongly typed, consistent data to render.
 
 ## Tasks / Subtasks
 
-- [ ] Create the typed data model. (AC: 1, 2)
-  - [ ] Create `src/data/types.ts`.
-  - [ ] Include reusable `Mode = "automobile" | "industrial"` and stock status types.
-  - [ ] Include interfaces for `Product`, `Category`, `Brand`, `VehicleType`, `ApplicationType`, `ModeContent`, and `Catalogue`.
-  - [ ] Ensure product fields support both automobile OEM data and industrial spec/product-number data.
-- [ ] Create the JSON catalogue file. (AC: 3-12)
-  - [ ] Create `src/data/catalog.json`.
-  - [ ] Populate from `reference/index.html` data objects, especially `siteModes` and `categoryCatalog`.
-  - [ ] Keep a single JSON source for categories, products, brands, modes, vehicles, and applications.
-  - [ ] Do not create `categories.ts`, `brands.ts`, `modes.ts`, `vehicles.ts`, `applications.ts`, or `products/**` data files.
-- [ ] Preserve SEO and routing requirements in data. (AC: 4, 9, 10, 11)
-  - [ ] Include category slugs matching PRD examples and architecture rules.
-  - [ ] Include product slugs or enough data for deterministic slug generation.
-  - [ ] Add `slugOverride` where the PRD requires SEO overrides, including Industrial "Hydraulic Parts" -> `hydraulic-hoses`.
-  - [ ] Keep automobile and industrial products grouped by mode and category.
-- [ ] Validate data completeness and build compatibility. (AC: 1-13)
-  - [ ] Confirm all 14 categories are present.
-  - [ ] Confirm all 12 mode-specific brand names per mode are present.
-  - [ ] Confirm all 6 vehicle types and all 6 application types are present.
-  - [ ] Confirm each category has products.
-  - [ ] Run `npm run lint`.
-  - [ ] Run `npm run build`.
+- [x] Create the typed data model. (AC: 1, 2)
+  - [x] Create `src/data/types.ts`.
+  - [x] Include reusable `Mode = "automobile" | "industrial"` and stock status types.
+  - [x] Include interfaces for `Product`, `Category`, `Brand`, `VehicleType`, `ApplicationType`, `ModeContent`, and `Catalogue`.
+  - [x] Ensure product fields support both automobile OEM data and industrial spec/product-number data.
+- [x] Create the JSON catalogue file. (AC: 3-12)
+  - [x] Create `src/data/catalog.json`.
+  - [x] Populate from `reference/index.html` data objects, especially `siteModes` and `categoryCatalog`.
+  - [x] Keep a single JSON source for categories, products, brands, modes, vehicles, and applications.
+  - [x] Do not create `categories.ts`, `brands.ts`, `modes.ts`, `vehicles.ts`, `applications.ts`, or `products/**` data files.
+- [x] Preserve SEO and routing requirements in data. (AC: 4, 9, 10, 11)
+  - [x] Include category slugs matching PRD examples and architecture rules.
+  - [x] Include product slugs or enough data for deterministic slug generation.
+  - [x] Add `slugOverride` where the PRD requires SEO overrides, including Industrial "Hydraulic Parts" -> `hydraulic-hoses`.
+  - [x] Keep automobile and industrial products grouped by mode and category.
+- [x] Validate data completeness and build compatibility. (AC: 1-13)
+  - [x] Confirm all 14 categories are present.
+  - [x] Confirm all 12 mode-specific brand names per mode are present.
+  - [x] Confirm all 6 vehicle types and all 6 application types are present.
+  - [x] Confirm each category has products.
+  - [x] Run `npm run lint`.
+  - [x] Run `npm run build`.
 
 ## Dev Notes
 
@@ -182,14 +182,29 @@ src/data/products/**
 
 ### Agent Model Used
 
-TBD by dev agent
+GPT-5 Codex
 
 ### Debug Log References
+
+- `node -e "<catalog completeness validation>"` passed.
+- `cmd /c npm run lint` passed.
+- `cmd /c npm run build` passed.
 
 ### Completion Notes List
 
 - Story context created from architecture, epics, PRD, reference data scan, and previous Story 1.1/1.2 status.
+- Created `src/data/types.ts` with typed catalogue, mode, product, category, brand, vehicle, application, search, contact, detail, and footer structures.
+- Created `src/data/catalog.json` as the only editable catalogue source, populated from `reference/index.html` using `siteModes` as primary data and `categoryCatalog` as fallback for automobile Cooling and Body Parts.
+- Preserved required SEO slugs and overrides, including Industrial Hydraulic Parts as `hydraulic-hoses` and Deep Groove Bearing as `skf-6205`.
+- Validated 14 categories, 12 brands per mode, 6 vehicle types, 6 industrial applications, and products in every category.
 
 ### File List
 
 - `_bmad-output/implementation-artifacts/1-3-json-catalogue-and-typescript-data-types.md`
+- `_bmad-output/implementation-artifacts/sprint-status.yaml`
+- `src/data/types.ts`
+- `src/data/catalog.json`
+
+### Change Log
+
+- 2026-05-20: Implemented JSON catalogue and TypeScript data schema for Story 1.3.

@@ -1,6 +1,6 @@
 # Story 1.4: Utility Libraries
 
-Status: ready-for-dev
+Status: review
 
 ## Story
 
@@ -21,33 +21,33 @@ so that page components and components have consistent, reusable helper function
 
 ## Tasks / Subtasks
 
-- [ ] Create slug utilities. (AC: 1)
-  - [ ] Implement `slugify` using PRD rules: lowercase, replace `&` with `and`, replace non-alphanumeric with hyphens, trim leading/trailing hyphens.
-  - [ ] Implement custom override support for categories/products via `slugOverride`.
-  - [ ] Include helpers to compare generated slugs and explicit slugs safely.
-- [ ] Create mode utilities. (AC: 2)
-  - [ ] Define `DEFAULT_MODE = "automobile"`.
-  - [ ] Implement `isMode`, `getValidMode`, and URL/path-segment extraction helpers.
-  - [ ] Keep mode typing aligned with `src/data/types.ts`.
-- [ ] Create WhatsApp utilities. (AC: 3)
-  - [ ] Implement a message builder that includes product name, OEM/spec number, category, and mode context.
-  - [ ] Implement a `wa.me` URL builder with URL-encoded message text.
-  - [ ] Keep phone number/config inputs explicit; do not hardcode hidden credentials or external config.
-- [ ] Create JSON-backed data utilities. (AC: 4, 6, 7)
-  - [ ] Import `src/data/catalog.json`.
-  - [ ] Cast or validate the imported JSON as `Catalogue` from `src/data/types.ts`.
-  - [ ] Implement `getProductBySlug`, `getCategoryProducts`, `getProductsByMode`, `filterProducts`, and `sortProducts`.
-  - [ ] Add route/static helper functions from architecture where useful: `getCategories`, `getCategoryBySlug`, `getProducts`, `searchProducts`, `getStaticCategoryParams`, `getStaticProductParams`.
-  - [ ] Ensure helpers return stable empty arrays or `null` for not-found cases rather than throwing during normal lookup.
-- [ ] Create SEO helpers. (AC: 5, 6)
-  - [ ] Add page metadata helper functions that can be consumed by `generateMetadata`.
-  - [ ] Add JSON-LD builders for `LocalBusiness`, `BreadcrumbList`, `Product`, and `ItemList`.
-  - [ ] Keep returned JSON serializable and compatible with React script injection in later components.
-- [ ] Validate utilities. (AC: 1-8)
-  - [ ] Confirm imports use `@/data/types` and `@/data/catalog.json` or equivalent project aliases.
-  - [ ] Confirm no Firebase/database/auth/e-commerce utilities are introduced.
-  - [ ] Run `npm run lint`.
-  - [ ] Run `npm run build`.
+- [x] Create slug utilities. (AC: 1)
+  - [x] Implement `slugify` using PRD rules: lowercase, replace `&` with `and`, replace non-alphanumeric with hyphens, trim leading/trailing hyphens.
+  - [x] Implement custom override support for categories/products via `slugOverride`.
+  - [x] Include helpers to compare generated slugs and explicit slugs safely.
+- [x] Create mode utilities. (AC: 2)
+  - [x] Define `DEFAULT_MODE = "automobile"`.
+  - [x] Implement `isMode`, `getValidMode`, and URL/path-segment extraction helpers.
+  - [x] Keep mode typing aligned with `src/data/types.ts`.
+- [x] Create WhatsApp utilities. (AC: 3)
+  - [x] Implement a message builder that includes product name, OEM/spec number, category, and mode context.
+  - [x] Implement a `wa.me` URL builder with URL-encoded message text.
+  - [x] Keep phone number/config inputs explicit; do not hardcode hidden credentials or external config.
+- [x] Create JSON-backed data utilities. (AC: 4, 6, 7)
+  - [x] Import `src/data/catalog.json`.
+  - [x] Cast or validate the imported JSON as `Catalogue` from `src/data/types.ts`.
+  - [x] Implement `getProductBySlug`, `getCategoryProducts`, `getProductsByMode`, `filterProducts`, and `sortProducts`.
+  - [x] Add route/static helper functions from architecture where useful: `getCategories`, `getCategoryBySlug`, `getProducts`, `searchProducts`, `getStaticCategoryParams`, `getStaticProductParams`.
+  - [x] Ensure helpers return stable empty arrays or `null` for not-found cases rather than throwing during normal lookup.
+- [x] Create SEO helpers. (AC: 5, 6)
+  - [x] Add page metadata helper functions that can be consumed by `generateMetadata`.
+  - [x] Add JSON-LD builders for `LocalBusiness`, `BreadcrumbList`, `Product`, and `ItemList`.
+  - [x] Keep returned JSON serializable and compatible with React script injection in later components.
+- [x] Validate utilities. (AC: 1-8)
+  - [x] Confirm imports use `@/data/types` and `@/data/catalog.json` or equivalent project aliases.
+  - [x] Confirm no Firebase/database/auth/e-commerce utilities are introduced.
+  - [x] Run `npm run lint`.
+  - [x] Run `npm run build`.
 
 ## Dev Notes
 
@@ -180,14 +180,36 @@ src/data/catalog.json
 
 ### Agent Model Used
 
-TBD by dev agent
+GPT-5 Codex
 
 ### Debug Log References
+
+- Reviewed Next.js 16 metadata documentation in `node_modules/next/dist/docs/01-app/01-getting-started/14-metadata-and-og-images.md`.
+- `node -e "<catalog prerequisite check>"` passed.
+- `cmd /c npm run lint` passed.
+- `cmd /c npm run build` passed.
+- `rg -n "catalog\\.json|Firebase|Firestore|Prisma|checkout|payment|cart|auth" src` confirmed only `dataUtils.ts` imports catalogue JSON; remaining match was product text containing "cartridge".
 
 ### Completion Notes List
 
 - Story context created from architecture, epics, PRD, reference implementation scan, and Story 1.3 dependency.
+- Created slug utilities with PRD-compliant slug generation, override-aware slug resolution, slug comparison, and lookup helpers.
+- Created mode utilities for default mode, mode validation, and pathname/path-segment extraction.
+- Created WhatsApp utilities for explicit-phone `wa.me` deep links with pre-filled product enquiry context.
+- Created JSON-backed data utilities that expose typed catalogue query, filtering, sorting, search, and static route parameter helpers.
+- Created SEO helpers for Next.js-compatible metadata plus LocalBusiness, BreadcrumbList, Product, and ItemList JSON-LD builders.
+- Confirmed no pages or components import `catalog.json` directly; catalogue access now goes through `src/lib/dataUtils.ts`.
 
 ### File List
 
 - `_bmad-output/implementation-artifacts/1-4-utility-libraries.md`
+- `_bmad-output/implementation-artifacts/sprint-status.yaml`
+- `src/lib/slugUtils.ts`
+- `src/lib/modeUtils.ts`
+- `src/lib/whatsappUtils.ts`
+- `src/lib/dataUtils.ts`
+- `src/lib/seoHelpers.ts`
+
+### Change Log
+
+- 2026-05-20: Implemented utility layer for slugs, modes, WhatsApp links, JSON-backed catalogue queries, and SEO helpers.

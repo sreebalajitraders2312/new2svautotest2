@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://new-sv-automobile.vercel.app
+
+# Sitemaps
+Sitemap: https://new-sv-automobile.vercel.app/sitemap.xml

@@ -1,6 +1,6 @@
 # Story 1.5: Root Layout with Header, Footer & FloatingWhatsApp
 
-Status: ready-for-dev
+Status: review
 
 ## Story
 
@@ -23,36 +23,36 @@ so that I can navigate the site and contact the business from anywhere.
 
 ## Tasks / Subtasks
 
-- [ ] Create layout component structure. (AC: 1, 2, 5, 6)
-  - [ ] Create `src/components/layout/Header.tsx`.
-  - [ ] Create `src/components/layout/MobileDrawer.tsx`.
-  - [ ] Create `src/components/layout/Footer.tsx`.
-  - [ ] Create `src/components/layout/FloatingWhatsApp.tsx`.
-  - [ ] Use existing reference CSS class names such as `.site-header`, `.mobile-drawer`, `.whatsapp-float`, and footer classes where present.
-- [ ] Create mode context provider. (AC: 4, 8)
-  - [ ] Create `src/context/ModeContext.tsx`.
-  - [ ] Default mode to `automobile`.
-  - [ ] Provide mode and setter for homepage/global UI labels.
-  - [ ] Keep routed-page URL-derived mode behavior for future stories; do not make Context the sole source of truth for SEO routes.
-- [ ] Wire root layout. (AC: 5, 8, 9)
-  - [ ] Wrap the app in `ModeContext` provider in `src/app/layout.tsx`.
-  - [ ] Render `Header`, `Footer`, and `FloatingWhatsApp` around `{children}`.
-  - [ ] Add Vercel Analytics from `@vercel/analytics/next`.
-  - [ ] Preserve existing Barlow font loading and `globals.css` import from Story 1.2.
-- [ ] Implement navigation behavior. (AC: 1, 2, 3, 4)
-  - [ ] Desktop nav includes Home, Products, Search by Vehicle/Application, Brands, Contact.
-  - [ ] CTA buttons include Search Parts and Get Quote.
-  - [ ] Mobile hamburger opens/closes the drawer.
-  - [ ] Active page highlighting works based on current pathname.
-  - [ ] Labels adapt from current mode.
-- [ ] Implement WhatsApp behavior. (AC: 6, 7)
-  - [ ] Use `whatsappUtils.ts` from Story 1.4 if available.
-  - [ ] If Story 1.4 is not implemented, use a small local link construction only if necessary and mark it for replacement by `whatsappUtils.ts`.
-  - [ ] Do not add API endpoints, forms, database writes, cart, checkout, or order behavior.
-- [ ] Validate layout foundation. (AC: 1-10)
-  - [ ] Run `npm run lint`.
-  - [ ] Run `npm run build`.
-  - [ ] Manually check that root pages render with header, footer, and floating WhatsApp present.
+- [x] Create layout component structure. (AC: 1, 2, 5, 6)
+  - [x] Create `src/components/layout/Header.tsx`.
+  - [x] Create `src/components/layout/MobileDrawer.tsx`.
+  - [x] Create `src/components/layout/Footer.tsx`.
+  - [x] Create `src/components/layout/FloatingWhatsApp.tsx`.
+  - [x] Use existing reference CSS class names such as `.site-header`, `.mobile-drawer`, `.whatsapp-float`, and footer classes where present.
+- [x] Create mode context provider. (AC: 4, 8)
+  - [x] Create `src/context/ModeContext.tsx`.
+  - [x] Default mode to `automobile`.
+  - [x] Provide mode and setter for homepage/global UI labels.
+  - [x] Keep routed-page URL-derived mode behavior for future stories; do not make Context the sole source of truth for SEO routes.
+- [x] Wire root layout. (AC: 5, 8, 9)
+  - [x] Wrap the app in `ModeContext` provider in `src/app/layout.tsx`.
+  - [x] Render `Header`, `Footer`, and `FloatingWhatsApp` around `{children}`.
+  - [x] Add Vercel Analytics from `@vercel/analytics/next`.
+  - [x] Preserve existing Barlow font loading and `globals.css` import from Story 1.2.
+- [x] Implement navigation behavior. (AC: 1, 2, 3, 4)
+  - [x] Desktop nav includes Home, Products, Search by Vehicle/Application, Brands, Contact.
+  - [x] CTA buttons include Search Parts and Get Quote.
+  - [x] Mobile hamburger opens/closes the drawer.
+  - [x] Active page highlighting works based on current pathname.
+  - [x] Labels adapt from current mode.
+- [x] Implement WhatsApp behavior. (AC: 6, 7)
+  - [x] Use `whatsappUtils.ts` from Story 1.4 if available.
+  - [x] If Story 1.4 is not implemented, use a small local link construction only if necessary and mark it for replacement by `whatsappUtils.ts`.
+  - [x] Do not add API endpoints, forms, database writes, cart, checkout, or order behavior.
+- [x] Validate layout foundation. (AC: 1-10)
+  - [x] Run `npm run lint`.
+  - [x] Run `npm run build`.
+  - [x] Manually check that root pages render with header, footer, and floating WhatsApp present.
 
 ## Dev Notes
 
@@ -146,14 +146,37 @@ _bmad-output/implementation-artifacts/sprint-status.yaml
 
 ### Agent Model Used
 
-TBD by dev agent
+GPT-5 Codex
 
 ### Debug Log References
+
+- Reviewed Next.js 16 root layout guidance in `node_modules/next/dist/docs/01-app/01-getting-started/03-layouts-and-pages.md`.
+- `cmd /c npm run lint` passed.
+- `cmd /c npm run build` passed.
+- Checked `.next/server/app/index.html` and confirmed `site-header`, `footer`, `floating-wa`, and Vercel analytics output are present.
+- Tried to run a localhost dev-server smoke test; foreground startup succeeded, but background startup did not stay reachable in this shell, so the static build output was used for markup verification.
 
 ### Completion Notes List
 
 - Story context created from epics, architecture, PRD requirements, reference layout expectations, and current sprint state.
+- Created the root layout shell with sticky header, mobile drawer, footer, floating WhatsApp link, ModeContext provider, and Vercel Analytics.
+- Header and drawer use reference class names and derive active states from `usePathname`, including future catalogue routes under `/automobile/...` and `/industrial/...`.
+- Mode context defaults to automobile, supports global mode switching, and derives routed-page mode from URL segments without making context the sole SEO route source of truth.
+- Floating WhatsApp uses `whatsappUtils.ts` and explicit phone/message inputs.
+- Added a mobile bottom padding and adjusted the floating button size/offset so it does not cover bottom content on small screens.
 
 ### File List
 
 - `_bmad-output/implementation-artifacts/1-5-root-layout-with-header-footer-and-floatingwhatsapp.md`
+- `_bmad-output/implementation-artifacts/sprint-status.yaml`
+- `src/app/layout.tsx`
+- `src/app/globals.css`
+- `src/context/ModeContext.tsx`
+- `src/components/layout/Header.tsx`
+- `src/components/layout/MobileDrawer.tsx`
+- `src/components/layout/Footer.tsx`
+- `src/components/layout/FloatingWhatsApp.tsx`
+
+### Change Log
+
+- 2026-05-20: Implemented root layout, responsive navigation, mode context, footer, floating WhatsApp, and analytics wiring.
