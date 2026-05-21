@@ -1,6 +1,6 @@
 # Story 1.6: Vercel Deployment & CI
 
-Status: review
+Status: done
 
 ## Story
 
@@ -220,3 +220,6 @@ GPT-5 Codex
 ### Change Log
 
 - 2026-05-20: Added sitemap postbuild, linked/deployed Vercel project, configured site URL env vars, verified production headers, production sitemap/robots, and preview deployment readiness.
+
+### Review Notes
+- Code review completed with no blocking findings.

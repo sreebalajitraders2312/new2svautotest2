@@ -1,9 +1,0 @@
-# *
-User-agent: *
-Allow: /
-
-# Host
-Host: https://new-sv-auto-test.web.app
-
-# Sitemaps
-Sitemap: https://new-sv-auto-test.web.app/sitemap.xml
