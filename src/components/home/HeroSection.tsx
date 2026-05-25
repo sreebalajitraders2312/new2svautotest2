@@ -86,11 +86,15 @@ export function HeroSection({ modes, children }: HeroSectionProps) {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
   useEffect(() => {
+    if (currentMode === "industrial") {
+      setCurrentImageIndex(0);
+      return;
+    }
     const interval = setInterval(() => {
       setCurrentImageIndex((prev) => (prev + 1) % sliderImages.length);
     }, 3000);
     return () => clearInterval(interval);
-  }, []);
+  }, [currentMode, sliderImages.length]);
 
   return (
     <section className="page active" id="page-home">

@@ -1,6 +1,7 @@
 "use client";
 
 import type { ProductSort } from "@/lib/dataUtils";
+import { useState, useRef, useEffect } from "react";
 
 interface SortOption {
   label: string;
@@ -24,18 +25,62 @@ export function SortDropdown({
   options = DEFAULT_OPTIONS,
   value,
 }: SortDropdownProps) {
+  const [isOpen, setIsOpen] = useState(false);
+  const containerRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (containerRef.current && !containerRef.current.contains(event.target as Node)) {
+        setIsOpen(false);
+      }
+    };
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => document.removeEventListener("mousedown", handleClickOutside);
+  }, []);
+
+  const selectedLabel = options.find((o) => o.value === value)?.label ?? options[0].label;
+
   return (
-    <select
-      aria-label="Sort products"
-      className="catalog-sort"
-      onChange={(event) => onChange(event.target.value as ProductSort)}
-      value={value}
-    >
-      {options.map((option) => (
-        <option key={option.value} value={option.value}>
-          {option.label}
-        </option>
-      ))}
-    </select>
+    <div className="custom-dropdown" ref={containerRef}>
+      <button
+        type="button"
+        className="custom-dropdown-toggle"
+        onClick={() => setIsOpen(!isOpen)}
+        aria-expanded={isOpen}
+        aria-label="Sort products"
+      >
+        <span className="custom-dropdown-value">{selectedLabel}</span>
+        <svg
+          className={`custom-dropdown-icon ${isOpen ? "open" : ""}`}
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth="2"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        >
+          <polyline points="6 9 12 15 18 9"></polyline>
+        </svg>
+      </button>
+
+      {isOpen && (
+        <div className="custom-dropdown-menu">
+          <ul className="custom-dropdown-list">
+            {options.map((option) => (
+              <li
+                key={option.value}
+                className={`custom-dropdown-item ${value === option.value ? "selected" : ""}`}
+                onClick={() => {
+                  onChange(option.value);
+                  setIsOpen(false);
+                }}
+              >
+                {option.label}
+              </li>
+            ))}
+          </ul>
+        </div>
+      )}
+    </div>
   );
 }
