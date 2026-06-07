@@ -1,7 +1,7 @@
 {
   "modes": {
     "automobile": {
-      "brandSub": "Auto Parts Bangalore",
+      "brandSub": "Global Auto Parts Export",
       "nav": {
         "explore": "Search by Vehicle",
         "search": "Search Parts",
@@ -9,8 +9,8 @@
         "mobileSearch": "Search"
       },
       "home": {
-        "title": "Automobile spare parts, <span>ready to source.</span>",
-        "copy": "Trusted Bangalore supplier for car and commercial vehicle parts. Search by OEM number, brand, category, or vehicle model.",
+        "title": "Genuine auto parts.<br><span>Delivered worldwide.</span>",
+        "copy": "India's trusted exporter of OEM-grade automobile spare parts. From Bangalore to over <b>60 countries</b> Ã¢â‚¬â€ air, sea and express freight, with full export documentation handled end-to-end.",
         "points": [
           "5000+ Parts & Consumables",
           "Same Day Dispatch",
@@ -22,7 +22,7 @@
         "brandsTitle": "Top Brands",
         "advantageKicker": "Why Us",
         "advantageTitle": "Our Advantage",
-        "contactTitle": "Need a part?",
+        "contactTitle": "Need a part",
         "contactCopy": "Send your enquiry by WhatsApp, call, or email. We will help identify the right spare and respond fast.",
         "advantages": [
           {
@@ -101,7 +101,12 @@
         "suggestionLabel": "Popular searches",
         "resultsTitle": "Suggested parts",
         "seeAll": "See all 12 ->",
-        "filters": ["All", "Brakes", "Lighting", "Filters"],
+        "filters": [
+          "All",
+          "Brakes",
+          "Lighting",
+          "Filters"
+        ],
         "suggestions": [
           "Brake pads",
           "Oil filter",
@@ -115,7 +120,7 @@
             "product": "Brake Pad Set",
             "code": "BP",
             "meta": "04465-0K240",
-            "price": "₹2,400",
+            "price": "Ã¢â€šÂ¹2,400",
             "status": "In stock"
           },
           {
@@ -123,7 +128,7 @@
             "product": "Head Lamp Relay",
             "code": "HL",
             "meta": "HL-H7-55W",
-            "price": "₹1,850",
+            "price": "Ã¢â€šÂ¹1,850",
             "status": "In stock"
           },
           {
@@ -131,7 +136,7 @@
             "product": "Oil Filter Cartridge",
             "code": "OF",
             "meta": "EOF-1180",
-            "price": "₹420",
+            "price": "Ã¢â€šÂ¹420",
             "status": "In stock"
           },
           {
@@ -139,7 +144,7 @@
             "product": "Clutch Plate",
             "code": "DB",
             "meta": "6PK-1125",
-            "price": "₹980",
+            "price": "Ã¢â€šÂ¹980",
             "status": "In stock"
           }
         ]
@@ -163,7 +168,14 @@
           {
             "label": "Brand",
             "placeholder": "Select Brand",
-            "options": ["Bosch", "Denso", "Brembo", "KYB", "Valeo", "Toyota"]
+            "options": [
+              "Bosch",
+              "Denso",
+              "Brembo",
+              "KYB",
+              "Valeo",
+              "Toyota"
+            ]
           },
           {
             "label": "Vehicle Type",
@@ -224,7 +236,10 @@
         "primaryLabel": "WhatsApp Enquiry",
         "secondaryLabel": "Call Now",
         "noteLabel": "Bulk<br>Orders",
-        "metaPoints": ["Wholesale Prices", "Fast Enquiry"],
+        "metaPoints": [
+          "Wholesale Prices",
+          "Fast Enquiry"
+        ],
         "trust": [
           {
             "title": "5000+ Parts",
@@ -265,7 +280,7 @@
         "brandsTitle": "Preferred Makes",
         "advantageKicker": "Why Buyers Choose Us",
         "advantageTitle": "Industrial Supply Support",
-        "contactTitle": "Need an industrial item?",
+        "contactTitle": "Need an industrial item",
         "contactCopy": "Share the application, specification, or old sample. We will help with brand options, compatibility, and quick wholesale pricing.",
         "advantages": [
           {
@@ -344,7 +359,13 @@
         "suggestionLabel": "Popular searches",
         "resultsTitle": "Suggested industrial products",
         "seeAll": "See all 18 ->",
-        "filters": ["All", "Bearings", "Hydraulics", "Motors", "Pneumatics"],
+        "filters": [
+          "All",
+          "Bearings",
+          "Hydraulics",
+          "Motors",
+          "Pneumatics"
+        ],
         "suggestions": [
           "6205 ZZ",
           "3 phase motor",
@@ -358,7 +379,7 @@
             "product": "Deep Groove Bearing",
             "code": "BRG",
             "meta": "6205 ZZ",
-            "price": "₹185",
+            "price": "Ã¢â€šÂ¹185",
             "status": "Ready stock"
           },
           {
@@ -366,7 +387,7 @@
             "product": "3 Phase Electric Motor",
             "code": "MTR",
             "meta": "2 HP Foot Mount",
-            "price": "₹8,900",
+            "price": "Ã¢â€šÂ¹8,900",
             "status": "Dealer supply"
           },
           {
@@ -374,7 +395,7 @@
             "product": "Hydraulic Hose Assembly",
             "code": "HYD",
             "meta": "1/2 inch 2SN",
-            "price": "₹1,250",
+            "price": "Ã¢â€šÂ¹1,250",
             "status": "Made to order"
           },
           {
@@ -382,7 +403,7 @@
             "product": "Pneumatic Cylinder",
             "code": "CYL",
             "meta": "SC 63 x 100",
-            "price": "₹1,780",
+            "price": "Ã¢â€šÂ¹1,780",
             "status": "In stock"
           }
         ]
@@ -406,7 +427,14 @@
           {
             "label": "Brand",
             "placeholder": "Select Brand",
-            "options": ["SKF", "Parker", "ABB", "Janatics", "Fenner", "Siemens"]
+            "options": [
+              "SKF",
+              "Parker",
+              "ABB",
+              "Janatics",
+              "Fenner",
+              "Siemens"
+            ]
           },
           {
             "label": "Application",
@@ -433,7 +461,13 @@
           {
             "label": "Size / Spec",
             "placeholder": "Select Size / Spec",
-            "options": ["6205", "1/2 inch", "2 HP", "SC 63", "NM Coupling"]
+            "options": [
+              "6205",
+              "1/2 inch",
+              "2 HP",
+              "SC 63",
+              "NM Coupling"
+            ]
           },
           {
             "label": "Supply Type",
@@ -459,7 +493,11 @@
         "primaryLabel": "WhatsApp for Pricing",
         "secondaryLabel": "Call Supply Desk",
         "noteLabel": "Bulk Supply<br>Available",
-        "metaPoints": ["Dealer Pricing", "Spec Matching", "Bangalore Supply"],
+        "metaPoints": [
+          "Dealer Pricing",
+          "Spec Matching",
+          "Bangalore Supply"
+        ],
         "trust": [
           {
             "title": "Standard Sizes",
@@ -491,7 +529,7 @@
         "slug": "engine-parts",
         "description": "Filters, belts, gaskets, service parts and overhaul components.",
         "count": "420+ Parts",
-        "imageUrl": "assets/brake-disc-card.svg",
+        "imageUrl": "/assets/brake-disc-card-transparent.png",
         "catalogueCopy": "Workshop-ready engine service parts for daily running cars, utility vehicles and fleet maintenance."
       },
       {
@@ -500,7 +538,7 @@
         "slug": "brake-parts",
         "description": "Pads, discs, drums, calipers, boosters and brake hardware.",
         "count": "280+ Parts",
-        "imageUrl": "assets/brake-disc-card.svg",
+        "imageUrl": "/assets/brake-disc-card-transparent.png",
         "catalogueCopy": "High quality brake components for cars, SUVs, MUVs and commercial vehicles."
       },
       {
@@ -509,7 +547,7 @@
         "slug": "suspension",
         "description": "Shocks, springs, bushes, links and steering support items.",
         "count": "310+ Parts",
-        "imageUrl": "assets/brake-disc-card.svg",
+        "imageUrl": "/assets/brake-disc-card-transparent.png",
         "catalogueCopy": "Ride control and suspension components for stable handling, heavy usage and fleet upkeep."
       },
       {
@@ -518,7 +556,7 @@
         "slug": "electrical",
         "description": "Sensors, relays, alternators, switches and lamps.",
         "count": "560+ Parts",
-        "imageUrl": "assets/brake-disc-card.svg",
+        "imageUrl": "/assets/brake-disc-card-transparent.png",
         "catalogueCopy": "Fast moving electrical parts for diagnostics, charging systems, sensors and lighting support."
       },
       {
@@ -527,7 +565,7 @@
         "slug": "filters",
         "description": "Air, oil, cabin, fuel and hydraulic service filters.",
         "count": "190+ Parts",
-        "imageUrl": "assets/brake-disc-card.svg",
+        "imageUrl": "/assets/brake-disc-card-transparent.png",
         "catalogueCopy": "Routine service filters for cleaner airflow, better engine protection and dependable maintenance cycles."
       },
       {
@@ -536,7 +574,7 @@
         "slug": "transmission",
         "description": "Clutch, CV joints, release bearings and drivetrain items.",
         "count": "240+ Parts",
-        "imageUrl": "assets/brake-disc-card.svg",
+        "imageUrl": "/assets/brake-disc-card-transparent.png",
         "catalogueCopy": "Fast moving clutch and drivetrain components for utility vehicles, pickups and commercial use."
       },
       {
@@ -545,7 +583,7 @@
         "slug": "cooling",
         "description": "Radiators, fans, hoses, tanks and thermostats.",
         "count": "175+ Parts",
-        "imageUrl": "assets/brake-disc-card.svg",
+        "imageUrl": "/assets/brake-disc-card-transparent.png",
         "catalogueCopy": "Radiator and cooling line parts for heavy running vehicles, workshop repairs and seasonal maintenance."
       },
       {
@@ -554,7 +592,7 @@
         "slug": "body-parts",
         "description": "Mirrors, lamps, panels, handles and exterior trims.",
         "count": "360+ Parts",
-        "imageUrl": "assets/brake-disc-card.svg",
+        "imageUrl": "/assets/brake-disc-card-transparent.png",
         "catalogueCopy": "Exterior trims, lamps and replacement body hardware for repair, accident work and fleet upkeep."
       }
     ],
@@ -565,7 +603,7 @@
         "slug": "bearings",
         "description": "Deep groove, taper, roller, pedestal and bearing kits.",
         "count": "260+ Products",
-        "imageUrl": "assets/brake-disc-card.svg",
+        "imageUrl": "/assets/brake-disc-card-transparent.png",
         "catalogueCopy": "Moving industrial bearing sizes for maintenance teams, machine builders, and repeat supply buyers."
       },
       {
@@ -574,7 +612,7 @@
         "slug": "hydraulic-hoses",
         "description": "Hoses, fittings, pumps, seals and hydraulic service items.",
         "count": "190+ Products",
-        "imageUrl": "assets/brake-disc-card.svg",
+        "imageUrl": "/assets/brake-disc-card-transparent.png",
         "catalogueCopy": "Hydraulic service items for power packs, construction support, presses and machine maintenance.",
         "slugOverride": "hydraulic-hoses"
       },
@@ -584,7 +622,7 @@
         "slug": "motors",
         "description": "AC motors, brake motors, geared motors and control drives.",
         "count": "140+ Products",
-        "imageUrl": "assets/brake-disc-card.svg",
+        "imageUrl": "/assets/brake-disc-card-transparent.png",
         "catalogueCopy": "Industrial electric motors and geared drive products for factory and utility applications."
       },
       {
@@ -593,7 +631,7 @@
         "slug": "gearboxes",
         "description": "Helical, worm, bevel and reduction gearbox assemblies.",
         "count": "110+ Products",
-        "imageUrl": "assets/brake-disc-card.svg",
+        "imageUrl": "/assets/brake-disc-card-transparent.png",
         "catalogueCopy": "Reduction gearbox supply for conveyors, mixers, machine transmissions and repair requirements."
       },
       {
@@ -602,7 +640,7 @@
         "slug": "pneumatic-parts",
         "description": "FRL units, cylinders, valves, hoses and connectors.",
         "count": "175+ Products",
-        "imageUrl": "assets/brake-disc-card.svg",
+        "imageUrl": "/assets/brake-disc-card-transparent.png",
         "catalogueCopy": "Pneumatic controls and accessories for automation, packaging, and compressed air systems."
       },
       {
@@ -611,7 +649,7 @@
         "slug": "seals-and-couplings",
         "description": "Oil seals, mechanical seals, jaw and chain couplings.",
         "count": "220+ Products",
-        "imageUrl": "assets/brake-disc-card.svg",
+        "imageUrl": "/assets/brake-disc-card-transparent.png",
         "catalogueCopy": "Sealing and transmission support items for pumps, motors, shafts and rotating machinery."
       }
     ]
@@ -630,9 +668,11 @@
           "categorySlug": "engine-parts",
           "stockStatus": "in-stock",
           "popularityRank": 1,
-          "imageUrl": "assets/brake-disc-card.svg",
+          "imageUrl": "/assets/brake-disc-card-transparent.png",
           "imageFallbackInitials": "OF",
-          "availableSizes": ["90915YZZD2"]
+          "availableSizes": [
+            "90915YZZD2"
+          ]
         },
         {
           "id": "automobile-engine-parts-air-filter-element",
@@ -645,9 +685,11 @@
           "categorySlug": "engine-parts",
           "stockStatus": "in-stock",
           "popularityRank": 2,
-          "imageUrl": "assets/brake-disc-card.svg",
+          "imageUrl": "/assets/brake-disc-card-transparent.png",
           "imageFallbackInitials": "AF",
-          "availableSizes": ["17801YZZA1"]
+          "availableSizes": [
+            "17801YZZA1"
+          ]
         },
         {
           "id": "automobile-engine-parts-timing-belt-kit",
@@ -660,7 +702,7 @@
           "categorySlug": "engine-parts",
           "stockStatus": "in-stock",
           "popularityRank": 3,
-          "imageUrl": "assets/brake-disc-card.svg",
+          "imageUrl": "/assets/brake-disc-card-transparent.png",
           "imageFallbackInitials": "TB"
         },
         {
@@ -674,7 +716,7 @@
           "categorySlug": "engine-parts",
           "stockStatus": "in-stock",
           "popularityRank": 4,
-          "imageUrl": "assets/brake-disc-card.svg",
+          "imageUrl": "/assets/brake-disc-card-transparent.png",
           "imageFallbackInitials": "HG"
         }
       ],
@@ -690,7 +732,7 @@
           "categorySlug": "brake-parts",
           "stockStatus": "in-stock",
           "popularityRank": 1,
-          "imageUrl": "assets/brake-disc-card.svg",
+          "imageUrl": "/assets/brake-disc-card-transparent.png",
           "imageFallbackInitials": "BD",
           "fullDescription": "High performance ventilated brake disc rotor for front axle. Precision machined for smooth braking, reduced heat build-up and longer life. Manufactured to OEM standards for perfect fit and safety.",
           "compatibleVehicles": [
@@ -719,7 +761,7 @@
           "categorySlug": "brake-parts",
           "stockStatus": "in-stock",
           "popularityRank": 2,
-          "imageUrl": "assets/brake-disc-card.svg",
+          "imageUrl": "/assets/brake-disc-card-transparent.png",
           "imageFallbackInitials": "BP"
         },
         {
@@ -733,7 +775,7 @@
           "categorySlug": "brake-parts",
           "stockStatus": "in-stock",
           "popularityRank": 3,
-          "imageUrl": "assets/brake-disc-card.svg",
+          "imageUrl": "/assets/brake-disc-card-transparent.png",
           "imageFallbackInitials": "BC"
         },
         {
@@ -747,7 +789,7 @@
           "categorySlug": "brake-parts",
           "stockStatus": "in-stock",
           "popularityRank": 4,
-          "imageUrl": "assets/brake-disc-card.svg",
+          "imageUrl": "/assets/brake-disc-card-transparent.png",
           "imageFallbackInitials": "BD"
         }
       ],
@@ -763,7 +805,7 @@
           "categorySlug": "suspension",
           "stockStatus": "in-stock",
           "popularityRank": 1,
-          "imageUrl": "assets/brake-disc-card.svg",
+          "imageUrl": "/assets/brake-disc-card-transparent.png",
           "imageFallbackInitials": "SA"
         },
         {
@@ -777,7 +819,7 @@
           "categorySlug": "suspension",
           "stockStatus": "in-stock",
           "popularityRank": 2,
-          "imageUrl": "assets/brake-disc-card.svg",
+          "imageUrl": "/assets/brake-disc-card-transparent.png",
           "imageFallbackInitials": "LB"
         },
         {
@@ -791,7 +833,7 @@
           "categorySlug": "suspension",
           "stockStatus": "in-stock",
           "popularityRank": 3,
-          "imageUrl": "assets/brake-disc-card.svg",
+          "imageUrl": "/assets/brake-disc-card-transparent.png",
           "imageFallbackInitials": "SL"
         },
         {
@@ -805,7 +847,7 @@
           "categorySlug": "suspension",
           "stockStatus": "in-stock",
           "popularityRank": 4,
-          "imageUrl": "assets/brake-disc-card.svg",
+          "imageUrl": "/assets/brake-disc-card-transparent.png",
           "imageFallbackInitials": "CS"
         }
       ],
@@ -821,7 +863,7 @@
           "categorySlug": "electrical",
           "stockStatus": "in-stock",
           "popularityRank": 1,
-          "imageUrl": "assets/brake-disc-card.svg",
+          "imageUrl": "/assets/brake-disc-card-transparent.png",
           "imageFallbackInitials": "O2"
         },
         {
@@ -835,7 +877,7 @@
           "categorySlug": "electrical",
           "stockStatus": "in-stock",
           "popularityRank": 2,
-          "imageUrl": "assets/brake-disc-card.svg",
+          "imageUrl": "/assets/brake-disc-card-transparent.png",
           "imageFallbackInitials": "AL"
         },
         {
@@ -849,7 +891,7 @@
           "categorySlug": "electrical",
           "stockStatus": "in-stock",
           "popularityRank": 3,
-          "imageUrl": "assets/brake-disc-card.svg",
+          "imageUrl": "/assets/brake-disc-card-transparent.png",
           "imageFallbackInitials": "RL"
         },
         {
@@ -863,7 +905,7 @@
           "categorySlug": "electrical",
           "stockStatus": "in-stock",
           "popularityRank": 4,
-          "imageUrl": "assets/brake-disc-card.svg",
+          "imageUrl": "/assets/brake-disc-card-transparent.png",
           "imageFallbackInitials": "BT"
         }
       ],
@@ -879,7 +921,7 @@
           "categorySlug": "filters",
           "stockStatus": "in-stock",
           "popularityRank": 1,
-          "imageUrl": "assets/brake-disc-card.svg",
+          "imageUrl": "/assets/brake-disc-card-transparent.png",
           "imageFallbackInitials": "FF"
         },
         {
@@ -893,7 +935,7 @@
           "categorySlug": "filters",
           "stockStatus": "in-stock",
           "popularityRank": 2,
-          "imageUrl": "assets/brake-disc-card.svg",
+          "imageUrl": "/assets/brake-disc-card-transparent.png",
           "imageFallbackInitials": "CF"
         },
         {
@@ -907,7 +949,7 @@
           "categorySlug": "filters",
           "stockStatus": "in-stock",
           "popularityRank": 3,
-          "imageUrl": "assets/brake-disc-card.svg",
+          "imageUrl": "/assets/brake-disc-card-transparent.png",
           "imageFallbackInitials": "HF"
         },
         {
@@ -921,7 +963,7 @@
           "categorySlug": "filters",
           "stockStatus": "in-stock",
           "popularityRank": 4,
-          "imageUrl": "assets/brake-disc-card.svg",
+          "imageUrl": "/assets/brake-disc-card-transparent.png",
           "imageFallbackInitials": "AC"
         }
       ],
@@ -937,7 +979,7 @@
           "categorySlug": "transmission",
           "stockStatus": "in-stock",
           "popularityRank": 1,
-          "imageUrl": "assets/brake-disc-card.svg",
+          "imageUrl": "/assets/brake-disc-card-transparent.png",
           "imageFallbackInitials": "CC"
         },
         {
@@ -951,7 +993,7 @@
           "categorySlug": "transmission",
           "stockStatus": "in-stock",
           "popularityRank": 2,
-          "imageUrl": "assets/brake-disc-card.svg",
+          "imageUrl": "/assets/brake-disc-card-transparent.png",
           "imageFallbackInitials": "CP"
         },
         {
@@ -965,7 +1007,7 @@
           "categorySlug": "transmission",
           "stockStatus": "in-stock",
           "popularityRank": 3,
-          "imageUrl": "assets/brake-disc-card.svg",
+          "imageUrl": "/assets/brake-disc-card-transparent.png",
           "imageFallbackInitials": "RB"
         },
         {
@@ -979,7 +1021,7 @@
           "categorySlug": "transmission",
           "stockStatus": "in-stock",
           "popularityRank": 4,
-          "imageUrl": "assets/brake-disc-card.svg",
+          "imageUrl": "/assets/brake-disc-card-transparent.png",
           "imageFallbackInitials": "CV"
         }
       ],
@@ -995,7 +1037,7 @@
           "categorySlug": "cooling",
           "stockStatus": "in-stock",
           "popularityRank": 1,
-          "imageUrl": "assets/brake-disc-card.svg",
+          "imageUrl": "/assets/brake-disc-card-transparent.png",
           "imageFallbackInitials": "RA"
         },
         {
@@ -1009,7 +1051,7 @@
           "categorySlug": "cooling",
           "stockStatus": "in-stock",
           "popularityRank": 2,
-          "imageUrl": "assets/brake-disc-card.svg",
+          "imageUrl": "/assets/brake-disc-card-transparent.png",
           "imageFallbackInitials": "CH"
         },
         {
@@ -1023,7 +1065,7 @@
           "categorySlug": "cooling",
           "stockStatus": "in-stock",
           "popularityRank": 3,
-          "imageUrl": "assets/brake-disc-card.svg",
+          "imageUrl": "/assets/brake-disc-card-transparent.png",
           "imageFallbackInitials": "TV"
         },
         {
@@ -1037,7 +1079,7 @@
           "categorySlug": "cooling",
           "stockStatus": "in-stock",
           "popularityRank": 4,
-          "imageUrl": "assets/brake-disc-card.svg",
+          "imageUrl": "/assets/brake-disc-card-transparent.png",
           "imageFallbackInitials": "FM"
         }
       ],
@@ -1053,7 +1095,7 @@
           "categorySlug": "body-parts",
           "stockStatus": "in-stock",
           "popularityRank": 1,
-          "imageUrl": "assets/brake-disc-card.svg",
+          "imageUrl": "/assets/brake-disc-card-transparent.png",
           "imageFallbackInitials": "HL"
         },
         {
@@ -1067,7 +1109,7 @@
           "categorySlug": "body-parts",
           "stockStatus": "in-stock",
           "popularityRank": 2,
-          "imageUrl": "assets/brake-disc-card.svg",
+          "imageUrl": "/assets/brake-disc-card-transparent.png",
           "imageFallbackInitials": "DM"
         },
         {
@@ -1081,7 +1123,7 @@
           "categorySlug": "body-parts",
           "stockStatus": "in-stock",
           "popularityRank": 3,
-          "imageUrl": "assets/brake-disc-card.svg",
+          "imageUrl": "/assets/brake-disc-card-transparent.png",
           "imageFallbackInitials": "TL"
         },
         {
@@ -1095,7 +1137,7 @@
           "categorySlug": "body-parts",
           "stockStatus": "in-stock",
           "popularityRank": 4,
-          "imageUrl": "assets/brake-disc-card.svg",
+          "imageUrl": "/assets/brake-disc-card-transparent.png",
           "imageFallbackInitials": "DH"
         }
       ]
@@ -1113,7 +1155,7 @@
           "categorySlug": "bearings",
           "stockStatus": "ready-stock",
           "popularityRank": 1,
-          "imageUrl": "assets/brake-disc-card.svg",
+          "imageUrl": "/assets/brake-disc-card-transparent.png",
           "imageFallbackInitials": "BR",
           "slugOverride": "skf-6205",
           "fullDescription": "Reliable deep groove bearing for regular industrial rotation duty. Suitable for motors, pumps, conveyors and other common maintenance requirements.",
@@ -1131,7 +1173,9 @@
             "Lubrication": "Pre-greased",
             "Application": "General rotating equipment"
           },
-          "availableSizes": ["6205 ZZ"]
+          "availableSizes": [
+            "6205 ZZ"
+          ]
         },
         {
           "id": "industrial-bearings-pillow-block-unit",
@@ -1144,9 +1188,11 @@
           "categorySlug": "bearings",
           "stockStatus": "ready-stock",
           "popularityRank": 2,
-          "imageUrl": "assets/brake-disc-card.svg",
+          "imageUrl": "/assets/brake-disc-card-transparent.png",
           "imageFallbackInitials": "PB",
-          "availableSizes": ["UCP205"]
+          "availableSizes": [
+            "UCP205"
+          ]
         },
         {
           "id": "industrial-bearings-taper-roller-bearing",
@@ -1159,7 +1205,7 @@
           "categorySlug": "bearings",
           "stockStatus": "ready-stock",
           "popularityRank": 3,
-          "imageUrl": "assets/brake-disc-card.svg",
+          "imageUrl": "/assets/brake-disc-card-transparent.png",
           "imageFallbackInitials": "TR"
         },
         {
@@ -1173,7 +1219,7 @@
           "categorySlug": "bearings",
           "stockStatus": "ready-stock",
           "popularityRank": 4,
-          "imageUrl": "assets/brake-disc-card.svg",
+          "imageUrl": "/assets/brake-disc-card-transparent.png",
           "imageFallbackInitials": "NB"
         }
       ],
@@ -1189,9 +1235,11 @@
           "categorySlug": "hydraulic-hoses",
           "stockStatus": "ready-stock",
           "popularityRank": 1,
-          "imageUrl": "assets/brake-disc-card.svg",
+          "imageUrl": "/assets/brake-disc-card-transparent.png",
           "imageFallbackInitials": "HH",
-          "availableSizes": ["1/2 inch 2SN"]
+          "availableSizes": [
+            "1/2 inch 2SN"
+          ]
         },
         {
           "id": "industrial-hydraulic-hoses-hydraulic-seal-kit",
@@ -1204,7 +1252,7 @@
           "categorySlug": "hydraulic-hoses",
           "stockStatus": "ready-stock",
           "popularityRank": 2,
-          "imageUrl": "assets/brake-disc-card.svg",
+          "imageUrl": "/assets/brake-disc-card-transparent.png",
           "imageFallbackInitials": "SK"
         },
         {
@@ -1218,7 +1266,7 @@
           "categorySlug": "hydraulic-hoses",
           "stockStatus": "ready-stock",
           "popularityRank": 3,
-          "imageUrl": "assets/brake-disc-card.svg",
+          "imageUrl": "/assets/brake-disc-card-transparent.png",
           "imageFallbackInitials": "GP"
         },
         {
@@ -1232,7 +1280,7 @@
           "categorySlug": "hydraulic-hoses",
           "stockStatus": "ready-stock",
           "popularityRank": 4,
-          "imageUrl": "assets/brake-disc-card.svg",
+          "imageUrl": "/assets/brake-disc-card-transparent.png",
           "imageFallbackInitials": "DV"
         }
       ],
@@ -1248,9 +1296,11 @@
           "categorySlug": "motors",
           "stockStatus": "ready-stock",
           "popularityRank": 1,
-          "imageUrl": "assets/brake-disc-card.svg",
+          "imageUrl": "/assets/brake-disc-card-transparent.png",
           "imageFallbackInitials": "EM",
-          "availableSizes": ["2 HP Foot Mount"]
+          "availableSizes": [
+            "2 HP Foot Mount"
+          ]
         },
         {
           "id": "industrial-motors-brake-motor",
@@ -1263,9 +1313,11 @@
           "categorySlug": "motors",
           "stockStatus": "ready-stock",
           "popularityRank": 2,
-          "imageUrl": "assets/brake-disc-card.svg",
+          "imageUrl": "/assets/brake-disc-card-transparent.png",
           "imageFallbackInitials": "BM",
-          "availableSizes": ["1 HP B14"]
+          "availableSizes": [
+            "1 HP B14"
+          ]
         },
         {
           "id": "industrial-motors-geared-motor",
@@ -1278,9 +1330,11 @@
           "categorySlug": "motors",
           "stockStatus": "ready-stock",
           "popularityRank": 3,
-          "imageUrl": "assets/brake-disc-card.svg",
+          "imageUrl": "/assets/brake-disc-card-transparent.png",
           "imageFallbackInitials": "GM",
-          "availableSizes": ["40 RPM"]
+          "availableSizes": [
+            "40 RPM"
+          ]
         },
         {
           "id": "industrial-motors-motor-cooling-fan",
@@ -1293,9 +1347,11 @@
           "categorySlug": "motors",
           "stockStatus": "ready-stock",
           "popularityRank": 4,
-          "imageUrl": "assets/brake-disc-card.svg",
+          "imageUrl": "/assets/brake-disc-card-transparent.png",
           "imageFallbackInitials": "MF",
-          "availableSizes": ["Frame 100"]
+          "availableSizes": [
+            "Frame 100"
+          ]
         }
       ],
       "gearboxes": [
@@ -1310,9 +1366,11 @@
           "categorySlug": "gearboxes",
           "stockStatus": "ready-stock",
           "popularityRank": 1,
-          "imageUrl": "assets/brake-disc-card.svg",
+          "imageUrl": "/assets/brake-disc-card-transparent.png",
           "imageFallbackInitials": "WG",
-          "availableSizes": ["NMRV 063"]
+          "availableSizes": [
+            "NMRV 063"
+          ]
         },
         {
           "id": "industrial-gearboxes-helical-gearbox",
@@ -1325,9 +1383,11 @@
           "categorySlug": "gearboxes",
           "stockStatus": "ready-stock",
           "popularityRank": 2,
-          "imageUrl": "assets/brake-disc-card.svg",
+          "imageUrl": "/assets/brake-disc-card-transparent.png",
           "imageFallbackInitials": "HG",
-          "availableSizes": ["H Series 80"]
+          "availableSizes": [
+            "H Series 80"
+          ]
         },
         {
           "id": "industrial-gearboxes-gear-coupling-hub",
@@ -1340,7 +1400,7 @@
           "categorySlug": "gearboxes",
           "stockStatus": "ready-stock",
           "popularityRank": 3,
-          "imageUrl": "assets/brake-disc-card.svg",
+          "imageUrl": "/assets/brake-disc-card-transparent.png",
           "imageFallbackInitials": "CH"
         },
         {
@@ -1354,9 +1414,11 @@
           "categorySlug": "gearboxes",
           "stockStatus": "ready-stock",
           "popularityRank": 4,
-          "imageUrl": "assets/brake-disc-card.svg",
+          "imageUrl": "/assets/brake-disc-card-transparent.png",
           "imageFallbackInitials": "OS",
-          "availableSizes": ["80 x 100"]
+          "availableSizes": [
+            "80 x 100"
+          ]
         }
       ],
       "pneumatic-parts": [
@@ -1371,9 +1433,11 @@
           "categorySlug": "pneumatic-parts",
           "stockStatus": "ready-stock",
           "popularityRank": 1,
-          "imageUrl": "assets/brake-disc-card.svg",
+          "imageUrl": "/assets/brake-disc-card-transparent.png",
           "imageFallbackInitials": "PC",
-          "availableSizes": ["SC 63 x 100"]
+          "availableSizes": [
+            "SC 63 x 100"
+          ]
         },
         {
           "id": "industrial-pneumatic-parts-frl-unit",
@@ -1386,9 +1450,11 @@
           "categorySlug": "pneumatic-parts",
           "stockStatus": "ready-stock",
           "popularityRank": 2,
-          "imageUrl": "assets/brake-disc-card.svg",
+          "imageUrl": "/assets/brake-disc-card-transparent.png",
           "imageFallbackInitials": "FR",
-          "availableSizes": ["1/2 inch"]
+          "availableSizes": [
+            "1/2 inch"
+          ]
         },
         {
           "id": "industrial-pneumatic-parts-solenoid-valve",
@@ -1401,9 +1467,11 @@
           "categorySlug": "pneumatic-parts",
           "stockStatus": "ready-stock",
           "popularityRank": 3,
-          "imageUrl": "assets/brake-disc-card.svg",
+          "imageUrl": "/assets/brake-disc-card-transparent.png",
           "imageFallbackInitials": "SV",
-          "availableSizes": ["5/2 24VDC"]
+          "availableSizes": [
+            "5/2 24VDC"
+          ]
         },
         {
           "id": "industrial-pneumatic-parts-pu-tube-roll",
@@ -1416,9 +1484,11 @@
           "categorySlug": "pneumatic-parts",
           "stockStatus": "ready-stock",
           "popularityRank": 4,
-          "imageUrl": "assets/brake-disc-card.svg",
+          "imageUrl": "/assets/brake-disc-card-transparent.png",
           "imageFallbackInitials": "PU",
-          "availableSizes": ["8 x 5 mm"]
+          "availableSizes": [
+            "8 x 5 mm"
+          ]
         }
       ],
       "seals-and-couplings": [
@@ -1433,9 +1503,11 @@
           "categorySlug": "seals-and-couplings",
           "stockStatus": "ready-stock",
           "popularityRank": 1,
-          "imageUrl": "assets/brake-disc-card.svg",
+          "imageUrl": "/assets/brake-disc-card-transparent.png",
           "imageFallbackInitials": "MS",
-          "availableSizes": ["MG1 28 mm"]
+          "availableSizes": [
+            "MG1 28 mm"
+          ]
         },
         {
           "id": "industrial-seals-and-couplings-jaw-coupling-set",
@@ -1448,7 +1520,7 @@
           "categorySlug": "seals-and-couplings",
           "stockStatus": "ready-stock",
           "popularityRank": 2,
-          "imageUrl": "assets/brake-disc-card.svg",
+          "imageUrl": "/assets/brake-disc-card-transparent.png",
           "imageFallbackInitials": "JC"
         },
         {
@@ -1462,9 +1534,11 @@
           "categorySlug": "seals-and-couplings",
           "stockStatus": "ready-stock",
           "popularityRank": 3,
-          "imageUrl": "assets/brake-disc-card.svg",
+          "imageUrl": "/assets/brake-disc-card-transparent.png",
           "imageFallbackInitials": "OS",
-          "availableSizes": ["40 x 62 x 10"]
+          "availableSizes": [
+            "40 x 62 x 10"
+          ]
         },
         {
           "id": "industrial-seals-and-couplings-chain-coupling",
@@ -1477,7 +1551,7 @@
           "categorySlug": "seals-and-couplings",
           "stockStatus": "ready-stock",
           "popularityRank": 4,
-          "imageUrl": "assets/brake-disc-card.svg",
+          "imageUrl": "/assets/brake-disc-card-transparent.png",
           "imageFallbackInitials": "CC"
         }
       ]
@@ -1615,7 +1689,7 @@
       "title": "Tractors",
       "slug": "tractors",
       "description": "Agriculture tractor parts for field duty, hydraulics, clutch, lighting, and routine service.",
-      "imageUrl": "assets/tractor-hero-provided.png",
+      "imageUrl": "/assets/tractor-hero-provided.png",
       "parts": [
         "Clutch Plate and Pressure Plate",
         "Hydraulic Pump",
@@ -1632,7 +1706,7 @@
       "title": "Bus and Trailers",
       "slug": "bus-trailers",
       "description": "Heavy-duty fleet parts for brake, suspension, body electrical, lamps, and trailer hardware.",
-      "imageUrl": "assets/car-suv-cutout.png",
+      "imageUrl": "/assets/car-suv-cutout.png",
       "parts": [
         "Air Brake Valve",
         "Brake Lining Kit",
@@ -1649,7 +1723,7 @@
       "title": "Construction Vehicles",
       "slug": "construction",
       "description": "High-demand parts for loaders, backhoes, excavators, site vehicles, and construction equipment.",
-      "imageUrl": "assets/hero-machine-parts-cutout.png",
+      "imageUrl": "/assets/hero-machine-parts-cutout.png",
       "parts": [
         "Work Lamp H3",
         "Work Lamp LED",
@@ -1666,7 +1740,7 @@
       "title": "Three Wheeler",
       "slug": "three-wheeler",
       "description": "Auto rickshaw spares for engine, body, cables, lighting, brake, and service requirements.",
-      "imageUrl": "assets/car-sedan-cutout.png",
+      "imageUrl": "/assets/car-sedan-cutout.png",
       "parts": [
         "Clutch Cable",
         "Brake Drum",
@@ -1683,7 +1757,7 @@
       "title": "Two Wheeler",
       "slug": "two-wheeler",
       "description": "Bike and scooter parts for daily service, braking, lighting, cables, filters, and electricals.",
-      "imageUrl": "assets/car-sedan-cutout.png",
+      "imageUrl": "/assets/car-sedan-cutout.png",
       "parts": [
         "Disc Pad Set",
         "Drive Belt",
@@ -1700,7 +1774,7 @@
       "title": "Forklift",
       "slug": "forklift",
       "description": "Industrial forklift parts for mast, hydraulic, drivetrain, brake, electrical, and service systems.",
-      "imageUrl": "assets/hero-machine-parts-cutout.png",
+      "imageUrl": "/assets/hero-machine-parts-cutout.png",
       "parts": [
         "Forklift Fork Pin",
         "Mast Roller Bearing",
@@ -1719,7 +1793,7 @@
       "title": "Conveyor Systems",
       "slug": "conveyors",
       "description": "Bearings, couplings, geared motors, chains, and conveyor maintenance items.",
-      "imageUrl": "assets/hero-machine-parts-cutout.png",
+      "imageUrl": "/assets/hero-machine-parts-cutout.png",
       "parts": [
         "Bearing Housing",
         "Chain Coupling",
@@ -1737,7 +1811,7 @@
       "title": "Compressors",
       "slug": "compressors",
       "description": "Filters, valves, seals, hoses and service items for air compressor maintenance.",
-      "imageUrl": "assets/hero-machine-parts-cutout.png",
+      "imageUrl": "/assets/hero-machine-parts-cutout.png",
       "parts": [
         "Air Intake Filter",
         "NRV Valve",
@@ -1755,7 +1829,7 @@
       "title": "Hydraulic Power Packs",
       "slug": "hydraulics",
       "description": "Hydraulic hoses, seals, pumps, valves and line accessories.",
-      "imageUrl": "assets/hero-machine-parts-cutout.png",
+      "imageUrl": "/assets/hero-machine-parts-cutout.png",
       "parts": [
         "Hydraulic Hose",
         "Seal Kit",
@@ -1773,7 +1847,7 @@
       "title": "Packaging Machines",
       "slug": "packaging",
       "description": "Sensors, pneumatic cylinders, heaters, couplings and wear parts.",
-      "imageUrl": "assets/hero-machine-parts-cutout.png",
+      "imageUrl": "/assets/hero-machine-parts-cutout.png",
       "parts": [
         "Photo Sensor",
         "Pneumatic Cylinder",
@@ -1791,7 +1865,7 @@
       "title": "Industrial Pumps",
       "slug": "pumps",
       "description": "Mechanical seals, bearings, shafts, couplings and electric drive items.",
-      "imageUrl": "assets/hero-machine-parts-cutout.png",
+      "imageUrl": "/assets/hero-machine-parts-cutout.png",
       "parts": [
         "Mechanical Seal",
         "Impeller Nut",
@@ -1809,7 +1883,7 @@
       "title": "Industrial Panels",
       "slug": "panels",
       "description": "Motors, relays, breakers, lamps and electrical maintenance supplies.",
-      "imageUrl": "assets/hero-machine-parts-cutout.png",
+      "imageUrl": "/assets/hero-machine-parts-cutout.png",
       "parts": [
         "Contactor",
         "Overload Relay",

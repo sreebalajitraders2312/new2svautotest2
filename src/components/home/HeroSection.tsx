@@ -5,54 +5,11 @@ import { useState, useEffect } from "react";
 import type { ReactNode } from "react";
 import type { Catalogue, Mode, ModeContent } from "@/data/types";
 import { useMode } from "@/context/ModeContext";
-import { ModeToggle } from "@/components/home/ModeToggle";
 import { BrandMarquee } from "@/components/home/BrandMarquee";
 
 interface HeroSectionProps {
   modes: Catalogue["modes"];
   children?: ReactNode;
-}
-
-function splitTitle(title: string): {
-  before: string;
-  accent: string;
-  after: string;
-} {
-  const match = title.match(/^(.*)<span>(.*)<\/span>(.*)$/);
-
-  if (!match) {
-    return { before: title, accent: "", after: "" };
-  }
-
-  return {
-    before: match[1],
-    accent: match[2],
-    after: match[3],
-  };
-}
-
-function renderTitle(content: ModeContent) {
-  const title = splitTitle(content.home.title);
-
-  return (
-    <>
-      {title.before}
-      {title.accent ? <span>{title.accent}</span> : null}
-      {title.after}
-    </>
-  );
-}
-
-function HeroPoint({ point, index }: { point: string; index: number }) {
-  return (
-    <div className="hero-point">
-      <svg viewBox="0 0 24 24" className="hero-point-icon" fill="none">
-        <circle cx="12" cy="12" r="11" fill="var(--orange)" />
-        <path d="M8 12.5L11 15.5L16 9" stroke="white" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />
-      </svg>
-      <span>{point}</span>
-    </div>
-  );
 }
 
 function SearchIcon() {
@@ -98,22 +55,19 @@ export function HeroSection({ modes, children }: HeroSectionProps) {
 
   return (
     <section className="page active" id="page-home">
-      <ModeToggle mode={currentMode} onModeChange={setMode} />
       <div className="hero">
         <div className="container hero-grid">
           <div className="hero-content">
             <div className="hero-text-block">
-              <h1 className="hero-title">{renderTitle(content)}</h1>
-              
-              <p className="hero-copy">{content.home.copy}</p>
-
-              {content.home.points && content.home.points.length > 0 && (
-                <div className="hero-points-list" aria-label="Business highlights">
-                  {content.home.points.map((point, index) => (
-                    <HeroPoint point={point} index={index} key={point} />
-                  ))}
+              {currentMode === "automobile" && (
+                <div className="hero-shipping-badge">
+                  <span className="pulsing-dot"></span>
+                  Shipping to 40+ Countries Worldwide
                 </div>
               )}
+              <h1 className="hero-title" dangerouslySetInnerHTML={{ __html: content.home.title }} />
+              
+              <p className="hero-copy" dangerouslySetInnerHTML={{ __html: content.home.copy }} />
               
               <div className="hero-actions" aria-label="Hero actions">
                 <Link className="hero-cta primary" href="/search">
