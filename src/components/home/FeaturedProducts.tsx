@@ -71,6 +71,10 @@ export function FeaturedProducts() {
   const [activeIndex, setActiveIndex] = useState(0);
 
   useEffect(() => {
+    if (products.length === 0) {
+      return;
+    }
+
     const interval = setInterval(() => {
       setActiveIndex((prev) => {
         const nextIndex = (prev + 1) % products.length;
@@ -87,6 +91,10 @@ export function FeaturedProducts() {
     }, 4000);
     return () => clearInterval(interval);
   }, [products.length]);
+
+  if (products.length === 0) {
+    return null;
+  }
 
   return (
     <section className="section" aria-labelledby="home-featured-title">

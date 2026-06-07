@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useMemo, useState } from "react";
+import Link from "next/link";
 import type { Mode, Product } from "@/data/types";
 import type { ProductSort } from "@/lib/dataUtils";
 import { filterProducts, sortProducts } from "@/lib/dataUtils";
@@ -73,6 +74,7 @@ export function CatalogListingShell({
 
     return sortProducts(filtered, sort);
   }, [products, selectedBrand, sort]);
+  const hasProducts = products.length > 0;
 
   const activeFilterCount =
     (selectedBrand ? 1 : 0) + (selectedVehicleManufacturer ? 1 : 0) + (selectedVehicleModel ? 1 : 0) + (selectedToolType ? 1 : 0) + (selectedVehicleType ? 1 : 0);
@@ -165,46 +167,50 @@ export function CatalogListingShell({
 
   return (
     <div className="catalog-listing-shell">
-      <div
-        className="catalog-toolbar"
-        aria-label={`${categoryTitle} listing controls`}
-      >
-        <button
-          aria-expanded={isFilterOpen}
-          aria-haspopup="dialog"
-          className="catalog-filter-btn"
-          type="button"
-          onClick={openFilterPanel}
-        >
-          <svg
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            strokeWidth="2"
-            strokeLinecap="round"
-            strokeLinejoin="round"
+      {hasProducts ? (
+        <>
+          <div
+            className="catalog-toolbar"
+            aria-label={`${categoryTitle} listing controls`}
           >
-            <polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3"></polygon>
-          </svg>
-          <span>Filter</span>
-          {activeFilterCount > 0 ? (
-            <span className="catalog-filter-badge">{activeFilterCount}</span>
-          ) : null}
-        </button>
+            <button
+              aria-expanded={isFilterOpen}
+              aria-haspopup="dialog"
+              className="catalog-filter-btn"
+              type="button"
+              onClick={openFilterPanel}
+            >
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              >
+                <polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3"></polygon>
+              </svg>
+              <span>Filter</span>
+              {activeFilterCount > 0 ? (
+                <span className="catalog-filter-badge">{activeFilterCount}</span>
+              ) : null}
+            </button>
 
-        <SortDropdown onChange={setSort} value={sort} />
-      </div>
+            <SortDropdown onChange={setSort} value={sort} />
+          </div>
 
-      <div className="catalog-subbar">
-        <div className="catalog-count">
-          {filteredProducts.length}{" "}
-          {filteredProducts.length === 1 ? "Product" : "Products"} Found
-        </div>
+          <div className="catalog-subbar">
+            <div className="catalog-count">
+              {filteredProducts.length}{" "}
+              {filteredProducts.length === 1 ? "Product" : "Products"} Found
+            </div>
 
-        <ViewToggle onChange={setViewMode} value={viewMode} />
-      </div>
+            <ViewToggle onChange={setViewMode} value={viewMode} />
+          </div>
+        </>
+      ) : null}
 
-      {filteredProducts.length > 0 ? (
+      {hasProducts && filteredProducts.length > 0 ? (
         <div
           className={`category-grid${viewMode === "list" ? " category-grid--list" : ""}`}
           aria-label={`${categoryTitle} products`}
@@ -218,7 +224,7 @@ export function CatalogListingShell({
             />
           ))}
         </div>
-      ) : (
+      ) : hasProducts ? (
         <div className="catalog-empty" role="status">
           <h3>No products match these filters</h3>
           <p>
@@ -233,31 +239,50 @@ export function CatalogListingShell({
             Reset filters
           </button>
         </div>
+      ) : (
+        <div className="catalog-empty" role="status">
+          <h3>{categoryTitle} products are available on enquiry</h3>
+          <p>
+            This category is active, but individual products are not listed
+            online yet. Contact the team for current availability, brands, and
+            bulk pricing.
+          </p>
+          <div className="catalog-empty-actions">
+            <Link className="btn btn-primary" href="/contact">
+              Enquire now
+            </Link>
+            <Link className="btn btn-secondary" href="/categories">
+              Browse categories
+            </Link>
+          </div>
+        </div>
       )}
 
-      <FilterPanel
-        brandOptions={brandOptions}
-        brandValue={draftBrand}
-        copy={filterPanelCopy}
-        onApply={applyFilters}
-        onBrandChange={setDraftBrand}
-        onClose={() => setIsFilterOpen(false)}
-        onReset={resetFilters}
-        onToolTypeChange={setDraftToolType}
-        onVehicleManufacturerChange={setDraftVehicleManufacturer}
-        onVehicleModelChange={setDraftVehicleModel}
-        onVehicleTypeChange={setDraftVehicleType}
-        open={isFilterOpen}
-        title={filterPanelTitle}
-        toolTypeOptions={toolTypeOptions}
-        toolTypeValue={draftToolType}
-        vehicleManufacturerOptions={vehicleManufacturerOptions}
-        vehicleManufacturerValue={draftVehicleManufacturer}
-        vehicleModelOptions={vehicleModelOptions}
-        vehicleModelValue={draftVehicleModel}
-        vehicleTypeOptions={vehicleTypeOptions}
-        vehicleTypeValue={draftVehicleType}
-      />
+      {hasProducts ? (
+        <FilterPanel
+          brandOptions={brandOptions}
+          brandValue={draftBrand}
+          copy={filterPanelCopy}
+          onApply={applyFilters}
+          onBrandChange={setDraftBrand}
+          onClose={() => setIsFilterOpen(false)}
+          onReset={resetFilters}
+          onToolTypeChange={setDraftToolType}
+          onVehicleManufacturerChange={setDraftVehicleManufacturer}
+          onVehicleModelChange={setDraftVehicleModel}
+          onVehicleTypeChange={setDraftVehicleType}
+          open={isFilterOpen}
+          title={filterPanelTitle}
+          toolTypeOptions={toolTypeOptions}
+          toolTypeValue={draftToolType}
+          vehicleManufacturerOptions={vehicleManufacturerOptions}
+          vehicleManufacturerValue={draftVehicleManufacturer}
+          vehicleModelOptions={vehicleModelOptions}
+          vehicleModelValue={draftVehicleModel}
+          vehicleTypeOptions={vehicleTypeOptions}
+          vehicleTypeValue={draftVehicleType}
+        />
+      ) : null}
     </div>
   );
 }
