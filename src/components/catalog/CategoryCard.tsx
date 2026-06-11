@@ -27,13 +27,13 @@ export function CategoryCard({
   return (
     <Link className={className} href={getCategoryUrl(category, mode)}>
       <div className="cat-visual">
-        {imagePath ? (
+          {imagePath ? (
           <Image
             src={imagePath}
             alt={isOverview ? category.title : ""}
             aria-hidden={isOverview ? undefined : "true"}
-            width={96}
-            height={72}
+            width={130}
+            height={112}
             onError={(event) => {
               event.currentTarget.hidden = true;
             }}

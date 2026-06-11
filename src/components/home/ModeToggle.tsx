@@ -59,7 +59,7 @@ export function ModeToggle({ mode, onModeChange }: ModeToggleProps) {
           <circle cx="17" cy="19" r="2" />
           <path d="M8 12V6h4v6" />
         </svg>
-        <span>Industrial Spare parts</span>
+        <span>Industrial Parts</span>
       </button>
     </div>
   );

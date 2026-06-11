@@ -2,19 +2,16 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import type { Mode } from "@/data/types";
-import { CatalogListingShell } from "@/components/catalog/CatalogListingShell";
+import { SubcategoryCard } from "@/components/catalog/SubcategoryCard";
 import { SeoJsonLd } from "@/components/shared/SeoJsonLd";
-import { getCatalogue } from "@/lib/dataUtils";
 import {
-  getCategories,
   getCategoryBySlug,
-  getCategoryProducts,
+  getCategorySubcategories,
   getStaticCategoryParams,
 } from "@/lib/dataUtils";
 import {
   buildBreadcrumbListJsonLd,
   buildCategoryMetadata,
-  buildItemListJsonLd,
 } from "@/lib/seoHelpers";
 import { isMode } from "@/lib/modeUtils";
 
@@ -43,14 +40,10 @@ async function resolveCategoryPage(params: Promise<CategoryRouteParams>) {
     notFound();
   }
 
-  const products = getCategoryProducts(validMode, category.slug);
-  const categories = getCategories(validMode);
-
   return {
     mode: validMode,
     category,
-    categories,
-    products,
+    subcategories: getCategorySubcategories(validMode, category.slug),
   };
 }
 
@@ -66,15 +59,10 @@ export async function generateMetadata({
   return buildCategoryMetadata(mode, category);
 }
 
-export default async function CategoryDetailPage({
+export default async function CategorySubcategoriesPage({
   params,
 }: CategoryPageProps) {
-  const { mode, category, categories, products } =
-    await resolveCategoryPage(params);
-  const catalogue = getCatalogue();
-  const filterPanel = catalogue.modes[mode].filterPanel;
-  const brandField = filterPanel.fields[1];
-  const compatibilityField = filterPanel.fields[2];
+  const { mode, category, subcategories } = await resolveCategoryPage(params);
 
   return (
     <section className="section compact">
@@ -82,7 +70,11 @@ export default async function CategoryDetailPage({
         <div className="category-catalog">
           <div className="category-header-clean">
             <nav className="category-breadcrumb" aria-label="Breadcrumb">
-              <Link href="/">Home</Link><span aria-hidden="true">&gt;</span><Link href="/categories">Categories</Link><span aria-hidden="true">&gt;</span><span>{category.title}</span>
+              <Link href="/">Home</Link>
+              <span aria-hidden="true">&gt;</span>
+              <Link href="/categories">Categories</Link>
+              <span aria-hidden="true">&gt;</span>
+              <span>{category.title}</span>
             </nav>
 
             <SeoJsonLd
@@ -92,7 +84,6 @@ export default async function CategoryDetailPage({
                 { name: category.title, path: `/${mode}/${category.slug}/` },
               ])}
             />
-            <SeoJsonLd data={buildItemListJsonLd(mode, category, products)} />
 
             <div className="catalog-title-clean">
               <h1>{category.title}</h1>
@@ -100,17 +91,19 @@ export default async function CategoryDetailPage({
             </div>
           </div>
 
-          <CatalogListingShell
-            brandLabel={brandField.label}
-            brandPlaceholder={brandField.placeholder}
-            categoryTitle={category.title}
-            compatibilityLabel={compatibilityField.label}
-            compatibilityPlaceholder={compatibilityField.placeholder}
-            filterPanelCopy={filterPanel.copy}
-            filterPanelTitle={filterPanel.title}
-            mode={mode}
-            products={products}
-          />
+          <div
+            className="category-overview-grid"
+            aria-label={`${category.title} sub categories`}
+          >
+            {subcategories.map((subcategory) => (
+              <SubcategoryCard
+                categorySlug={category.slug}
+                key={subcategory.id}
+                mode={mode}
+                subcategory={subcategory}
+              />
+            ))}
+          </div>
         </div>
       </div>
     </section>

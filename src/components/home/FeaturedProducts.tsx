@@ -44,11 +44,12 @@ function ProductImage({ product, code }: { product: Product; code: string }) {
 
   return (
     <Image
+      className="featured-product-image"
       src={product.imageUrl}
       alt=""
       aria-hidden="true"
-      width={108}
-      height={72}
+      width={380}
+      height={260}
     />
   );
 }

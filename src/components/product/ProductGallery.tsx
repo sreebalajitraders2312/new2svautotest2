@@ -30,11 +30,6 @@ export function ProductGallery({ product }: ProductGalleryProps) {
           </span>
         )}
       </div>
-      <div className="detail-dots" aria-hidden="true">
-        <span className="active" />
-        <span />
-        <span />
-      </div>
     </div>
   );
 }

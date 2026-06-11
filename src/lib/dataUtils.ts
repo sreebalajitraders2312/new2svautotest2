@@ -40,6 +40,15 @@ export interface StaticProductParam extends StaticCategoryParam {
   productSlug: string;
 }
 
+export interface ProductSubcategory {
+  id: string;
+  title: string;
+  slug: string;
+  description: string;
+  count: string;
+  imageUrl?: string;
+}
+
 export const catalogue = catalogJson as unknown as Catalogue;
 
 export function getCatalogue(): Catalogue {
@@ -91,6 +100,67 @@ export function getProductBySlug(
     getCategoryProducts(mode, categorySlug).find((product) =>
       slugsMatch(product, productSlug),
     ) || null
+  );
+}
+
+export function getCategorySubcategories(
+  mode: Mode,
+  categorySlug: string,
+): ProductSubcategory[] {
+  const products = getCategoryProducts(mode, categorySlug);
+  const grouped = new Map<string, Product[]>();
+
+  products.forEach((product) => {
+    const key = product.brand || "General";
+    grouped.set(key, [...(grouped.get(key) || []), product]);
+  });
+
+  return Array.from(grouped.entries())
+    .sort(([a], [b]) => a.localeCompare(b))
+    .map(([brand, brandProducts]) => {
+      const firstProduct = brandProducts[0];
+      const count = brandProducts.length;
+
+      return {
+        id: `${firstProduct.categorySlug}-${slugify(brand)}`,
+        title: brand,
+        slug: slugify(brand),
+        description: `${count} ${count === 1 ? "product" : "products"} available in ${firstProduct.category}.`,
+        count: `${count} ${count === 1 ? "item" : "items"}`,
+        imageUrl: firstProduct.imageUrl,
+      };
+    });
+}
+
+export function getCategorySubcategoryBySlug(
+  mode: Mode,
+  categorySlug: string,
+  subcategorySlug: string,
+): ProductSubcategory | null {
+  return (
+    getCategorySubcategories(mode, categorySlug).find(
+      (subcategory) => subcategory.slug === subcategorySlug,
+    ) || null
+  );
+}
+
+export function getSubcategoryProducts(
+  mode: Mode,
+  categorySlug: string,
+  subcategorySlug: string,
+): Product[] {
+  const subcategory = getCategorySubcategoryBySlug(
+    mode,
+    categorySlug,
+    subcategorySlug,
+  );
+
+  if (!subcategory) {
+    return [];
+  }
+
+  return getCategoryProducts(mode, categorySlug).filter(
+    (product) => slugify(product.brand || "General") === subcategory.slug,
   );
 }
 
@@ -197,6 +267,18 @@ export function getStaticProductParams(): StaticProductParam[] {
       mode,
       categorySlug: product.categorySlug,
       productSlug: getProductSlug(product),
+    })),
+  );
+}
+
+export function getStaticSubcategoryParams(): Array<
+  StaticCategoryParam & { subcategorySlug: string }
+> {
+  return getStaticCategoryParams().flatMap(({ mode, categorySlug }) =>
+    getCategorySubcategories(mode, categorySlug).map((subcategory) => ({
+      mode,
+      categorySlug,
+      subcategorySlug: subcategory.slug,
     })),
   );
 }
