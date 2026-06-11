@@ -1,14 +1,13 @@
 "use client";
 
 import { useMode } from "@/context/ModeContext";
-import catalogData from "@/data/catalog.json";
-import type { Catalogue } from "@/data/types";
+import { getCatalogue } from "@/lib/dataUtils";
 
 export function BrandMarquee() {
   const { mode } = useMode();
 
   // Extract brands from the filter panel data for the current mode
-  const modeData = (catalogData as Catalogue).modes[mode];
+  const modeData = getCatalogue().modes[mode];
   const brandField = modeData.filterPanel.fields.find(f => f.label === "Brand");
   const brands = brandField ? brandField.options : [];
 
