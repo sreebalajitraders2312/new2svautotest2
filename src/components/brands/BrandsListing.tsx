@@ -3,37 +3,70 @@
 import Link from "next/link";
 import { useMode } from "@/context/ModeContext";
 import { getBrands, getCatalogue } from "@/lib/dataUtils";
-import { ModeToggle } from "@/components/home/ModeToggle";
 import { BrandCard } from "@/components/brands/BrandCard";
 
+function renderBrandsTitle(title: string) {
+  const highlightWords = new Set(["automobile", "industrial", "brands"]);
+
+  return title.split(" ").map((word, index, words) => (
+    <span
+      className={highlightWords.has(word.toLowerCase()) ? "overview-highlight" : undefined}
+      key={`${word}-${index}`}
+    >
+      {word.toUpperCase()}
+      {index < words.length - 1 ? " " : ""}
+    </span>
+  ));
+}
+
 export function BrandsListing() {
-  const { mode, setMode } = useMode();
+  const { mode } = useMode();
   const catalogue = getCatalogue();
   const content = catalogue.modes[mode].brandsPage;
   const brands = getBrands(mode);
 
   return (
-    <section className="section compact">
-      <div className="container page-shell">
-        <div className="category-breadcrumb" aria-label="Breadcrumb">
-          <Link href="/">Home</Link>
-          <span aria-hidden="true">&gt;</span>
-          <span>Brands</span>
-        </div>
+    <>
+      <section
+        aria-labelledby="brands-overview-title"
+        className="section brands-header-section"
+      >
+        <div className="container">
+          <div className="category-overview-shell">
+            <nav className="category-breadcrumb" aria-label="Breadcrumb">
+              <Link href="/">Home</Link>
+              <span aria-hidden="true">&gt;</span>
+              <span>Brands</span>
+            </nav>
 
-        <div className="category-overview-hero">
-          <p className="kicker section-kicker">Manufacturers</p>
-          <h1>{content.title}</h1>
-          <p>{content.copy}</p>
-          <ModeToggle mode={mode} onModeChange={setMode} />
+            <div className="category-overview-hero">
+              <div className="overview-badge">
+                <span className="overview-badge-dot" aria-hidden="true"></span>
+                {mode === "automobile" ? "ALL BRANDS" : "INDUSTRIAL BRANDS"}
+              </div>
+              <h1 id="brands-overview-title">{renderBrandsTitle(content.title)}</h1>
+              <p>{content.copy}</p>
+            </div>
+          </div>
         </div>
+      </section>
 
-        <div className="brands-grid" aria-label={`${mode} brands`}>
-          {brands.map((brand) => (
-            <BrandCard key={brand.id} name={brand.name} />
-          ))}
+      <section className="section brands-list-section">
+        <div className="container">
+          <div className="category-overview-shell">
+            <div className="brands-grid" aria-label={`${mode} brands`}>
+              {brands.map((brand, index) => (
+                <BrandCard
+                  key={brand.id}
+                  index={index}
+                  mode={mode}
+                  name={brand.name}
+                />
+              ))}
+            </div>
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
+    </>
   );
 }

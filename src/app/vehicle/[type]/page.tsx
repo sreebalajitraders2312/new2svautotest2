@@ -8,7 +8,9 @@ import {
   getStaticVehicleParams,
   getVehicleEntityBySlug,
   getVehicleEntityUrl,
+  getCompatibleProductsForVehicle,
 } from "@/lib/dataUtils";
+import { CompatibleProducts } from "@/components/vehicle/CompatibleProducts";
 import { buildBreadcrumbListJsonLd, buildMetadata } from "@/lib/seoHelpers";
 
 type VehicleRouteParams = {
@@ -56,6 +58,7 @@ export async function generateMetadata({
 
 export default async function VehicleDetailPage({ params }: VehiclePageProps) {
   const entity = await resolveVehiclePage(params);
+  const compatibleProducts = getCompatibleProductsForVehicle(entity);
 
   return (
     <section className="section compact">
@@ -77,6 +80,7 @@ export default async function VehicleDetailPage({ params }: VehiclePageProps) {
         />
 
         <VehicleDetail entity={entity} />
+        <CompatibleProducts products={compatibleProducts} />
       </div>
     </section>
   );

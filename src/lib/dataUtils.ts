@@ -333,3 +333,35 @@ export function getVehicleEntityUrl(entity: VehicleEntity): string {
 export function normalizeSearchQuery(query: string): string {
   return slugify(query).replace(/-/g, " ");
 }
+
+export function getCompatibleProductsForVehicle(entity: VehicleEntity): Array<{ product: Product; mode: Mode }> {
+  const allProducts = getModes().flatMap((mode) => 
+    getProductsByMode(mode).map((product) => ({ product, mode }))
+  );
+  
+  const matched = new Set<string>();
+  const results: Array<{ product: Product; mode: Mode }> = [];
+
+  for (const part of entity.parts) {
+    const partLower = part.toLowerCase();
+    // Simple fuzzy match by part name in product name or category
+    for (const item of allProducts) {
+      if (!matched.has(item.product.id)) {
+        const prodName = item.product.name.toLowerCase();
+        const prodCat = item.product.category.toLowerCase();
+        if (prodName.includes(partLower) || partLower.includes(prodCat) || prodCat.includes(partLower)) {
+          results.push(item);
+          matched.add(item.product.id);
+        }
+      }
+    }
+  }
+
+  // Fallback to top products for the vehicle's mode if no direct match found
+  if (results.length === 0) {
+    const mode = "badge" in entity ? "industrial" : "automobile";
+    return allProducts.filter(p => p.mode === mode).slice(0, 8);
+  }
+
+  return results.slice(0, 8);
+}
