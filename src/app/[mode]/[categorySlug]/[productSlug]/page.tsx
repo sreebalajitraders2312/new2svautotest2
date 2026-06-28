@@ -7,8 +7,11 @@ import { ProductDetail } from "@/components/product/ProductDetail";
 import {
   getCatalogue,
   getCategoryBySlug,
+  getProductUrl,
   getProductBySlug,
   getStaticProductParams,
+  getVehicleEntityBySlug,
+  getVehicleEntityUrl,
 } from "@/lib/dataUtils";
 import {
   buildBreadcrumbListJsonLd,
@@ -25,6 +28,9 @@ type ProductRouteParams = {
 
 type ProductPageProps = {
   params: Promise<ProductRouteParams>;
+  searchParams?: Promise<{
+    fromVehicle?: string;
+  }>;
 };
 
 export const dynamicParams = false;
@@ -71,33 +77,46 @@ export async function generateMetadata({
   return buildProductMetadata(mode, product);
 }
 
-export default async function ProductDetailPage({ params }: ProductPageProps) {
+export default async function ProductDetailPage({
+  params,
+  searchParams,
+}: ProductPageProps) {
   const { category, detail, mode, product } = await resolveProductPage(params);
+  const query = searchParams ? await searchParams : {};
+  const sourceVehicle = query.fromVehicle
+    ? getVehicleEntityBySlug(query.fromVehicle)
+    : null;
+  const breadcrumbItems = sourceVehicle
+    ? [
+        { name: "Home", path: "/" },
+        { name: "Vehicle Types", path: "/vehicle/" },
+        { name: sourceVehicle.title, path: getVehicleEntityUrl(sourceVehicle) },
+        { name: product.name, path: getProductUrl(product, mode) },
+      ]
+    : [
+        { name: "Home", path: "/" },
+        { name: "Categories", path: "/categories/" },
+        { name: category.title, path: `/${mode}/${category.slug}/` },
+        { name: product.name, path: getProductUrl(product, mode) },
+      ];
 
   return (
     <section className="section compact">
       <div className="container page-shell">
         <nav className="category-breadcrumb" aria-label="Breadcrumb">
-          <Link href="/">Home</Link>
-          <span aria-hidden="true">&gt;</span>
-          <Link href="/categories">Categories</Link>
-          <span aria-hidden="true">&gt;</span>
-          <Link href={`/${mode}/${category.slug}/`}>{category.title}</Link>
-          <span aria-hidden="true">&gt;</span>
-          <span>{product.name}</span>
+          {breadcrumbItems.map((item, index) => (
+            <span className="breadcrumb-crumb" key={item.path}>
+              {index > 0 && <span aria-hidden="true">&gt;</span>}
+              {index < breadcrumbItems.length - 1 ? (
+                <Link href={item.path}>{item.name}</Link>
+              ) : (
+                <span>{item.name}</span>
+              )}
+            </span>
+          ))}
         </nav>
 
-        <SeoJsonLd
-          data={buildBreadcrumbListJsonLd([
-            { name: "Home", path: "/" },
-            { name: "Categories", path: "/categories/" },
-            { name: category.title, path: `/${mode}/${category.slug}/` },
-            {
-              name: product.name,
-              path: `/${mode}/${category.slug}/${product.slug}/`,
-            },
-          ])}
-        />
+        <SeoJsonLd data={buildBreadcrumbListJsonLd(breadcrumbItems)} />
         <SeoJsonLd data={buildProductJsonLd(product, mode)} />
 
         <ProductDetail

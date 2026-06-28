@@ -6,7 +6,7 @@ import { getCatalogue, getVehiclesForMode } from "@/lib/dataUtils";
 import { VehicleCard } from "@/components/vehicle/VehicleCard";
 
 export function VehicleListing() {
-  const { mode, setMode } = useMode();
+  const { mode } = useMode();
   const catalogue = getCatalogue();
   const content = catalogue.modes[mode].explore;
   const entities = getVehiclesForMode(mode);
@@ -16,8 +16,7 @@ export function VehicleListing() {
   return (
     <>
       <section
-        className="section"
-        style={{ paddingTop: '16px', paddingBottom: '24px', backgroundColor: '#ffffff' }}
+        className="section vehicle-listing-hero-section"
         aria-labelledby="vehicle-listing-title"
       >
         <div className="container">
@@ -44,7 +43,7 @@ export function VehicleListing() {
         </div>
       </section>
 
-      <section className="section" style={{ paddingTop: '24px' }}>
+      <section className="section vehicle-listing-grid-section">
         <div className="container">
           <div className="category-overview-shell">
             <div

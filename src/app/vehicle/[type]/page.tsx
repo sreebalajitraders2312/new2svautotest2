@@ -8,9 +8,8 @@ import {
   getStaticVehicleParams,
   getVehicleEntityBySlug,
   getVehicleEntityUrl,
-  getCompatibleProductsForVehicle,
+  getVehiclePartProductLinks,
 } from "@/lib/dataUtils";
-import { CompatibleProducts } from "@/components/vehicle/CompatibleProducts";
 import { buildBreadcrumbListJsonLd, buildMetadata } from "@/lib/seoHelpers";
 
 type VehicleRouteParams = {
@@ -58,12 +57,20 @@ export async function generateMetadata({
 
 export default async function VehicleDetailPage({ params }: VehiclePageProps) {
   const entity = await resolveVehiclePage(params);
-  const compatibleProducts = getCompatibleProductsForVehicle(entity);
+  const partLinks = getVehiclePartProductLinks(entity);
 
   return (
-    <section className="section compact">
-      <div className="container page-shell">
-        <nav className="category-breadcrumb" aria-label="Breadcrumb">
+    <section className="section vehicle-detail-section">
+      <SeoJsonLd
+        data={buildBreadcrumbListJsonLd([
+          { name: "Home", path: "/" },
+          { name: "Vehicle Types", path: "/vehicle/" },
+          { name: entity.title, path: getVehicleEntityUrl(entity) },
+        ])}
+      />
+
+      <div className="container">
+        <nav className="category-breadcrumb vehicle-detail-breadcrumb" aria-label="Breadcrumb">
           <Link href="/">Home</Link>
           <span aria-hidden="true">&gt;</span>
           <Link href="/vehicle">Vehicle Types</Link>
@@ -71,17 +78,9 @@ export default async function VehicleDetailPage({ params }: VehiclePageProps) {
           <span>{entity.title}</span>
         </nav>
 
-        <SeoJsonLd
-          data={buildBreadcrumbListJsonLd([
-            { name: "Home", path: "/" },
-            { name: "Vehicle Types", path: "/vehicle/" },
-            { name: entity.title, path: getVehicleEntityUrl(entity) },
-          ])}
-        />
-
-        <VehicleDetail entity={entity} />
-        <CompatibleProducts products={compatibleProducts} />
+        <VehicleDetail entity={entity} partLinks={partLinks} />
       </div>
     </section>
   );
 }
+

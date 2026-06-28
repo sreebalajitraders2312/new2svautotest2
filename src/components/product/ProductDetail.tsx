@@ -1,4 +1,3 @@
-import Link from "next/link";
 import type {
   Category,
   DetailContent,
@@ -6,7 +5,7 @@ import type {
   Product,
   TrustItem,
 } from "@/data/types";
-import { getCatalogue, getCategoryUrl, getProductUrl } from "@/lib/dataUtils";
+import { getCatalogue, getProductUrl } from "@/lib/dataUtils";
 import { BUSINESS_PHONE } from "@/lib/seoHelpers";
 import {
   buildProductWhatsAppUrl,
@@ -51,7 +50,7 @@ function HeartIcon() {
   );
 }
 
-function BackIcon() {
+function WholesaleIcon() {
   return (
     <svg
       viewBox="0 0 24 24"
@@ -60,7 +59,36 @@ function BackIcon() {
       strokeWidth="2"
       aria-hidden="true"
     >
-      <path d="m15 18-6-6 6-6" />
+      <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" />
+    </svg>
+  );
+}
+
+function FastIcon() {
+  return (
+    <svg
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="#f05a1a"
+      strokeWidth="2"
+      aria-hidden="true"
+    >
+      <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" />
+    </svg>
+  );
+}
+
+function LocationIcon() {
+  return (
+    <svg
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="#f05a1a"
+      strokeWidth="2"
+      aria-hidden="true"
+    >
+      <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+      <circle cx="12" cy="10" r="3" />
     </svg>
   );
 }
@@ -123,7 +151,6 @@ function getTrustItems(mode: Mode, content: DetailContent): TrustItem[] {
 }
 
 export function ProductDetail({
-  category,
   content,
   mode,
   product,
@@ -183,15 +210,14 @@ export function ProductDetail({
 
           <div className="detail-meta-row">
             {content.metaPoints.map((point) => {
-              // Quick logic to match icons from screenshot
               const p = point.toLowerCase();
               let Icon = MetaPointIcon;
               if (p.includes('wholesale')) {
-                Icon = () => <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>;
+                Icon = WholesaleIcon;
               } else if (p.includes('fast')) {
-                Icon = () => <svg viewBox="0 0 24 24" fill="none" stroke="#f05a1a" strokeWidth="2"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>;
+                Icon = FastIcon;
               } else if (p.includes('dealer') || p.includes('bangalore')) {
-                Icon = () => <svg viewBox="0 0 24 24" fill="none" stroke="#f05a1a" strokeWidth="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>;
+                Icon = LocationIcon;
               }
               
               return (
@@ -238,3 +264,4 @@ export function ProductDetail({
     </div>
   );
 }
+

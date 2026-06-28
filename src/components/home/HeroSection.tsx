@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { useState, useEffect } from "react";
 import type { ReactNode } from "react";
-import type { Catalogue, Mode, ModeContent } from "@/data/types";
+import type { Catalogue, Mode } from "@/data/types";
 import { useMode } from "@/context/ModeContext";
 import { BrandMarquee } from "@/components/home/BrandMarquee";
 
@@ -33,7 +33,7 @@ function GridIcon() {
 }
 
 export function HeroSection({ modes, children }: HeroSectionProps) {
-  const { mode, setMode } = useMode();
+  const { mode } = useMode();
   const currentMode: Mode = mode;
   const content = modes[currentMode];
 
@@ -41,10 +41,10 @@ export function HeroSection({ modes, children }: HeroSectionProps) {
     ? ["/assets/industry-image1.png", "/assets/industry-image2.png"]
     : ["/assets/backhoe-diagram.png", "/assets/diagram2.png"];
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  const displayedImageIndex = currentMode === "industrial" ? 0 : currentImageIndex;
 
   useEffect(() => {
     if (currentMode === "industrial") {
-      setCurrentImageIndex(0);
       return;
     }
     const interval = setInterval(() => {
@@ -82,7 +82,7 @@ export function HeroSection({ modes, children }: HeroSectionProps) {
               
               <div className="hero-machine-image-wrapper">
                 <img 
-                  src={sliderImages[currentImageIndex]} 
+                  src={sliderImages[displayedImageIndex]} 
                   alt="Machine Parts Diagram" 
                   className="hero-machine-image fade-transition"
                 />
@@ -113,3 +113,4 @@ export function HeroSection({ modes, children }: HeroSectionProps) {
     </section>
   );
 }
+

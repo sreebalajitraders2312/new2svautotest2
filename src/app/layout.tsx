@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import { Barlow, Barlow_Condensed } from "next/font/google";
 import { Analytics } from "@vercel/analytics/next";
 import { FloatingWhatsApp } from "@/components/layout/FloatingWhatsApp";
 import { Footer } from "@/components/layout/Footer";
@@ -10,20 +9,6 @@ import { ModeProvider } from "@/context/ModeContext";
 import { getCatalogue } from "@/lib/dataUtils";
 import { buildLocalBusinessJsonLd } from "@/lib/seoHelpers";
 import "./globals.css";
-
-const barlow = Barlow({
-  subsets: ["latin"],
-  weight: ["400", "500", "600", "700", "800"],
-  variable: "--font-barlow",
-  display: "swap",
-});
-
-const barlowCondensed = Barlow_Condensed({
-  subsets: ["latin"],
-  weight: ["700", "800"],
-  variable: "--font-barlow-condensed",
-  display: "swap",
-});
 
 export const metadata: Metadata = {
   title: "SV Enterprises - Automobile Spare Parts Bangalore",
@@ -39,10 +24,7 @@ export default function RootLayout({
   const catalogue = getCatalogue();
 
   return (
-    <html
-      lang="en"
-      className={`${barlow.variable} ${barlowCondensed.variable}`}
-    >
+    <html lang="en">
       <body>
         <ModeProvider>
           <div className="app">
@@ -59,3 +41,4 @@ export default function RootLayout({
     </html>
   );
 }
+

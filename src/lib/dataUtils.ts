@@ -365,3 +365,92 @@ export function getCompatibleProductsForVehicle(entity: VehicleEntity): Array<{ 
 
   return results.slice(0, 8);
 }
+
+export interface VehiclePartProductLink {
+  part: string;
+  product: Product;
+  mode: Mode;
+  href: string;
+}
+
+const PART_CATEGORY_KEYWORDS: Array<{
+  pattern: RegExp;
+  mode: Mode;
+  categorySlug: string;
+}> = [
+  { pattern: /clutch|pressure plate|drive belt|chain|coupling|gear|cv joint/i, mode: "automobile", categorySlug: "transmission" },
+  { pattern: /fuel filter|oil filter|air filter|filter assembly|air cleaner/i, mode: "automobile", categorySlug: "filters" },
+  { pattern: /radiator|coolant|cooling|hose/i, mode: "automobile", categorySlug: "cooling" },
+  { pattern: /hydraulic|pump|valve|seal kit/i, mode: "industrial", categorySlug: "hydraulic-hoses" },
+  { pattern: /lamp|light|relay|starter|alternator|sensor|switch|battery|indicator/i, mode: "automobile", categorySlug: "electrical" },
+  { pattern: /brake|disc pad|pad set|shoe|drum|caliper|master cylinder/i, mode: "automobile", categorySlug: "brake-parts" },
+  { pattern: /steering|joint|mount|shock|spring|bush|bearing/i, mode: "automobile", categorySlug: "suspension" },
+  { pattern: /head lamp|tail lamp|mirror|body|handle/i, mode: "automobile", categorySlug: "body-parts" },
+  { pattern: /bearing|roller/i, mode: "industrial", categorySlug: "bearings" },
+  { pattern: /motor|fan/i, mode: "industrial", categorySlug: "motors" },
+];
+
+function tokenizePartName(value: string): string[] {
+  return slugify(value)
+    .split("-")
+    .filter((token) => token.length > 2 && !["and", "set", "kit", "assy", "unit"].includes(token));
+}
+
+function scoreProductForPart(part: string, product: Product, preferredCategory?: string) {
+  const partTokens = tokenizePartName(part);
+  const productTokens = tokenizePartName(
+    `${product.name} ${product.category} ${product.shortDescription}`,
+  );
+  const productText = productTokens.join(" ");
+  const matchedTokens = partTokens.filter((token) => productText.includes(token));
+  let score = matchedTokens.length * 10;
+
+  if (product.name.toLowerCase().includes(part.toLowerCase())) {
+    score += 60;
+  }
+
+  if (preferredCategory && product.categorySlug === preferredCategory) {
+    score += 35;
+  }
+
+  score -= product.popularityRank / 100;
+
+  return score;
+}
+
+export function getVehiclePartProductLinks(
+  entity: VehicleEntity,
+): VehiclePartProductLink[] {
+  const defaultMode: Mode = "badge" in entity ? "industrial" : "automobile";
+  const allProducts = getModes().flatMap((mode) =>
+    getProductsByMode(mode).map((product) => ({ product, mode })),
+  );
+
+  return entity.parts.map((part) => {
+    const categoryHint = PART_CATEGORY_KEYWORDS.find((entry) =>
+      entry.pattern.test(part),
+    );
+    const preferredMode = categoryHint?.mode || defaultMode;
+    const preferredCategory = categoryHint?.categorySlug;
+    const candidates = allProducts.filter(({ product, mode }) => {
+      if (preferredCategory) {
+        return mode === preferredMode && product.categorySlug === preferredCategory;
+      }
+
+      return mode === preferredMode;
+    });
+    const pool = candidates.length > 0 ? candidates : allProducts.filter(({ mode }) => mode === preferredMode);
+    const best = [...pool].sort(
+      (a, b) =>
+        scoreProductForPart(part, b.product, preferredCategory) -
+        scoreProductForPart(part, a.product, preferredCategory),
+    )[0];
+
+    return {
+      part,
+      product: best.product,
+      mode: best.mode,
+      href: getProductUrl(best.product, best.mode),
+    };
+  });
+}
