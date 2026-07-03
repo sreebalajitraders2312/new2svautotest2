@@ -36,8 +36,12 @@ export function ProductCard({
       </div>
       <div className="catalog-card-content">
         <h3>{product.name}</h3>
-        <div className="catalog-oem">OEM: {product.oemNumber}</div>
-        <div className="catalog-desc">{product.shortDescription}</div>
+        {product.oemNumber ? (
+          <div className="catalog-oem">OEM: {product.oemNumber}</div>
+        ) : null}
+        {product.shortDescription ? (
+          <div className="catalog-desc">{product.shortDescription}</div>
+        ) : null}
         <div className="catalog-card-footer">
           <span className="catalog-view-details">
             View Details

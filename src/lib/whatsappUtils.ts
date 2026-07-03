@@ -18,10 +18,12 @@ export function buildWhatsAppMessage(input: WhatsAppMessageInput): string {
   return [
     `Hello SV Enterprises, I want to enquire about this ${productLabel}.`,
     `Product: ${input.productName}`,
-    `OEM/Spec: ${input.oemNumber}`,
+    input.oemNumber ? `OEM/Spec: ${input.oemNumber}` : "",
     `Category: ${input.category}`,
     `Mode: ${input.mode}`,
-  ].join("\n");
+  ]
+    .filter(Boolean)
+    .join("\n");
 }
 
 export function buildProductWhatsAppMessage(

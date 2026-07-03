@@ -138,6 +138,7 @@ export function ProductDetail({
   const callHref = `tel:${normalizeWhatsAppPhone(callPhone)}`;
   const pdfHref = `${getProductUrl(product, mode)}pdf/`;
   const trustItems = getTrustItems(mode, content);
+  const productDescription = product.fullDescription || product.shortDescription;
 
   const specRows =
     product.technicalSpecs && Object.keys(product.technicalSpecs).length > 0
@@ -152,7 +153,7 @@ export function ProductDetail({
               value: product.availableSizes.join(", "),
             },
           ]
-        : [{ label: "Reference", value: product.oemNumber }];
+        : [];
 
   return (
     <div className="detail-grid">
@@ -176,10 +177,16 @@ export function ProductDetail({
             </span>
           </div>
 
-          <div className="detail-oem-row" style={{ display: 'flex', alignItems: 'center', gap: '12px', marginTop: '12px' }}>
-            <div className="oem-chip" style={{ marginTop: 0 }}>OEM: {product.oemNumber}</div>
-            <span className="brand-chip" style={{ minHeight: '30px', fontSize: '13px', borderRadius: '999px', padding: '0 10px', textTransform: 'uppercase' }}>{product.brand}</span>
-          </div>
+          {product.oemNumber || product.brand ? (
+            <div className="detail-oem-row" style={{ display: 'flex', alignItems: 'center', gap: '12px', marginTop: '12px' }}>
+              {product.oemNumber ? (
+                <div className="oem-chip" style={{ marginTop: 0 }}>OEM: {product.oemNumber}</div>
+              ) : null}
+              {product.brand ? (
+                <span className="brand-chip" style={{ minHeight: '30px', fontSize: '13px', borderRadius: '999px', padding: '0 10px', textTransform: 'uppercase' }}>{product.brand}</span>
+              ) : null}
+            </div>
+          ) : null}
 
           <div className="detail-meta-row">
             {content.metaPoints.map((point) => {
@@ -203,24 +210,28 @@ export function ProductDetail({
             })}
           </div>
 
-          <CompatibilityList
-            emptyCopy={
-              mode === "automobile"
-                ? "No compatible vehicles are listed for this product."
-                : "No suitable applications are listed for this product."
-            }
-            items={compatibleItems}
-            title={content.compatTitle}
-          />
+          {compatibleItems.length > 0 ? (
+            <CompatibilityList
+              emptyCopy={
+                mode === "automobile"
+                  ? "No compatible vehicles are listed for this product."
+                  : "No suitable applications are listed for this product."
+              }
+              items={compatibleItems}
+              title={content.compatTitle}
+            />
+          ) : null}
 
-          <TechSpecs rows={specRows} title={content.specTitle} />
+          {specRows.length > 0 ? (
+            <TechSpecs rows={specRows} title={content.specTitle} />
+          ) : null}
 
-          <section className="detail-section">
-            <h2>{content.descriptionTitle}</h2>
-            <p className="desc">
-              {product.fullDescription || product.shortDescription}
-            </p>
-          </section>
+          {productDescription ? (
+            <section className="detail-section">
+              <h2>{content.descriptionTitle}</h2>
+              <p className="desc">{productDescription}</p>
+            </section>
+          ) : null}
 
           <TrustRow items={trustItems} />
 

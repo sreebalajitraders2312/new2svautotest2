@@ -101,13 +101,18 @@ export function buildCategoryMetadata(
 }
 
 export function buildProductMetadata(mode: Mode, product: Product): Metadata {
+  const oemTitlePart = product.oemNumber ? ` ${product.oemNumber}` : "";
+  const oemDescriptionPart = product.oemNumber
+    ? ` (${product.oemNumber})`
+    : "";
+
   return buildMetadata({
-    title: `${product.name} ${product.oemNumber} | ${product.category} Bangalore | ${BUSINESS_NAME}`,
-    description: `Enquire for ${product.name} (${product.oemNumber || "standard specification"}) from ${BUSINESS_NAME}, Bangalore wholesale dealer for ${product.category.toLowerCase()}.`,
+    title: `${product.name}${oemTitlePart} | ${product.category} Bangalore | ${BUSINESS_NAME}`,
+    description: `Enquire for ${product.name}${oemDescriptionPart} from ${BUSINESS_NAME}, Bangalore wholesale dealer for ${product.category.toLowerCase()}.`,
     path: getProductUrl(product, mode),
     keywords: [
       product.name,
-      product.oemNumber,
+      ...(product.oemNumber ? [product.oemNumber] : []),
       product.category,
       product.brand,
       BUSINESS_NAME,
@@ -162,7 +167,7 @@ export function buildProductJsonLd(
   mode: Mode,
   siteUrl = DEFAULT_SITE_URL,
 ): JsonLdObject {
-  return {
+  const jsonLd: JsonLdObject = {
     "@context": "https://schema.org",
     "@type": "Product",
     name: product.name,
@@ -170,11 +175,19 @@ export function buildProductJsonLd(
       "@type": "Brand",
       name: product.brand || BUSINESS_NAME,
     },
-    sku: product.oemNumber,
-    description: product.fullDescription || product.shortDescription,
     category: product.category,
     url: absoluteUrl(getProductUrl(product, mode), siteUrl),
   };
+
+  if (product.oemNumber) {
+    jsonLd.sku = product.oemNumber;
+  }
+
+  if (product.fullDescription || product.shortDescription) {
+    jsonLd.description = product.fullDescription || product.shortDescription;
+  }
+
+  return jsonLd;
 }
 
 export function buildItemListJsonLd(

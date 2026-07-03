@@ -37,6 +37,10 @@ export function ProductPdfView({
     mode === "automobile"
       ? product.compatibleVehicles || []
       : product.compatibleApplications || [];
+  const productDescription = product.fullDescription || product.shortDescription;
+  const technicalItems = product.technicalSpecs
+    ? Object.entries(product.technicalSpecs)
+    : [];
 
   useEffect(() => {
     const previousMode = document.body.dataset.homeMode;
@@ -132,55 +136,51 @@ export function ProductPdfView({
                   <small>Brand</small>
                   <strong>{product.brand}</strong>
                 </div>
-                <div>
-                  <small>OEM / Spec</small>
-                  <strong>{product.oemNumber}</strong>
-                </div>
+                {product.oemNumber ? (
+                  <div>
+                    <small>OEM / Spec</small>
+                    <strong>{product.oemNumber}</strong>
+                  </div>
+                ) : null}
                 <div>
                   <small>Stock</small>
                   <strong>{product.stockStatus.replace(/-/g, " ")}</strong>
                 </div>
               </div>
 
-              <section className="product-pdf-section">
-                <h2>Description</h2>
-                <p>{product.fullDescription || product.shortDescription}</p>
-              </section>
+              {productDescription ? (
+                <section className="product-pdf-section">
+                  <h2>Description</h2>
+                  <p>{productDescription}</p>
+                </section>
+              ) : null}
 
-              <section className="product-pdf-section">
-                <h2>Compatibility</h2>
-                <ul>
-                  {compatibilityItems.length > 0 ? (
-                    compatibilityItems.map((item) => <li key={item}>{item}</li>)
-                  ) : (
-                    <li>No compatibility details listed.</li>
-                  )}
-                </ul>
-              </section>
+              {compatibilityItems.length > 0 ? (
+                <section className="product-pdf-section">
+                  <h2>Compatibility</h2>
+                  <ul>
+                    {compatibilityItems.map((item) => <li key={item}>{item}</li>)}
+                  </ul>
+                </section>
+              ) : null}
 
-              <section className="product-pdf-section">
-                <h2>Technical Details</h2>
-                <ul>
-                  {product.technicalSpecs
-                    ? Object.entries(product.technicalSpecs).map(
-                        ([label, value]) => (
+              {technicalItems.length > 0 ||
+              (product.availableSizes && product.availableSizes.length > 0) ? (
+                <section className="product-pdf-section">
+                  <h2>Technical Details</h2>
+                  <ul>
+                    {technicalItems.length > 0
+                      ? technicalItems.map(([label, value]) => (
                           <li key={label}>
                             <strong>{label}:</strong> {value}
                           </li>
-                        ),
-                      )
-                    : product.availableSizes &&
-                        product.availableSizes.length > 0
-                      ? product.availableSizes.map((size) => (
-                          <li key={size}>{size}</li>
                         ))
-                      : [
-                          <li key="reference">
-                            Reference: {product.oemNumber}
-                          </li>,
-                        ]}
-                </ul>
-              </section>
+                      : product.availableSizes?.map((size) => (
+                          <li key={size}>{size}</li>
+                        ))}
+                  </ul>
+                </section>
+              ) : null}
 
               <footer className="product-pdf-footer">
                 <span>{getCategoryUrl(category, mode)}</span>

@@ -137,7 +137,9 @@ export function FeaturedProducts() {
                   <div className="product-body">
                     <div className="brand-text">{product.brand}</div>
                     <h3>{product.name}</h3>
-                    <div className="meta">OEM: {product.oemNumber}</div>
+                    {product.oemNumber ? (
+                      <div className="meta">OEM: {product.oemNumber}</div>
+                    ) : null}
                     <div className="product-highlights">
                       <span className="highlight-pill">
                         <svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="var(--orange)" strokeWidth="2"><path d="M5 18c0 .6.4 1 1 1h12c.6 0 1-.4 1-1v-2H5v2Z"/><path d="M4 14h16l-2-6H6l-2 6Z"/><circle cx="7" cy="14" r="1"/><circle cx="17" cy="14" r="1"/></svg> Cars & SUVs
