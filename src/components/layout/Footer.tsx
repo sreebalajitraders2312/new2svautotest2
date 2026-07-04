@@ -47,24 +47,6 @@ export function Footer({ catalogue }: FooterProps) {
   return (
     <footer className="footer">
       <div className="container footer-shell">
-        <div className="footer-primary">
-          <section className="footer-brand-panel" aria-label="SV Enterprises">
-            <Link className="brand footer-brand" href="/" aria-label="SV Enterprises home">
-              <span className="brand-mark">SV</span>
-              <span>
-                <span className="brand-name">SV Enterprises</span>
-                <span className="brand-sub">{modeContent.brandSub}</span>
-              </span>
-            </Link>
-            <p>{modeContent.footer.copy}</p>
-            <div className="footer-badges" aria-label="Service highlights">
-              <span>OEM Matching</span>
-              <span>Wholesale Supply</span>
-              <span>Bangalore Pickup</span>
-            </div>
-          </section>
-        </div>
-
         <div className="footer-directory">
           <nav className="footer-col" aria-label="Footer product links">
             <h2>Products</h2>

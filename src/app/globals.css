@@ -1857,84 +1857,6 @@ body[data-home-mode="industrial"] #page-home .mini-btn {
   gap: 34px;
 }
 
-.footer-primary {
-  position: relative;
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 0;
-  align-items: start;
-  padding: 34px;
-  border-bottom: 1px solid var(--line);
-  border-radius: 24px;
-  background:
-    radial-gradient(circle at 8% 12%, rgba(255, 106, 0, 0.1), transparent 28%),
-    linear-gradient(135deg, rgba(255, 255, 255, 0.94), rgba(247, 250, 252, 0.88));
-  box-shadow: 0 22px 48px rgba(7, 24, 39, 0.08);
-}
-
-.footer-brand-panel {
-  min-width: 0;
-  border: 0;
-  border-radius: 0;
-  background: transparent;
-  box-shadow: none;
-}
-
-.footer-brand-panel {
-  display: grid;
-  gap: 20px;
-  align-content: center;
-  padding: 0;
-}
-
-.footer-brand {
-  width: fit-content;
-}
-
-.footer-brand .brand-mark {
-  width: 52px;
-  height: 52px;
-  border-radius: 12px;
-  font-size: 22px;
-}
-
-.footer-brand .brand-name {
-  font-size: 28px;
-}
-
-.footer-brand .brand-sub {
-  margin-top: 6px;
-  font-size: 10px;
-}
-
-.footer-brand-panel p {
-  max-width: 700px;
-  color: var(--muted);
-  font-size: 17px;
-  line-height: 1.7;
-}
-
-.footer-badges {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-  margin-top: 4px;
-}
-
-.footer-badges span {
-  min-height: 34px;
-  display: inline-flex;
-  align-items: center;
-  border: 1px solid rgba(255, 106, 0, 0.22);
-  border-radius: 999px;
-  background: rgba(255, 255, 255, 0.74);
-  color: var(--orange-dark);
-  padding: 0 14px;
-  font-size: 12px;
-  font-weight: 900;
-  box-shadow: 0 8px 18px rgba(7, 24, 39, 0.04);
-}
-
 .footer-map-link {
   min-height: 48px;
   display: inline-flex;
@@ -5046,13 +4968,6 @@ body[data-pdf-view="true"] {
     padding-bottom: 24px;
   }
 
-  .footer-primary {
-    grid-template-columns: 1fr;
-    gap: 24px;
-    padding: 28px;
-    padding-bottom: 28px;
-  }
-
   .footer-directory {
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 28px 34px;
@@ -6505,17 +6420,6 @@ body[data-pdf-view="true"] {
     gap: 22px;
   }
 
-  .footer-primary {
-    gap: 20px;
-    padding: 22px;
-    padding-bottom: 22px;
-    border-radius: 20px;
-  }
-
-  .footer-brand-panel {
-    padding: 0;
-  }
-
   .footer-directory {
     grid-template-columns: 1fr;
     gap: 22px;
@@ -6712,9 +6616,6 @@ iframe {
     width: 100%;
   }
 
-  .footer-primary {
-    grid-template-columns: 1fr;
-  }
 }
 
 @media (max-width: 640px) {
