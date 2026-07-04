@@ -1942,11 +1942,11 @@ body[data-home-mode="industrial"] #page-home .mini-btn {
   gap: 14px;
   align-content: center;
   justify-items: start;
-  padding: 24px;
-  border: 1px solid rgba(7, 54, 90, 0.1);
-  border-radius: 20px;
-  background: #ffffff;
-  box-shadow: 0 18px 34px rgba(7, 24, 39, 0.08);
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
 }
 
 .footer-kicker {
@@ -6579,7 +6579,7 @@ body[data-pdf-view="true"] {
   }
 
   .footer-contact-card {
-    padding: 18px;
+    padding: 0;
   }
 
   .footer-contact-actions {
