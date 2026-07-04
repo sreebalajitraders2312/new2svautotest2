@@ -6797,6 +6797,10 @@ iframe {
   }
 
   .hero-actions {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .hero-actions {
     gap: 10px;
   }
 
@@ -6870,6 +6874,12 @@ iframe {
     height: 50px;
     right: 12px;
     bottom: 12px;
+  }
+}
+
+@media (max-width: 430px) {
+  .hero-actions {
+    grid-template-columns: 1fr;
   }
 }
 
