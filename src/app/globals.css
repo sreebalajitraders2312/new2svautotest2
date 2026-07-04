@@ -463,9 +463,14 @@ svg {
 
 .hero-content {
   min-width: 0;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+  display: grid;
+  grid-template-columns: minmax(0, 0.92fr) minmax(440px, 1.08fr);
+  gap: clamp(28px, 4vw, 56px);
+  align-items: center;
+}
+
+.hero-text-block {
+  min-width: 0;
 }
 
 .hero-shipping-badge {
@@ -568,21 +573,21 @@ svg {
 }
 
 .hero-machine-image-wrapper {
-  margin-top: 48px;
+  min-width: 0;
+  margin-top: 0;
   width: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
+  justify-content: center;
   align-items: center;
-  /* Center image and cards */
 }
 
 .hero-machine-image {
   width: 100%;
-  max-width: 1200px;
+  max-width: 660px;
   aspect-ratio: 1.6;
   object-fit: contain;
-  object-position: left top;
+  object-position: center;
   display: block;
 }
 
@@ -4449,6 +4454,10 @@ body[data-pdf-view="true"] {
   .contact-page,
   .contact-band-grid {
     grid-template-columns: 1fr;
+  }
+
+  .hero-machine-image-wrapper {
+    margin-top: 28px;
   }
 
   .hero-visual-card {

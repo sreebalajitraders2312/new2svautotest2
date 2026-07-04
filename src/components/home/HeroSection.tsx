@@ -79,29 +79,29 @@ export function HeroSection({ modes, children }: HeroSectionProps) {
                   <span>Browse by Category</span>
                 </Link>
               </div>
-              
-              <div className="hero-machine-image-wrapper">
-                <img 
-                  src={sliderImages[displayedImageIndex]} 
-                  alt="Machine Parts Diagram" 
-                  className="hero-machine-image fade-transition"
-                />
-                
-                <div className="hero-trust-cards">
-                  <div className="trust-card">
-                    <span className="trust-card-value">5K+</span>
-                    <span className="trust-card-label">PRODUCTS</span>
-                  </div>
-                  <div className="trust-card-divider"></div>
-                  <div className="trust-card">
-                    <span className="trust-card-value">50+</span>
-                    <span className="trust-card-label">BRANDS</span>
-                  </div>
-                  <div className="trust-card-divider"></div>
-                  <div className="trust-card">
-                    <span className="trust-card-value">15Y+</span>
-                    <span className="trust-card-label">EXPERIENCE</span>
-                  </div>
+            </div>
+
+            <div className="hero-machine-image-wrapper">
+              <img
+                src={sliderImages[displayedImageIndex]}
+                alt="Machine Parts Diagram"
+                className="hero-machine-image fade-transition"
+              />
+
+              <div className="hero-trust-cards">
+                <div className="trust-card">
+                  <span className="trust-card-value">5K+</span>
+                  <span className="trust-card-label">PRODUCTS</span>
+                </div>
+                <div className="trust-card-divider"></div>
+                <div className="trust-card">
+                  <span className="trust-card-value">50+</span>
+                  <span className="trust-card-label">BRANDS</span>
+                </div>
+                <div className="trust-card-divider"></div>
+                <div className="trust-card">
+                  <span className="trust-card-value">15Y+</span>
+                  <span className="trust-card-label">EXPERIENCE</span>
                 </div>
               </div>
             </div>
