@@ -32,7 +32,7 @@ export default function RootLayout({
             <SeoJsonLd data={buildLocalBusinessJsonLd()} />
             {children}
             <GlobalStoreLocation />
-            <Footer modeContent={catalogue.modes.automobile} />
+            <Footer catalogue={catalogue} />
             <FloatingWhatsApp />
           </div>
         </ModeProvider>
