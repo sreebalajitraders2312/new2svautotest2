@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { Barlow, Manrope } from "next/font/google";
 import { Analytics } from "@vercel/analytics/next";
 import { FloatingWhatsApp } from "@/components/layout/FloatingWhatsApp";
 import { Footer } from "@/components/layout/Footer";
@@ -10,6 +11,19 @@ import { getCatalogue } from "@/lib/dataUtils";
 import { buildLocalBusinessJsonLd } from "@/lib/seoHelpers";
 import "./globals.css";
 
+const manrope = Manrope({
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700", "800"],
+  variable: "--font-manrope",
+  display: "swap",
+});
+
+const barlow = Barlow({
+  subsets: ["latin"],
+  weight: ["600", "700", "800", "900"],
+  variable: "--font-barlow",
+  display: "swap",
+});
 export const metadata: Metadata = {
   title: "SV Enterprises - Automobile Spare Parts Bangalore",
   description:
@@ -24,7 +38,7 @@ export default function RootLayout({
   const catalogue = getCatalogue();
 
   return (
-    <html lang="en">
+    <html lang="en" className={`${manrope.variable} ${barlow.variable}`}>
       <body>
         <ModeProvider>
           <div className="app">
