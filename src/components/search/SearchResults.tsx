@@ -40,9 +40,13 @@ function formatAvailability(status: Product["stockStatus"]): string {
 }
 
 function getResultDescription(product: Product): string {
-  return [`OEM: ${product.oemNumber}`, product.brand, product.category].join(
-    " - ",
-  );
+  return [
+    product.oemNumber ? `OEM: ${product.oemNumber}` : "",
+    product.brand,
+    product.category,
+  ]
+    .filter(Boolean)
+    .join(" - ");
 }
 
 function SearchResultCard({ mode, product }: { mode: Mode; product: Product }) {
@@ -61,7 +65,9 @@ function SearchResultCard({ mode, product }: { mode: Mode; product: Product }) {
       </div>
       <div className="demo-product-body">
         <h3>{product.name}</h3>
-        <p>{getResultDescription(product)}</p>
+        {getResultDescription(product) ? (
+          <p>{getResultDescription(product)}</p>
+        ) : null}
       </div>
       <div className="demo-product-price">
         {product.category}

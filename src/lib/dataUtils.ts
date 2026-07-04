@@ -49,7 +49,7 @@ export interface ProductSubcategory {
   imageUrl?: string;
 }
 
-export const catalogue = catalogJson as Catalogue;
+export const catalogue = catalogJson as unknown as Catalogue;
 
 export function getCatalogue(): Catalogue {
   return catalogue;

@@ -2438,6 +2438,13 @@ body[data-home-mode="industrial"] #page-home .mini-btn {
   font-size: 15px;
 }
 
+.catalog-empty-actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+}
+
 .category-overview-shell {
   display: block;
 }
