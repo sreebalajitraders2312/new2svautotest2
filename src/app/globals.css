@@ -504,11 +504,11 @@ svg {
 .hero-title {
   max-width: 680px;
   font-family: var(--display);
-  font-size: clamp(48px, 7vw, 86px);
+  font-size: clamp(42px, 5.4vw, 68px);
   font-weight: 900;
-  line-height: 0.94;
+  line-height: 0.98;
   letter-spacing: 0;
-  margin-bottom: 24px;
+  margin-bottom: 18px;
 }
 
 .hero-title span {
@@ -518,9 +518,9 @@ svg {
 .hero-copy {
   max-width: 560px;
   color: var(--muted);
-  font-size: 18px;
-  line-height: 1.65;
-  margin-bottom: 20px;
+  font-size: 16px;
+  line-height: 1.6;
+  margin-bottom: 16px;
   /* Reduced since points are below it now */
 }
 
