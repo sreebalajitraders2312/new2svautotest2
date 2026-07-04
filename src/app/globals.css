@@ -117,8 +117,9 @@ svg {
   top: 0;
   z-index: 80;
   border-bottom: 1px solid var(--line);
-  background: #ffffff;
-  box-shadow: 0 10px 30px rgba(7, 24, 39, 0.06);
+  background: rgba(255, 255, 255, 0.94);
+  box-shadow: 0 14px 34px rgba(7, 24, 39, 0.08);
+  backdrop-filter: blur(18px);
 }
 
 .header-inner {
@@ -183,38 +184,66 @@ svg {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 3px;
+  gap: 2px;
   justify-self: center;
-  padding: 4px;
-  border: 1px solid var(--line);
-  border-radius: 999px;
-  background: rgba(255, 255, 255, 0.74);
+  padding: 5px;
+  border: 1px solid rgba(7, 54, 90, 0.1);
+  border-radius: 14px;
+  background:
+    linear-gradient(180deg, rgba(246, 248, 251, 0.92), rgba(255, 255, 255, 0.92));
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.92);
 }
 
 .nav-link {
-  min-height: 38px;
+  position: relative;
+  min-height: 40px;
   display: inline-flex;
   align-items: center;
   justify-content: center;
   border: 0;
-  border-radius: 999px;
+  border-radius: 10px;
   background: transparent;
   color: var(--muted);
   font-size: 13px;
-  font-weight: 800;
-  padding: 0 13px;
+  font-weight: 900;
+  padding: 0 14px;
   white-space: nowrap;
   transition:
     color 0.2s ease,
-    background 0.2s ease;
+    background 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.nav-link::after {
+  content: "";
+  position: absolute;
+  right: 14px;
+  bottom: 7px;
+  left: 14px;
+  height: 2px;
+  border-radius: 999px;
+  background: var(--orange);
+  opacity: 0;
+  transform: scaleX(0.45);
+  transition:
+    opacity 0.2s ease,
+    transform 0.2s ease;
 }
 
 .nav-link:hover,
 .nav-link:focus-visible,
 .nav-link.active {
   outline: none;
-  color: var(--blue);
-  background: rgba(7, 54, 90, 0.08);
+  color: var(--ink);
+  background: #ffffff;
+  box-shadow: 0 8px 20px rgba(7, 24, 39, 0.08);
+}
+
+.nav-link:hover::after,
+.nav-link:focus-visible::after,
+.nav-link.active::after {
+  opacity: 1;
+  transform: scaleX(1);
 }
 
 .header-actions {
@@ -231,7 +260,7 @@ svg {
   align-items: center;
   justify-content: center;
   gap: 8px;
-  border-radius: var(--radius);
+  border-radius: 12px;
   border: 1px solid transparent;
   padding: 0 18px;
   font-weight: 800;
@@ -251,8 +280,8 @@ svg {
 
 .btn-primary {
   color: #ffffff;
-  background: var(--orange);
-  box-shadow: 0 14px 28px rgba(255, 106, 0, 0.22);
+  background: linear-gradient(180deg, #ff7b22, var(--orange));
+  box-shadow: 0 14px 28px rgba(255, 106, 0, 0.24);
 }
 
 .btn-primary:hover,
@@ -262,10 +291,10 @@ svg {
 }
 
 .btn-secondary {
-  border-color: var(--line);
-  background: #ffffff;
+  border-color: rgba(7, 54, 90, 0.12);
+  background: #f8fafc;
   color: var(--blue);
-  box-shadow: var(--shadow-sm);
+  box-shadow: none;
 }
 
 .icon-btn {
@@ -357,8 +386,8 @@ svg {
   }
 
   .nav-link {
-    min-height: 36px;
-    padding-inline: 10px;
+    min-height: 38px;
+    padding-inline: 11px;
     font-size: 12px;
   }
 
@@ -504,41 +533,74 @@ svg {
 
 .hero-mode-toggle-desktop {
   width: fit-content;
-  margin-bottom: 22px;
+  margin-bottom: 24px;
+}
+
+.hero-mode-toggle-desktop::before {
+  content: "Choose catalogue";
+  display: block;
+  margin-bottom: 8px;
+  color: var(--soft);
+  font-size: 11px;
+  font-weight: 900;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
 }
 
 .hero-mode-toggle-desktop .hero-mode-switch {
-  width: fit-content;
-  display: inline-flex;
-  gap: 4px;
-  padding: 4px;
-  border: 1px solid var(--line);
-  border-radius: 999px;
-  background: rgba(255, 255, 255, 0.82);
-  box-shadow: 0 12px 28px rgba(7, 24, 39, 0.07);
+  width: min(100%, 430px);
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 6px;
+  padding: 6px;
+  border: 1px solid rgba(7, 54, 90, 0.12);
+  border-radius: 16px;
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.96), rgba(244, 248, 251, 0.96));
+  box-shadow:
+    0 16px 34px rgba(7, 24, 39, 0.08),
+    inset 0 1px 0 rgba(255, 255, 255, 0.9);
 }
 
 .hero-mode-toggle-desktop .hero-mode-btn {
-  flex: 0 0 auto;
-  min-height: 40px;
-  gap: 8px;
+  min-height: 48px;
+  justify-content: center;
+  gap: 9px;
   border: 0;
-  border-radius: 999px;
-  padding: 0 14px;
+  border-radius: 12px;
+  padding: 0 16px;
   background: transparent;
   color: var(--muted);
-  font-size: 13px;
+  font-size: 14px;
   font-weight: 900;
+  transition:
+    transform 0.2s ease,
+    color 0.2s ease,
+    background 0.2s ease,
+    box-shadow 0.2s ease;
 }
 
 .hero-mode-toggle-desktop .hero-mode-btn svg {
-  width: 17px;
-  height: 17px;
+  width: 19px;
+  height: 19px;
 }
 
 .hero-mode-toggle-desktop .hero-mode-btn.active {
-  background: var(--orange);
+  background: linear-gradient(180deg, #ff7b22, var(--orange));
   color: #ffffff;
+  box-shadow: 0 12px 22px rgba(255, 106, 0, 0.24);
+}
+
+.hero-mode-toggle-desktop .hero-mode-btn:not(.active):hover,
+.hero-mode-toggle-desktop .hero-mode-btn:not(.active):focus-visible {
+  outline: none;
+  color: var(--blue);
+  background: #ffffff;
+  box-shadow: 0 8px 18px rgba(7, 24, 39, 0.07);
+}
+
+.hero-mode-toggle-desktop .hero-mode-btn:active {
+  transform: translateY(1px);
 }
 
 .hero-shipping-badge {
