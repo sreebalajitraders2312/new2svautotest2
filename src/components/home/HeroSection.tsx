@@ -6,6 +6,7 @@ import type { ReactNode } from "react";
 import type { Catalogue, Mode } from "@/data/types";
 import { useMode } from "@/context/ModeContext";
 import { BrandMarquee } from "@/components/home/BrandMarquee";
+import { ModeToggle } from "@/components/home/ModeToggle";
 
 interface HeroSectionProps {
   modes: Catalogue["modes"];
@@ -33,7 +34,7 @@ function GridIcon() {
 }
 
 export function HeroSection({ modes, children }: HeroSectionProps) {
-  const { mode } = useMode();
+  const { mode, setMode } = useMode();
   const currentMode: Mode = mode;
   const content = modes[currentMode];
 
@@ -59,6 +60,10 @@ export function HeroSection({ modes, children }: HeroSectionProps) {
         <div className="container hero-grid">
           <div className="hero-content">
             <div className="hero-text-block">
+              <div className="hero-mode-toggle-desktop">
+                <ModeToggle mode={currentMode} onModeChange={setMode} />
+              </div>
+
               {currentMode === "automobile" && (
                 <div className="hero-shipping-badge">
                   <span className="pulsing-dot"></span>

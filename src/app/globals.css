@@ -290,6 +290,7 @@ svg {
 }
 
 .mode-tabs-wrap {
+  display: none;
   width: min(var(--container), calc(100% - 40px));
   margin: 0 auto;
 }
@@ -499,6 +500,45 @@ svg {
 
 .hero-text-block {
   min-width: 0;
+}
+
+.hero-mode-toggle-desktop {
+  width: fit-content;
+  margin-bottom: 22px;
+}
+
+.hero-mode-toggle-desktop .hero-mode-switch {
+  width: fit-content;
+  display: inline-flex;
+  gap: 4px;
+  padding: 4px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.82);
+  box-shadow: 0 12px 28px rgba(7, 24, 39, 0.07);
+}
+
+.hero-mode-toggle-desktop .hero-mode-btn {
+  flex: 0 0 auto;
+  min-height: 40px;
+  gap: 8px;
+  border: 0;
+  border-radius: 999px;
+  padding: 0 14px;
+  background: transparent;
+  color: var(--muted);
+  font-size: 13px;
+  font-weight: 900;
+}
+
+.hero-mode-toggle-desktop .hero-mode-btn svg {
+  width: 17px;
+  height: 17px;
+}
+
+.hero-mode-toggle-desktop .hero-mode-btn.active {
+  background: var(--orange);
+  color: #ffffff;
 }
 
 .hero-shipping-badge {
@@ -4724,6 +4764,7 @@ body[data-pdf-view="true"] {
   }
 
   .mode-tabs-wrap {
+    display: block;
     width: min(100% - 28px, var(--container));
   }
 
@@ -4748,6 +4789,10 @@ body[data-pdf-view="true"] {
 
   .hero {
     padding: 36px 0 34px;
+  }
+
+  .hero-mode-toggle-desktop {
+    display: none;
   }
 
   .hero-title {
