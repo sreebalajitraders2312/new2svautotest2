@@ -1860,9 +1860,9 @@ body[data-home-mode="industrial"] #page-home .mini-btn {
 .footer-primary {
   position: relative;
   display: grid;
-  grid-template-columns: minmax(0, 1.08fr) minmax(360px, 0.72fr);
-  gap: 40px;
-  align-items: stretch;
+  grid-template-columns: 1fr;
+  gap: 0;
+  align-items: start;
   padding: 34px;
   border-bottom: 1px solid var(--line);
   border-radius: 24px;
@@ -1872,8 +1872,7 @@ body[data-home-mode="industrial"] #page-home .mini-btn {
   box-shadow: 0 22px 48px rgba(7, 24, 39, 0.08);
 }
 
-.footer-brand-panel,
-.footer-contact-card {
+.footer-brand-panel {
   min-width: 0;
   border: 0;
   border-radius: 0;
@@ -1936,50 +1935,6 @@ body[data-home-mode="industrial"] #page-home .mini-btn {
   box-shadow: 0 8px 18px rgba(7, 24, 39, 0.04);
 }
 
-.footer-contact-card {
-  position: relative;
-  display: grid;
-  gap: 14px;
-  align-content: center;
-  justify-items: start;
-  padding: 0;
-  border: 0;
-  border-radius: 0;
-  background: transparent;
-  box-shadow: none;
-}
-
-.footer-kicker {
-  color: var(--orange);
-  font-size: 11px;
-  font-weight: 900;
-  letter-spacing: 0.16em;
-  text-transform: uppercase;
-}
-
-.footer-contact-card h2 {
-  color: var(--ink);
-  font-family: var(--display);
-  font-size: 40px;
-  font-weight: 900;
-  line-height: 1;
-}
-
-.footer-contact-card p {
-  color: var(--muted);
-  font-size: 15px;
-  line-height: 1.65;
-}
-
-.footer-contact-actions {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 12px;
-  width: 100%;
-  margin-top: 8px;
-}
-
-.footer-contact-actions a,
 .footer-map-link {
   min-height: 48px;
   display: inline-flex;
@@ -2000,8 +1955,6 @@ body[data-home-mode="industrial"] #page-home .mini-btn {
     color 0.2s ease;
 }
 
-.footer-contact-actions a:hover,
-.footer-contact-actions a:focus-visible,
 .footer-map-link:hover,
 .footer-map-link:focus-visible {
   outline: none;
@@ -2011,24 +1964,10 @@ body[data-home-mode="industrial"] #page-home .mini-btn {
   color: var(--orange-dark);
 }
 
-.footer-contact-actions svg,
 .footer-map-link svg {
   width: 15px;
   height: 15px;
   flex: 0 0 auto;
-}
-
-.footer-contact-actions .footer-action-primary {
-  border-color: var(--orange);
-  background: linear-gradient(180deg, #ff7b22, var(--orange));
-  color: #ffffff;
-  box-shadow: 0 14px 24px rgba(255, 106, 0, 0.22);
-}
-
-.footer-contact-actions .footer-action-primary:hover,
-.footer-contact-actions .footer-action-primary:focus-visible {
-  background: var(--orange-dark);
-  color: #ffffff;
 }
 
 .footer-directory {
@@ -6573,17 +6512,8 @@ body[data-pdf-view="true"] {
     border-radius: 20px;
   }
 
-  .footer-brand-panel,
-  .footer-contact-card {
+  .footer-brand-panel {
     padding: 0;
-  }
-
-  .footer-contact-card {
-    padding: 0;
-  }
-
-  .footer-contact-actions {
-    grid-template-columns: 1fr;
   }
 
   .footer-directory {
@@ -6836,7 +6766,6 @@ iframe {
   }
 
   .hero-actions,
-  .footer-contact-actions,
   .catalog-toolbar,
   .catalog-subbar,
   .search-bar,
