@@ -125,6 +125,18 @@ export function Header({ modes }: HeaderProps) {
             </span>
           </Link>
 
+          <nav className="desktop-nav" aria-label="Primary navigation">
+            {navItems.map((item) => (
+              <Link
+                className={`nav-link${item.active ? " active" : ""}`}
+                href={item.href}
+                key={item.href}
+              >
+                {item.label}
+              </Link>
+            ))}
+          </nav>
+
           <div className="header-actions">
             <Link className="btn btn-secondary" href="/search">
               {modeContent.nav.search}

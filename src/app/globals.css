@@ -123,10 +123,10 @@ svg {
 
 .header-inner {
   height: 72px;
-  display: flex;
+  display: grid;
+  grid-template-columns: minmax(220px, auto) minmax(0, 1fr) auto;
   align-items: center;
-  justify-content: space-between;
-  gap: 24px;
+  gap: clamp(16px, 2vw, 28px);
 }
 
 .brand {
@@ -177,10 +177,14 @@ svg {
 }
 
 .desktop-nav {
+  min-width: 0;
+  width: fit-content;
+  max-width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 3px;
+  justify-self: center;
   padding: 4px;
   border: 1px solid var(--line);
   border-radius: 999px;
@@ -189,13 +193,17 @@ svg {
 
 .nav-link {
   min-height: 38px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   border: 0;
   border-radius: 999px;
   background: transparent;
   color: var(--muted);
-  font-size: 14px;
-  font-weight: 700;
-  padding: 0 14px;
+  font-size: 13px;
+  font-weight: 800;
+  padding: 0 13px;
+  white-space: nowrap;
   transition:
     color 0.2s ease,
     background 0.2s ease;
@@ -210,8 +218,10 @@ svg {
 }
 
 .header-actions {
+  min-width: 0;
   display: flex;
   align-items: center;
+  justify-content: flex-end;
   gap: 10px;
 }
 
@@ -337,6 +347,24 @@ svg {
 
 .mode-tab-btn.active svg {
   color: var(--orange);
+}
+
+@media (max-width: 1240px) {
+  .header-inner {
+    grid-template-columns: minmax(200px, auto) minmax(0, 1fr) auto;
+    gap: 14px;
+  }
+
+  .nav-link {
+    min-height: 36px;
+    padding-inline: 10px;
+    font-size: 12px;
+  }
+
+  .header-actions .btn {
+    padding-inline: 14px;
+    font-size: 13px;
+  }
 }
 
 .mobile-nav {
