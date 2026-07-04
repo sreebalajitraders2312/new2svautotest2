@@ -118,7 +118,9 @@ export function Header({ modes }: HeaderProps) {
         {/* Row 1: Logo + Actions */}
         <div className="container header-inner">
           <Link className="brand" href="/" aria-label="Go to home">
-            <span className="brand-mark">SV</span>
+            <span className="brand-mark" aria-hidden="true">
+              <span>SVE</span>
+            </span>
             <span>
               <span className="brand-name">SV Enterprises</span>
               <span className="brand-sub">{modeContent.brandSub}</span>

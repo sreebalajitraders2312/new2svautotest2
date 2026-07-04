@@ -40,7 +40,9 @@ export function MobileDrawer({
       >
         <div className="mobile-nav-head">
           <span className="brand">
-            <span className="brand-mark">SV</span>
+            <span className="brand-mark" aria-hidden="true">
+              <span>SVE</span>
+            </span>
             <span>
               <span className="brand-name">SV Enterprises</span>
               <span className="brand-sub">{brandSub}</span>
