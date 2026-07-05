@@ -6,6 +6,7 @@ import type { Mode, Product } from "@/data/types";
 import type { ProductSort } from "@/lib/dataUtils";
 import { filterProducts, sortProducts } from "@/lib/dataUtils";
 import { ProductCard } from "@/components/catalog/ProductCard";
+import { FilterChips } from "@/components/catalog/FilterChips";
 import { FilterPanel } from "@/components/catalog/FilterPanel";
 import { SortDropdown } from "@/components/catalog/SortDropdown";
 import {
@@ -26,7 +27,9 @@ interface CatalogListingShellProps {
 }
 
 function uniqueSorted(values: string[]) {
-  return Array.from(new Set(values)).sort((a, b) => a.localeCompare(b));
+  return Array.from(new Set(values.filter(Boolean))).sort((a, b) =>
+    a.localeCompare(b),
+  );
 }
 
 export function CatalogListingShell({
@@ -41,12 +44,6 @@ export function CatalogListingShell({
   products,
 }: CatalogListingShellProps) {
   const [isFilterOpen, setIsFilterOpen] = useState(false);
-
-  // Dummy options
-  const vehicleManufacturerOptions = ["Toyota", "Honda", "Ford", "Chevrolet", "Nissan", "Volkswagen", "Hyundai", "Kia", "BMW", "Mercedes-Benz"];
-  const vehicleModelOptions = ["Corolla", "Civic", "F-150", "Silverado", "Altima", "Jetta", "Elantra", "Optima", "3 Series", "C-Class"];
-  const toolTypeOptions = ["Wrench", "Screwdriver", "Pliers", "Hammer", "Drill", "Saw", "Socket Set", "Allen Key", "Mallet", "Tape Measure"];
-  const vehicleTypeOptions = ["Sedan", "SUV", "Truck", "Hatchback", "Coupe", "Convertible", "Minivan", "Wagon", "Van", "Pickup"];
 
   const [draftBrand, setDraftBrand] = useState("");
   const [draftVehicleManufacturer, setDraftVehicleManufacturer] = useState("");
@@ -66,14 +63,59 @@ export function CatalogListingShell({
     () => uniqueSorted(products.map((product) => product.brand)),
     [products],
   );
+  const vehicleManufacturerOptions = useMemo(
+    () =>
+      uniqueSorted(
+        products.map(
+          (product) => product.technicalSpecs?.["Vehicle Manufacturer"] || "",
+        ),
+      ),
+    [products],
+  );
+  const vehicleModelOptions = useMemo(
+    () =>
+      uniqueSorted(
+        products.flatMap((product) => [
+          ...(product.compatibleVehicles || []),
+          ...(product.compatibleApplications || []),
+        ]),
+      ),
+    [products],
+  );
+  const toolTypeOptions = useMemo(
+    () =>
+      uniqueSorted(
+        products.map((product) => product.technicalSpecs?.["Sub Category"] || ""),
+      ),
+    [products],
+  );
+  const vehicleTypeOptions = useMemo(
+    () =>
+      uniqueSorted(
+        products.map((product) => product.technicalSpecs?.["Vehicle Type"] || ""),
+      ),
+    [products],
+  );
 
   const filteredProducts = useMemo(() => {
     const filtered = filterProducts(products, {
       brand: selectedBrand || undefined,
+      toolType: selectedToolType || undefined,
+      vehicleManufacturer: selectedVehicleManufacturer || undefined,
+      vehicleModel: selectedVehicleModel || undefined,
+      vehicleType: selectedVehicleType || undefined,
     });
 
     return sortProducts(filtered, sort);
-  }, [products, selectedBrand, sort]);
+  }, [
+    products,
+    selectedBrand,
+    selectedToolType,
+    selectedVehicleManufacturer,
+    selectedVehicleModel,
+    selectedVehicleType,
+    sort,
+  ]);
   const hasProducts = products.length > 0;
 
   const activeFilterCount =
@@ -207,6 +249,20 @@ export function CatalogListingShell({
 
             <ViewToggle onChange={setViewMode} value={viewMode} />
           </div>
+
+          <FilterChips
+            brandValue={selectedBrand}
+            onClearAll={resetFilters}
+            onRemoveBrand={clearBrand}
+            onRemoveToolType={clearToolType}
+            onRemoveVehicleManufacturer={clearVehicleManufacturer}
+            onRemoveVehicleModel={clearVehicleModel}
+            onRemoveVehicleType={clearVehicleType}
+            toolTypeValue={selectedToolType}
+            vehicleManufacturerValue={selectedVehicleManufacturer}
+            vehicleModelValue={selectedVehicleModel}
+            vehicleTypeValue={selectedVehicleType}
+          />
         </>
       ) : null}
 

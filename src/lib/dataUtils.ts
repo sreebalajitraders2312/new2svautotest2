@@ -28,7 +28,11 @@ export interface ProductFilters {
   brand?: string;
   stockStatus?: Product["stockStatus"];
   compatibleWith?: string;
+  toolType?: string;
   query?: string;
+  vehicleManufacturer?: string;
+  vehicleModel?: string;
+  vehicleType?: string;
 }
 
 export interface StaticCategoryParam {
@@ -182,6 +186,38 @@ export function filterProducts(
 
     if (filters.stockStatus && product.stockStatus !== filters.stockStatus) {
       return false;
+    }
+
+    if (
+      filters.vehicleManufacturer &&
+      product.technicalSpecs?.["Vehicle Manufacturer"] !== filters.vehicleManufacturer
+    ) {
+      return false;
+    }
+
+    if (
+      filters.vehicleType &&
+      product.technicalSpecs?.["Vehicle Type"] !== filters.vehicleType
+    ) {
+      return false;
+    }
+
+    if (
+      filters.toolType &&
+      product.technicalSpecs?.["Sub Category"] !== filters.toolType
+    ) {
+      return false;
+    }
+
+    if (filters.vehicleModel) {
+      const models = [
+        ...(product.compatibleVehicles || []),
+        ...(product.compatibleApplications || []),
+      ];
+
+      if (!models.includes(filters.vehicleModel)) {
+        return false;
+      }
     }
 
     if (normalizedCompatible) {
