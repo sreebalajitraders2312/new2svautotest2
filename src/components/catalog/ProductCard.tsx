@@ -5,8 +5,8 @@ import Image from "next/image";
 import type { Mode, Product } from "@/data/types";
 import { getProductUrl } from "@/lib/dataUtils";
 import {
-  getAssetPath,
   getFallbackInitials,
+  getProductImagePath,
 } from "@/components/catalog/cardUtils";
 
 interface ProductCardProps {
@@ -20,7 +20,7 @@ export function ProductCard({
   product,
   variant = "grid",
 }: ProductCardProps) {
-  const imagePath = getAssetPath(product.imageUrl);
+  const imagePath = getProductImagePath(product);
   const productUrl = getProductUrl(product, mode);
 
   return (

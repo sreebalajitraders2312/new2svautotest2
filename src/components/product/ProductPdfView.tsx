@@ -5,8 +5,8 @@ import Image from "next/image";
 import type { Category, Mode, Product } from "@/data/types";
 import { useMode } from "@/context/ModeContext";
 import {
-  getAssetPath,
   getFallbackInitials,
+  getProductImagePath,
 } from "@/components/catalog/cardUtils";
 import { getCatalogue, getCategoryUrl } from "@/lib/dataUtils";
 import { BUSINESS_PHONE } from "@/lib/seoHelpers";
@@ -26,7 +26,7 @@ export function ProductPdfView({
   const { setMode } = useMode();
   const catalogue = getCatalogue();
   const modeContent = catalogue.modes[mode];
-  const imagePath = getAssetPath(product.imageUrl);
+  const imagePath = getProductImagePath(product);
   const callPhone =
     modeContent.home.contactList.find((item) => item.label === "Call")?.value ||
     BUSINESS_PHONE;

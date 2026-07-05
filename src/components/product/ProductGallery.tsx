@@ -1,8 +1,8 @@
 import Image from "next/image";
 import type { Product } from "@/data/types";
 import {
-  getAssetPath,
   getFallbackInitials,
+  getProductImagePath,
 } from "@/components/catalog/cardUtils";
 
 interface ProductGalleryProps {
@@ -10,7 +10,7 @@ interface ProductGalleryProps {
 }
 
 export function ProductGallery({ product }: ProductGalleryProps) {
-  const imagePath = getAssetPath(product.imageUrl);
+  const imagePath = getProductImagePath(product);
 
   return (
     <div className="detail-gallery">

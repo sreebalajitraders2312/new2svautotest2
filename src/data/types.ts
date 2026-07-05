@@ -19,6 +19,7 @@ export interface Product {
   availableSizes?: string[];
   stockStatus: StockStatus;
   popularityRank: number;
+  image?: string;
   imageUrl?: string;
   imageFallbackInitials: string;
 }

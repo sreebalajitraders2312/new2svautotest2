@@ -6,8 +6,8 @@ import { useMemo, useState } from "react";
 import type { Mode, Product } from "@/data/types";
 import { getProductUrl } from "@/lib/dataUtils";
 import {
-  getAssetPath,
   getFallbackInitials,
+  getProductImagePath,
 } from "@/components/catalog/cardUtils";
 import { SearchSuggestions } from "@/components/search/SearchSuggestions";
 
@@ -50,7 +50,7 @@ function getResultDescription(product: Product): string {
 }
 
 function SearchResultCard({ mode, product }: { mode: Mode; product: Product }) {
-  const imagePath = getAssetPath(product.imageUrl);
+  const imagePath = getProductImagePath(product);
 
   return (
     <Link className="demo-product-card" href={getProductUrl(product, mode)}>

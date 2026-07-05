@@ -1,3 +1,5 @@
+import type { Product } from "@/data/types";
+
 export function getAssetPath(path?: string): string {
   if (!path) {
     return "";
@@ -8,6 +10,10 @@ export function getAssetPath(path?: string): string {
   }
 
   return `/${path}`;
+}
+
+export function getProductImagePath(product: Product): string {
+  return getAssetPath(product.image || product.imageUrl);
 }
 
 export function getFallbackInitials(title: string): string {

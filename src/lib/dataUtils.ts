@@ -8,6 +8,7 @@ import type {
   VehicleEntity,
   VehicleType,
 } from "@/data/types";
+import { getStableCategoryImage } from "@/data/categoryProductImages";
 import { DEFAULT_MODE, getValidMode } from "@/lib/modeUtils";
 import {
   findBySlug,
@@ -53,7 +54,35 @@ export interface ProductSubcategory {
   imageUrl?: string;
 }
 
-export const catalogue = catalogJson as unknown as Catalogue;
+function withStableProductImages(source: Catalogue): Catalogue {
+  return {
+    ...source,
+    products: {
+      automobile: Object.fromEntries(
+        Object.entries(source.products.automobile).map(([categorySlug, products]) => [
+          categorySlug,
+          products.map((product, index) => ({
+            ...product,
+            image: getStableCategoryImage(product, index),
+          })),
+        ]),
+      ),
+      industrial: Object.fromEntries(
+        Object.entries(source.products.industrial).map(([categorySlug, products]) => [
+          categorySlug,
+          products.map((product, index) => ({
+            ...product,
+            image: getStableCategoryImage(product, index),
+          })),
+        ]),
+      ),
+    },
+  };
+}
+
+export const catalogue = withStableProductImages(
+  catalogJson as unknown as Catalogue,
+);
 
 export function getCatalogue(): Catalogue {
   return catalogue;
@@ -131,7 +160,7 @@ export function getCategorySubcategories(
         slug: slugify(brand),
         description: `${count} ${count === 1 ? "product" : "products"} available in ${firstProduct.category}.`,
         count: `${count} ${count === 1 ? "item" : "items"}`,
-        imageUrl: firstProduct.imageUrl,
+        imageUrl: firstProduct.image || firstProduct.imageUrl,
       };
     });
 }

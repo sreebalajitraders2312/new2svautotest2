@@ -6,6 +6,7 @@ import { useEffect, useRef, useState } from "react";
 import type { FeaturedProductReference, Mode, Product } from "@/data/types";
 import { useMode } from "@/context/ModeContext";
 import { getCatalogue, getProductUrl } from "@/lib/dataUtils";
+import { getProductImagePath } from "@/components/catalog/cardUtils";
 import { findBySlug } from "@/lib/slugUtils";
 import { buildProductWhatsAppUrl } from "@/lib/whatsappUtils";
 
@@ -38,14 +39,16 @@ function resolveFeaturedProduct(
 }
 
 function ProductImage({ product, code }: { product: Product; code: string }) {
-  if (!product.imageUrl) {
+  const imagePath = getProductImagePath(product);
+
+  if (!imagePath) {
     return <span aria-hidden="true">{code}</span>;
   }
 
   return (
     <Image
       className="featured-product-image"
-      src={product.imageUrl}
+      src={imagePath}
       alt=""
       aria-hidden="true"
       width={380}
